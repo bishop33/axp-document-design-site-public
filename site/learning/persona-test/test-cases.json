@@ -1,0 +1,13 @@
+{
+  "method": "동일 입력의 역할 시뮬레이션; 실제 사용자 테스트 아님",
+  "cases": [
+    {"id":"C1","requirement":"4쪽에 독자 질문·주장·근거·한계를 연결", "verification":"페이지별 원고 대조", "priority":"P1"},
+    {"id":"C2","requirement":"매출80/100/120, 영업이익8/12/15, 영업현금6/10/9 보존", "verification":"제공 원장과 HTML 표 대조", "priority":"P1"},
+    {"id":"C3","requirement":"구성60+42+18=120, 분기25+28+31+36=120, 고객48/120=40%", "verification":"산식과 본문 단위 대조", "priority":"P1"},
+    {"id":"C4","requirement":"기초20+9-6-3=기말20; 순이익/영업이익/현금 혼동 없음", "verification":"본문 해석·표 대조", "priority":"P1"},
+    {"id":"C5","requirement":"8명/6억원 요청과 미제공 채용시점·추가매출·확도를 구분", "verification":"결론과 승인 조건 읽기", "priority":"P1"},
+    {"id":"C6","requirement":"grid/chart/reference ID 실제 존재, 임의 token 출처를 분리", "verification":"decisions.json과 라이브러리 대조", "priority":"P1"},
+    {"id":"C7","requirement":"글자·요소 겹침, 잘림, 큰 공백, 그룹핑 및 지면 리듬 점검", "verification":"실제 렌더가 있어야 판정; 소스만으로 합격 금지", "priority":"P1"},
+    {"id":"C8","requirement":"재실행·변형 가능한 표/차트/긴 원고 예외 처리", "verification":"현재 시험은 1개 원장. 장문/누락/많은 항목 추가 fixture는 후속 재테스트", "priority":"P2"}
+  ]
+}

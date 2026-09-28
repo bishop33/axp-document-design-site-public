@@ -1,0 +1,21 @@
+.sample{margin-top:22px;scroll-margin-top:20px}.sample+.sample{margin-top:28px}.sample h2{font-size:14pt;letter-spacing:-.3px;line-height:1.4;margin:0 0 7px}.sample .lead{font-size:10pt;line-height:1.55;margin:0 0 12px}.sample .figure{padding:11px 12px 10px}.sample .fighead{margin-bottom:8px}.sample .fighead h3{font-size:10pt}.sample .diagram .title{font-size:13.5px}.sample .diagram .small{font-size:12px}.sample .caption{font-size:8.5pt;line-height:1.5;margin:8px 0 0}.interpretation{font-size:10pt;line-height:1.55;margin:10px 0 0;color:#444}.sample .diagram svg{min-width:600px}
+/* Frame aligns with the text column; artwork retains its insertion scale. */
+.sample .figure{width:100%;max-width:100%;margin:14px 0 12px;padding:9px 10px 8px}
+.sample .diagram svg{width:calc(160mm - 22px);min-width:0;margin-inline:auto}
+.sample .diagram .title{font-size:12.7px;font-weight:600}
+.sample .diagram .small{font-size:11.75px}
+.sample .fighead h3{font-size:9pt}
+.sample .caption{font-size:8pt;line-height:1.45}
+.sample h2{font-size:12pt}
+#industry .diagram svg{width:100%}
+#industry .diagram .title{font-size:11.7px}
+#industry .diagram .small{font-size:10.6px}
+#process .diagram svg{width:calc(144mm - 22px)}
+#process .diagram .title{font-size:14.2px}
+#process .diagram .small{font-size:13.1px}
+.sample+.sample{margin-top:32px}
+.sample .fighead{justify-content:center}
+.sample .caption{text-align:center}
+#industry .fighead{margin-bottom:14px}
+@media screen and (max-width:600px){.sample .diagram svg{min-width:583px}#industry .diagram svg{min-width:643px}#process .diagram svg{min-width:522px}}
+@media print{.sample .diagram svg{min-width:0}}

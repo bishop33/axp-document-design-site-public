@@ -1,0 +1,36 @@
+{
+  "capturedAt": "2026-09-22T08:55:40.966Z",
+  "files": [
+    {
+      "file": "guide/topics.js",
+      "sha256": "1bd572ecf8830b9836c8d07220f28be99d15432667cab8dba1070c62898f91ed",
+      "bytes": 19414
+    },
+    {
+      "file": "guide/grid-systems.json",
+      "sha256": "6f56e3fc49323e8b15cfdffef585d191fcbb5519d6d051c4a77bd32ef0f603db",
+      "bytes": 22276
+    },
+    {
+      "file": "guide/chart-catalog.js",
+      "sha256": "bd041e15fc34bc1958bcbd2c6638e6867f4bf82492463699089555dea9404ccb",
+      "bytes": 9593
+    },
+    {
+      "file": "guide/examples.json",
+      "sha256": "669f666b599ca7de9b8a83ed812622e0106bf1d8a2f48aeb36c8a513d2fc09b3",
+      "bytes": 378138
+    },
+    {
+      "file": "references/catalog.json",
+      "sha256": "4eee2e0606a9fa2c1a4b858dac602198b406bbd03c6c68bc1286d6dfcb371896",
+      "bytes": 207723
+    },
+    {
+      "file": "learning/content.json",
+      "sha256": "4e361a6eb8aa1d5d38c0ad3d7d3e2448f32af210a423842bd9d6b9f6a823f515",
+      "bytes": 22968
+    }
+  ],
+  "limitation": "Source-read simulation; not human usability testing or browser interaction."
+}

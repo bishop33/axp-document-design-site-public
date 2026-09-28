@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>가온 데이터 서비스 | 기업현황 보고서 v2</title>
+<style>
+@page { size: A4 portrait; margin: 0; }
+@font-face { font-family: Pretendard; src: url('../assets/Pretendard-400.woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: Pretendard; src: url('../assets/Pretendard-600.woff2'); font-weight: 600; font-display: swap; }
+:root { --ink: #13213a; --text: #20242b; --muted: #667080; --line: #cbd1d9; --ground: #f1f4f7; --accent: #1647d8; --accent-soft: #dfe7ff; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #e6e8eb; color: var(--text); font-family: Pretendard, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; font-size: 9.5pt; line-height: 14pt; letter-spacing: 0; word-break: keep-all; overflow-wrap: break-word; }
+.page { width: 210mm; height: 297mm; padding: 16mm 18mm 13mm; margin: 8mm auto; background: white; display: flex; flex-direction: column; break-after: page; page-break-after: always; }
+.page:last-child { break-after: auto; page-break-after: auto; }
+.running { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 8mm; border-bottom: .6pt solid var(--line); padding-bottom: 3mm; color: var(--muted); font-size: 8pt; line-height: 11pt; }
+.running strong { color: var(--ink); font-weight: 600; }
+.heading { margin: 7mm 0 6mm; }
+.eyebrow { margin: 0 0 2mm; color: var(--accent); font-size: 8.5pt; font-weight: 600; }
+h1 { max-width: 174mm; margin: 0 0 3mm; color: var(--ink); font-size: 22pt; line-height: 28pt; font-weight: 600; }
+.title-line { display: block; white-space: nowrap; }
+.lead { margin: 0; max-width: 157mm; font-size: 11pt; line-height: 17pt; }
+h2 { color: var(--ink); font-size: 11.5pt; line-height: 16pt; margin: 0 0 3mm; font-weight: 600; }
+h3 { font-size: 10pt; line-height: 14pt; margin: 0 0 2mm; }
+p { margin: 0 0 3mm; }
+.report-meta { display: flex; flex-wrap: wrap; gap: 2mm 7mm; margin-top: 4mm; padding-top: 3mm; border-top: .5pt solid var(--line); color: var(--muted); font-size: 8pt; line-height: 11pt; }
+.report-meta b { color: var(--text); font-weight: 600; }
+.body { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: 5mm; row-gap: 6mm; align-content: start; }
+.full { grid-column: 1 / -1; }
+.wide { grid-column: span 4; }
+.narrow { grid-column: span 2; }
+.half { grid-column: span 3; }
+section, aside, figure { min-width: 0; margin: 0; break-inside: avoid; }
+.rule { border-top: 1pt solid var(--ink); padding-top: 3mm; }
+.note { font-size: 8.5pt; line-height: 12pt; color: var(--muted); margin-top: 2mm; }
+.limitation { border-left: 2pt solid var(--accent); padding-left: 3mm; }
+table { width: 100%; border-collapse: collapse; font-size: 9pt; line-height: 13pt; font-variant-numeric: tabular-nums; table-layout: fixed; }
+caption { text-align: left; font-weight: 600; padding-bottom: 2mm; font-size: 10pt; line-height: 14pt; }
+th, td { padding: 2.1mm 2mm; border-bottom: .5pt solid var(--line); vertical-align: top; }
+thead th { border-top: 1pt solid var(--ink); border-bottom: 1pt solid #7b8492; color: var(--ink); }
+th { text-align: left; font-weight: 600; }
+.num { text-align: right; white-space: nowrap; }
+.current { background: var(--accent-soft); }
+.total th, .total td { border-top: 1pt solid #555; font-weight: 700; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; border-top: 1pt solid var(--ink); border-bottom: .5pt solid var(--line); padding: 3mm 0; }
+.stats p { margin: 0; }
+.stat { display: block; color: var(--ink); font-size: 20pt; line-height: 27pt; font-weight: 600; margin: 1mm 0; }
+.stats p:last-child .stat { color: var(--accent); }
+.bars { margin-top: 3mm; }
+.bar-row { display: grid; grid-template-columns: 17mm 1fr 29mm; gap: 2mm; align-items: center; margin-bottom: 3mm; font-size: 9pt; line-height: 13pt; }
+.track { height: 5mm; border-left: .5pt solid var(--muted); border-bottom: .5pt solid var(--line); background: var(--ground); }
+.bar { display: block; height: 100%; width: var(--value); background: var(--accent); print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.bar-row:nth-child(2) .bar { background: var(--ink); }
+.bar-row:last-child .bar { background: #788292; }
+.scale { margin: 1mm 31mm 2mm 19mm; display: flex; justify-content: space-between; color: var(--muted); font-size: 8pt; }
+.equation { border-top: 1pt solid var(--ink); border-bottom: 1pt solid var(--ink); padding: 4mm 0; color: var(--ink); font-size: 18pt; line-height: 24pt; font-variant-numeric: tabular-nums; }
+.steps { margin: 0; padding-left: 5mm; }
+.steps li { padding-left: 1mm; margin-bottom: 3mm; }
+footer { margin-top: auto; padding-top: 3mm; border-top: .5pt solid var(--line); display: flex; justify-content: space-between; gap: 5mm; color: var(--muted); font-size: 7.5pt; line-height: 11pt; }
+@media print { body { background: white; } .page { margin: 0; } .current { print-color-adjust: exact; -webkit-print-color-adjust: exact; } }
+</style>
+</head>
+<body>
+<article class="page" id="page-1" data-page="1" data-grid-id="financial-table" aria-labelledby="title-1">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 성과 요약</span></header>
+  <div class="heading">
+    <p class="eyebrow">01 / 3개년 실적</p>
+    <h1 id="title-1"><span class="title-line">매출과 이익은 늘었지만</span><span class="title-line">영업현금은 감소했습니다</span></h1>
+    <p class="lead">2025년 매출은 120억원, 영업이익은 15억원입니다. 영업현금흐름은 전년보다 1억원 감소했습니다. 실적 성장만으로 2026년 채용 확대를 바로 승인하기는 어렵습니다.</p>
+    <p class="report-meta"><span><b>보고기간</b> 2025.01–12</span><span><b>용도</b> 이사회 검토</span><span><b>상태</b> 가상 데이터 기반 제작 시험</span></p>
+  </div>
+  <div class="body">
+    <section class="full stats" aria-label="2025년 전년 대비 증감">
+      <p>매출 증감<strong class="stat">+20.0%</strong><span>100 → 120억원</span></p>
+      <p>영업이익 증감<strong class="stat">+25.0%</strong><span>12 → 15억원</span></p>
+      <p>영업현금흐름 증감<strong class="stat">−10.0%</strong><span>10 → 9억원</span></p>
+    </section>
+    <section class="full">
+      <table data-chart-id="table-values" id="annual-table">
+        <caption>3개년 실적과 영업이익률 / 각 연도 1~12월</caption>
+        <colgroup><col style="width:40%"><col><col><col class="current"></colgroup>
+        <thead><tr><th scope="col">항목 / 단위</th><th class="num" scope="col">2023</th><th class="num" scope="col">2024</th><th class="num" scope="col">2025</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">매출 / 억원</th><td class="num">80</td><td class="num">100</td><td class="num">120</td></tr>
+          <tr><th scope="row">영업이익 / 억원</th><td class="num">8</td><td class="num">12</td><td class="num">15</td></tr>
+          <tr><th scope="row">영업현금흐름 / 억원</th><td class="num">6</td><td class="num">10</td><td class="num">9</td></tr>
+          <tr><th scope="row">영업이익률 / %</th><td class="num">10.0</td><td class="num">12.0</td><td class="num">12.5</td></tr>
+        </tbody>
+      </table>
+      <p class="note">자료: 테스트 공통 원장. 영업이익률 = 영업이익 ÷ 매출 × 100. 증감률 = (당기 ÷ 전기 − 1) × 100. 표시 비율은 소수 첫째 자리까지 계산했습니다.</p>
+    </section>
+    <section class="half rule">
+      <h2>확인된 개선</h2>
+      <p>매출은 80 → 100 → 120억원으로 증가했고 영업이익률도 10.0%에서 12.5%로 높아졌습니다. 2025년 이익률은 전년보다 0.5%p 상승했습니다.</p>
+      <p>다만 매출 증가액이 두 해 모두 20억원이라는 사실만으로 다음 해에도 같은 증가가 이어진다고 볼 수는 없습니다.</p>
+    </section>
+    <section class="half rule">
+      <h2>추가 확인이 필요한 차이</h2>
+      <p>2025년 영업이익은 증가했지만 영업현금흐름은 감소했습니다. 두 지표가 다른 방향으로 움직였다는 사실은 확인됩니다.</p>
+      <p>매출채권·재고·세금 등 세부 자료가 없어 차이의 원인은 특정할 수 없습니다. 회수 지연이나 비용 증가를 원인으로 단정하지 않습니다.</p>
+    </section>
+    <section class="full limitation">
+      <h2>검토 의견: 채용 확대안 보류 제안</h2>
+      <p>8명 추가 채용에 필요한 연간 현금지출 6억원의 집행 시기와 성과 근거가 없습니다. 매출 구성과 고객 집중도(2쪽), 현금 사용 내역(3쪽)을 확인한 뒤 재상정 자료(4쪽)를 요구하는 방안을 제안합니다. 이는 제공 자료에 근거한 검토 의견이며 이사회 결정이 아닙니다.</p>
+    </section>
+  </div>
+  <footer><span>전체 기업·수치는 테스트용 가상 자료이며 외부 감사 실적이 아닙니다.</span><span>01 / 04</span></footer>
+</article>
+
+<article class="page" id="page-2" data-page="2" data-grid-id="asymmetric-analysis" aria-labelledby="title-2">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 사업 구조</span></header>
+  <div class="heading">
+    <p class="eyebrow">02 / 사업 구성과 고객</p>
+    <h1 id="title-2"><span class="title-line">구독 매출은 절반이지만</span><span class="title-line">지속성 근거는 부족합니다</span></h1>
+    <p class="lead">2025년 구독 매출은 60억원으로 전체의 50%입니다. 상위 5개 고객 매출은 48억원입니다. 계약기간과 갱신율이 없어 다음 해 매출을 확정할 근거는 부족합니다.</p>
+  </div>
+  <div class="body">
+    <figure class="wide rule" data-chart-id="bar">
+      <h2>매출 구성 / 2025년 1~12월</h2>
+      <p>전체 매출 120억원 기준, 금액 단위: 억원</p>
+      <div class="bars">
+        <div class="bar-row"><span>구독</span><div class="track" aria-hidden="true"><i class="bar" style="--value:100%"></i></div><span class="num">60 / 50%</span></div>
+        <div class="bar-row"><span>구축</span><div class="track" aria-hidden="true"><i class="bar" style="--value:70%"></i></div><span class="num">42 / 35%</span></div>
+        <div class="bar-row"><span>유지보수</span><div class="track" aria-hidden="true"><i class="bar" style="--value:30%"></i></div><span class="num">18 / 15%</span></div>
+      </div>
+      <div class="scale"><span>0</span><span>60억원</span></div>
+      <figcaption class="note">자료: 공통 원장. 60 + 42 + 18 = 120억원, 구성비 합계 100%. 막대 길이는 금액 기준입니다.</figcaption>
+    </figure>
+    <aside class="narrow rule">
+      <h2>성장 기여는 미확인</h2>
+      <p>전년도 사업별 구성은 미제공입니다. 구독 매출이 전체 성장을 주도했다고 해석할 수 없습니다.</p>
+      <p>구독 매출 60억원을 ARR이나 계약 잔액으로 바꾸어 표시하지 않습니다.</p>
+    </aside>
+    <section class="wide rule">
+      <table data-chart-id="table-values" id="quarter-table">
+        <caption>분기별 매출 / 2025년, 단위: 억원</caption>
+        <thead><tr><th scope="col">기간</th><th scope="col" class="num">매출</th><th scope="col" class="num">연간 비중</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">1분기</th><td class="num">25</td><td class="num">20.8%</td></tr>
+          <tr><th scope="row">2분기</th><td class="num">28</td><td class="num">23.3%</td></tr>
+          <tr><th scope="row">3분기</th><td class="num">31</td><td class="num">25.8%</td></tr>
+          <tr><th scope="row">4분기</th><td class="num">36</td><td class="num">30.0%</td></tr>
+          <tr class="total"><th scope="row">연간 합계</th><td class="num">120</td><td class="num">100.0%</td></tr>
+        </tbody>
+      </table>
+      <p class="note">비중 = 분기 매출 ÷ 120 × 100. 반올림한 개별 비중 합계는 99.9%이며 연간 합계와 0.1%p 차이가 납니다.</p>
+    </section>
+    <aside class="narrow rule">
+      <h2>연말 규모와 반복성</h2>
+      <p>4분기 매출 36억원은 연간의 30.0%입니다. 매 분기 증가했지만 1개년 자료만으로 계절성이나 반복 가능한 추세를 확정하지 않습니다.</p>
+      <p>검수·청구·입금 시점이 없어 분기 매출을 같은 분기의 현금 유입으로 보지 않습니다.</p>
+    </aside>
+    <section class="full limitation">
+      <h2>상위 5개 고객: 48억원 / 총매출의 40%</h2>
+      <p>상위 5개 고객 매출 합계가 전체의 40%라는 사실은 채용안 검토 시 확인할 항목입니다. 고객별 금액, 계약기간, 갱신율은 미제공입니다. 48억원을 고객마다 균등 배분하거나 특정 고객 이탈에 따른 손실을 계산하지 않습니다.</p>
+      <p>재상정 시에는 주요 계약의 지속성과 역할별 업무량을 함께 제시할 것을 제안합니다. 매출 구성만으로 8명이라는 채용 규모의 적정성을 입증할 수 없습니다.</p>
+    </section>
+  </div>
+  <footer><span>자료: 테스트 공통 원장. 비율은 원장 값에서 계산했으며 전망치는 없습니다.</span><span>02 / 04</span></footer>
+</article>
+
+<article class="page" id="page-3" data-page="3" data-grid-id="financial-table" aria-labelledby="title-3">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 현금 흐름</span></header>
+  <div class="heading">
+    <p class="eyebrow">03 / 현금 연결</p>
+    <h1 id="title-3"><span class="title-line">기말현금은 20억원이지만</span><span class="title-line">연중 가용 수준은 확인되지 않았습니다</span></h1>
+    <p class="lead">2025년 영업현금 유입 9억원은 설비투자 6억원과 배당 3억원의 합계와 같습니다. 단순화한 모형에서 기초와 기말의 현금 잔액은 변하지 않았습니다.</p>
+  </div>
+  <div class="body">
+    <section class="full">
+      <p class="equation">20 + 9 − 6 − 3 + 0 = 20<span style="font-size:10pt"> 억원</span></p>
+      <table data-chart-id="table-values" id="cash-table">
+        <caption>2025년 현금 연결 / 금액 단위: 억원</caption>
+        <colgroup><col style="width:35%"><col style="width:17%"><col></colgroup>
+        <thead><tr><th scope="col">항목</th><th scope="col" class="num">금액</th><th scope="col">값의 성격</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">기초현금</th><td class="num">20</td><td>기간 시작 시점의 잔액</td></tr>
+          <tr><th scope="row">영업현금흐름</th><td class="num">+9</td><td>1~12월 영업현금 순유입</td></tr>
+          <tr><th scope="row">설비투자</th><td class="num">−6</td><td>1~12월 현금 사용</td></tr>
+          <tr><th scope="row">배당</th><td class="num">−3</td><td>1~12월 현금 사용</td></tr>
+          <tr><th scope="row">기타 현금흐름</th><td class="num">0</td><td>원장이 단순화를 위해 설정한 값</td></tr>
+          <tr class="total"><th scope="row">기말현금</th><td class="num">20</td><td>기간 종료 시점의 잔액</td></tr>
+        </tbody>
+      </table>
+      <p class="note">자료: 테스트 공통 원장의 단순 현금 모형. 시작·종료 잔액과 기간 중 흐름을 구분했습니다. 실제 기업의 완전한 현금흐름표가 아닙니다.</p>
+    </section>
+    <section class="half rule">
+      <h2>잔액 유지와 사용 가능액</h2>
+      <p>기말현금 20억원은 확인되지만 월별 잔액, 사용 제한 현금, 최소 운영자금은 제공되지 않았습니다. 따라서 20억원 전부를 추가 채용에 사용할 수 있다고 결론 내리지 않습니다.</p>
+      <p>연초와 연말 잔액이 같더라도 연중 잔액의 최저점이 같다는 뜻은 아닙니다. 월별 입금과 지출 일정이 필요합니다.</p>
+    </section>
+    <section class="half rule">
+      <h2>영업현금과 추가 채용 비용</h2>
+      <p>추가 채용의 연간 현금지출 요청은 6억원입니다. 2025년 영업현금 9억원과 단순 비교하면 66.7%에 해당합니다.</p>
+      <p>이는 서로 다른 연도의 금액을 비교한 부담 규모입니다. 2026년 영업현금이 9억원이라는 가정은 원장에 없으며, 그해 지출 가능액을 계산한 것이 아닙니다.</p>
+    </section>
+    <section class="full limitation">
+      <h2>9 − 6 = 3억원은 2026년 전망이 아닙니다</h2>
+      <p>다른 조건을 고정한 단순 잔여 계산일 뿐입니다. 2026년 영업현금, 설비투자, 배당, 기타 현금흐름과 채용 시점이 정해지지 않아 기말현금이나 순현금 전망으로 사용할 수 없습니다. 이 보고서는 해당 3억원을 채용 후 가용현금으로 제시하지 않습니다.</p>
+    </section>
+  </div>
+  <footer><span>금액은 모두 가상 입력값입니다. 현금 사용 가능성에 대한 별도 재무 검토가 필요합니다.</span><span>03 / 04</span></footer>
+</article>
+
+<article class="page" id="page-4" data-page="4" data-grid-id="modular-evidence" aria-labelledby="title-4">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 의사결정</span></header>
+  <div class="heading">
+    <p class="eyebrow">04 / 2026 채용 확대안</p>
+    <h1 id="title-4"><span class="title-line">채용 확대안의 집행 근거가 부족합니다</span><span class="title-line">자료를 보완한 뒤 재검토해야 합니다</span></h1>
+    <p class="lead">요청된 연간 추가 현금지출은 6억원입니다. 실적 성장과 현금 잔액은 확인됐지만, 채용 규모·시기·기대 성과를 연결하는 자료가 없어 즉시 승인 근거는 충분하지 않습니다.</p>
+  </div>
+  <div class="body">
+    <section class="wide rule">
+      <h2>보류 제안의 이유</h2>
+      <p>2025년 매출과 영업이익의 개선은 채용안을 검토할 근거입니다. 반면 영업현금흐름은 9억원으로 감소했고, 영업현금 유입과 설비투자·배당 사용액의 합계가 같습니다. 추가 채용 지출을 검토하려면 다음 해 현금계획이 필요합니다.</p>
+      <p>역할별 비용과 업무량, 추가매출 및 수주 확도가 없어 8명 전원을 같은 시점에 채용해야 하는지도 판단할 수 없습니다. 제공 자료만으로 채용 수익성이나 ROI를 확정하지 않습니다.</p>
+    </section>
+    <aside class="narrow rule">
+      <h2>결정의 범위</h2>
+      <p><strong>보류는 검토 의견입니다.</strong></p>
+      <p>이사회 승인·거절을 대신하지 않습니다. 자료 보완 후 승인, 조건부 승인, 계속 보류를 다시 판단합니다.</p>
+    </aside>
+    <section class="full">
+      <table data-chart-id="table-matrix" id="decision-table">
+        <caption>재상정에 필요한 자료와 확인 질문 / 아래 절차는 자체 제안</caption>
+        <colgroup><col style="width:23%"><col style="width:36%"><col></colgroup>
+        <thead><tr><th scope="col">검토 항목</th><th scope="col">현재 자료와 공백</th><th scope="col">추가 제출 및 확인 질문</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">채용 규모·시점</th><td>8명, 연간 지출 6억원만 제공</td><td>역할별 인원·비용·입사 월: 각 채용이 필요한 업무는 무엇인가?</td></tr>
+          <tr><th scope="row">현금 감당 가능성</th><td>2025년 기말현금 20억원; 다음 해 월별 계획 없음</td><td>월별 현금계획과 운영자금 기준: 지출 시점마다 필요한 잔액을 유지하는가?</td></tr>
+          <tr><th scope="row">수요와 성과</th><td>추가매출·수주 확도 미제공</td><td>확정 수요와 업무량 근거: 채용 인원과 기대 성과가 연결되는가?</td></tr>
+          <tr><th scope="row">고객 지속성</th><td>상위 5개 고객 매출 48억원; 계약 세부 없음</td><td>계약기간·갱신 정보: 채용을 뒷받침하는 수요가 유지되는가?</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="half rule">
+      <h2>재검토 순서 제안</h2>
+      <ol class="steps">
+        <li>채용 요청 부서가 역할·시점·비용 내역과 총액 6억원의 연결을 제시합니다.</li>
+        <li>재무 담당이 월별 현금계획과 필요한 운영자금 기준을 검토합니다.</li>
+        <li>이사회가 제출 근거와 불확실성을 함께 보고 집행 여부를 결정합니다.</li>
+      </ol>
+    </section>
+    <section class="half rule">
+      <h2>판단을 남겨 둔 항목</h2>
+      <p>최소 현금 잔액, 역할별 성과 기준, 단계 채용 여부와 재상정 일정은 결정되지 않았습니다. 이 보고서에서 임의의 합격선을 만들지 않았습니다.</p>
+      <p>자료가 제출됐다는 사실만으로 자동 승인하지 않습니다. 기준의 적절성과 충족 여부는 별도로 검토해야 합니다.</p>
+    </section>
+  </div>
+  <footer><span>테스트용 제작 초안 / 독립 재무·디자인 검수 및 Bishop 검토 전</span><span>04 / 04</span></footer>
+</article>
+</body>
+</html>

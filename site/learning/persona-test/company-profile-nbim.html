@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>가온 데이터 서비스 | 기업현황 보고서 2025</title>
+<style>
+@page { size: A4 portrait; margin: 0; }
+@font-face { font-family: Pretendard; src: url('../assets/Pretendard-400.woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: Pretendard; src: url('../assets/Pretendard-600.woff2'); font-weight: 600; font-display: swap; }
+:root { --ink: #13213a; --text: #20242b; --muted: #667080; --line: #cbd1d9; --ground: #f1f4f7; --accent: #1647d8; --accent-soft: #dfe7ff; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #e6e8eb; color: var(--text); font-family: Pretendard, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; font-size: 9.5pt; line-height: 14pt; letter-spacing: 0; word-break: keep-all; overflow-wrap: break-word; }
+.page { width: 210mm; height: 297mm; padding: 16mm 18mm 13mm; margin: 8mm auto; background: white; display: flex; flex-direction: column; break-after: page; page-break-after: always; }
+.page:last-child { break-after: auto; page-break-after: auto; }
+.running { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 8mm; border-bottom: .6pt solid var(--line); padding-bottom: 3mm; color: var(--muted); font-size: 8pt; line-height: 11pt; }
+.running strong { color: var(--ink); font-weight: 600; }
+.heading { margin: 7mm 0 6mm; }
+.eyebrow { margin: 0 0 2mm; color: var(--accent); font-size: 8.5pt; font-weight: 600; }
+h1 { max-width: 174mm; margin: 0 0 3mm; color: var(--ink); font-size: 22pt; line-height: 28pt; font-weight: 600; }
+.title-line { display: block; white-space: nowrap; }
+.lead { margin: 0; max-width: 157mm; font-size: 11pt; line-height: 17pt; }
+h2 { color: var(--ink); font-size: 11.5pt; line-height: 16pt; margin: 0 0 3mm; font-weight: 600; }
+h3 { font-size: 10pt; line-height: 14pt; margin: 0 0 2mm; }
+p { margin: 0 0 3mm; }
+.report-meta { display: flex; flex-wrap: wrap; gap: 2mm 7mm; margin-top: 4mm; padding-top: 3mm; border-top: .5pt solid var(--line); color: var(--muted); font-size: 8pt; line-height: 11pt; }
+.report-meta b { color: var(--text); font-weight: 600; }
+.body { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: 5mm; row-gap: 6mm; align-content: start; }
+.full { grid-column: 1 / -1; }
+.wide { grid-column: span 4; }
+.narrow { grid-column: span 2; }
+.half { grid-column: span 3; }
+section, aside, figure { min-width: 0; margin: 0; break-inside: avoid; }
+.rule { border-top: 1pt solid var(--ink); padding-top: 3mm; }
+.note { font-size: 8.5pt; line-height: 12pt; color: var(--muted); margin-top: 2mm; }
+.limitation { border-left: 2pt solid var(--accent); padding-left: 3mm; }
+table { width: 100%; border-collapse: collapse; font-size: 9pt; line-height: 13pt; font-variant-numeric: tabular-nums; table-layout: fixed; }
+caption { text-align: left; font-weight: 600; padding-bottom: 2mm; font-size: 10pt; line-height: 14pt; }
+th, td { padding: 2.1mm 2mm; border-bottom: .4pt solid var(--line); vertical-align: top; }
+thead th { border-top: 0; border-bottom: 0; background: var(--ink); color: white; }
+th { text-align: left; font-weight: 600; }
+.num { text-align: right; white-space: nowrap; }
+.current { background: var(--accent-soft); }
+.total th, .total td { border-top: .4pt solid var(--line); background: var(--ground); font-weight: 600; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; border-top: 1pt solid var(--ink); border-bottom: .5pt solid var(--line); padding: 3mm 0; }
+.stats p { margin: 0; }
+.stat { display: block; color: var(--ink); font-size: 20pt; line-height: 27pt; font-weight: 600; margin: 1mm 0; }
+.stats p:last-child .stat { color: var(--accent); }
+.bars { margin-top: 3mm; }
+.bar-row { display: grid; grid-template-columns: 17mm 1fr 29mm; gap: 2mm; align-items: center; margin-bottom: 3mm; font-size: 9pt; line-height: 13pt; }
+.track { height: 5mm; border-left: .5pt solid var(--muted); border-bottom: .5pt solid var(--line); background: var(--ground); }
+.bar { display: block; height: 100%; width: var(--value); background: var(--accent); print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.bar-row:nth-child(2) .bar { background: var(--ink); }
+.bar-row:last-child .bar { background: #788292; }
+.scale { margin: 1mm 31mm 2mm 19mm; display: flex; justify-content: space-between; color: var(--muted); font-size: 8pt; }
+.equation { border-top: 1pt solid var(--ink); border-bottom: 1pt solid var(--ink); padding: 4mm 0; color: var(--ink); font-size: 18pt; line-height: 24pt; font-variant-numeric: tabular-nums; }
+.steps { margin: 0; padding-left: 5mm; }
+.steps li { padding-left: 1mm; margin-bottom: 3mm; }
+footer { margin-top: auto; padding-top: 3mm; border-top: .5pt solid var(--line); display: flex; justify-content: space-between; gap: 5mm; color: var(--muted); font-size: 7.5pt; line-height: 11pt; }
+
+/* 01. KPI + narrative: a narrow decision rail beside a wider reading field. */
+.page--summary .heading { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: 5mm; align-items: end; }
+.page--summary .heading .eyebrow { grid-column: 1 / -1; }
+.page--summary .heading h1 { grid-column: 1 / span 4; margin-bottom: 0; }
+.page--summary .heading .lead { grid-column: 5 / span 2; font-size: 9.5pt; line-height: 14.5pt; }
+.page--summary .heading .report-meta { grid-column: 1 / -1; }
+.page--summary .stats { grid-template-columns: 1.25fr 1fr 1fr; padding: 4mm 0 3.5mm; }
+.page--summary .stat { font-size: 30pt; line-height: 34pt; }
+.page--summary .stats p:first-child { padding-right: 5mm; border-right: .5pt solid var(--line); }
+
+/* 02. Table + chart: compact evidence and interpretation stay asymmetric. */
+.page--business .heading { margin-bottom: 8mm; }
+.page--business .wide { grid-column: span 4; }
+.page--business .narrow { grid-column: span 2; }
+.page--business .bars { margin-top: 5mm; }
+.page--business .bar-row { margin-bottom: 4mm; }
+
+/* 03. Financial note: denser typography is limited to this specialist page. */
+.page--financial .heading { margin: 5mm 0 4mm; }
+.page--financial h1 { font-size: 20pt; line-height: 25pt; }
+.page--financial .lead { max-width: 145mm; font-size: 9.5pt; line-height: 14pt; }
+.page--financial table { font-size: 8.25pt; line-height: 11.5pt; }
+.page--financial th, .page--financial td { padding: 1.55mm 1.8mm; }
+.page--financial .note { font-size: 7.5pt; line-height: 10.5pt; }
+.page--financial .equation { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 5mm; font-size: 24pt; line-height: 30pt; }
+.page--financial .equation small { color: var(--muted); font-size: 8pt; line-height: 11pt; font-weight: 400; }
+
+/* 04. Decision page: evidence matrix dominates; actions form a lower band. */
+.page--decision .heading { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: 5mm; }
+.page--decision .heading .eyebrow { grid-column: 1 / -1; }
+.page--decision .heading h1 { grid-column: 1 / span 4; }
+.page--decision .heading .lead { grid-column: 5 / span 2; font-size: 9.5pt; line-height: 14.5pt; }
+.page--decision #decision-table { font-size: 8.5pt; line-height: 12pt; }
+.page--decision #decision-table th, .page--decision #decision-table td { padding: 1.8mm; }
+.section-nav { display: grid; gap: 2mm; justify-items: end; color: #9aa3b1; font-size: 8pt; line-height: 11pt; }
+.section-nav b { color: var(--accent); font-weight: 600; }
+.section-nav span::after { content: ""; display: inline-block; width: 2.4mm; height: 2.4mm; margin-left: 3mm; border-radius: 50%; background: #c8ced6; }
+.section-nav b::after { background: var(--accent); }
+.page--cover { padding-top: 18mm; background: #f7fbfc; }
+.cover-top { display: grid; grid-template-columns: 1fr auto; align-items: start; }
+.cover-pill { display: inline-block; width: max-content; margin: 0; padding: 2.4mm 6mm; border: 1pt solid var(--accent); border-radius: 20mm; color: var(--ink); font-size: 10pt; line-height: 14pt; }
+.cover-main { margin-top: 48mm; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: 5mm; }
+.cover-main h1 { grid-column: 1 / span 5; max-width: none; font-size: 34pt; line-height: 42pt; margin: 0 0 8mm; }
+.cover-main .cover-deck { grid-column: 1 / span 4; font-size: 13pt; line-height: 20pt; margin: 0; }
+.cover-facts { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; margin-top: 24mm; padding-top: 5mm; border-top: 1pt solid var(--ink); }
+.cover-facts p { margin: 0; color: var(--muted); font-size: 8pt; line-height: 11pt; }
+.cover-facts strong { display: block; margin-top: 1mm; color: var(--ink); font-size: 11pt; line-height: 15pt; }
+.page--charts .heading { margin-bottom: 12mm; }
+.chart-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10mm 8mm; }
+.chart-panel { border-top: 1pt solid var(--ink); padding-top: 3mm; min-width: 0; }
+.chart-panel h2 { min-height: 10mm; margin-bottom: 1mm; }
+.chart-panel .chart-sub { min-height: 9mm; color: var(--muted); font-size: 8pt; line-height: 11pt; }
+.chart-panel svg { display: block; width: 100%; height: 45mm; overflow: visible; }
+.chart-panel .chart-note { margin: 2mm 0 0; color: var(--muted); font-size: 7.5pt; line-height: 10.5pt; }
+.chart-axis { stroke: #cbd1d9; stroke-width: .7; }
+.chart-main { fill: none; stroke: var(--accent); stroke-width: 2.5; }
+.chart-dark { fill: none; stroke: var(--ink); stroke-width: 2.5; }
+.chart-muted { fill: none; stroke: #9ba5b2; stroke-width: 2.5; }
+.chart-fill-main { fill: var(--accent); }
+.chart-fill-dark { fill: var(--ink); }
+.chart-fill-muted { fill: #9ba5b2; }
+.chart-label { fill: #667080; font: 8px Pretendard, sans-serif; }
+.page--narrative .narrative-stage { margin-top: 42mm; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: 5mm; }
+.narrative-kpi { grid-column: 1 / span 2; align-self: start; }
+.narrative-kpi strong { display: block; color: var(--accent); font-size: 34pt; line-height: 40pt; font-weight: 600; }
+.narrative-kpi p { color: var(--ink); font-size: 16pt; line-height: 23pt; font-weight: 600; }
+.narrative-copy { grid-column: 3 / -1; font-size: 10pt; line-height: 16pt; }
+.narrative-copy h2 { margin-top: 7mm; font-size: 16pt; line-height: 21pt; }
+.narrative-copy p { margin-bottom: 4mm; }
+.page--industry .heading { margin-bottom: 7mm; }
+.page--industry .industry-lead { display: grid; grid-template-columns: 1.7fr 1fr; gap: 9mm; margin-bottom: 8mm; }
+.market-scope { padding: 4mm; background: var(--ground); }
+.market-scope h2 { margin-bottom: 2mm; }
+.market-scope dl { display: grid; grid-template-columns: 15mm 1fr; gap: 1.5mm 3mm; margin: 0; font-size: 8pt; line-height: 11pt; }
+.market-scope dt { color: var(--muted); font-weight: 600; }
+.market-scope dd { margin: 0; color: var(--ink); }
+.data-note { margin-top: 3mm; padding-top: 2.5mm; border-top: .4pt solid var(--line); color: var(--muted); font-size: 7.5pt; line-height: 10.5pt; }
+.industry-map { display: grid; grid-template-columns: 1fr 1.55fr 1fr; gap: 3mm; margin: 3mm 0 7mm; align-items: stretch; }
+.industry-map__group { padding: 3.5mm; background: var(--ground); }
+.industry-map__group > span { display: block; margin-bottom: 3mm; color: var(--muted); font-size: 7pt; font-weight: 600; }
+.industry-map__group strong { display: block; margin-bottom: 1.5mm; font-size: 10pt; line-height: 13pt; }
+.industry-map__group p { margin: 0; color: var(--muted); font-size: 8pt; line-height: 11pt; }
+.industry-map__core { position: relative; padding: 3.5mm; background: var(--accent-soft); border-top: 1pt solid var(--accent); }
+.industry-map__core::before, .industry-map__core::after { content: ""; position: absolute; top: 50%; width: 3mm; border-top: .6pt solid var(--accent); }
+.industry-map__core::before { left: -3mm; }
+.industry-map__core::after { right: -3mm; }
+.industry-map__core > span { display: block; margin-bottom: 3mm; color: var(--accent); font-size: 7pt; font-weight: 600; }
+.core-layer { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm; }
+.core-layer div { padding: 2.5mm; background: white; }
+.core-layer b { display: block; margin-bottom: 1mm; font-size: 9pt; line-height: 12pt; }
+.core-layer small { color: var(--muted); font-size: 7.5pt; line-height: 10pt; }
+.industry-bottom { display: grid; grid-template-columns: 1fr 1.15fr; gap: 9mm; }
+.signal-list { display: grid; gap: 2.5mm; }
+.signal-list div { display: grid; grid-template-columns: 15mm 1fr; gap: 3mm; padding-top: 2.5mm; border-top: .4pt solid var(--line); }
+.signal-list b { color: var(--accent); font-size: 8pt; line-height: 11pt; }
+.signal-list p { margin: 0; font-size: 8.5pt; line-height: 12pt; }
+.position-table { width: 100%; table-layout: fixed; font-size: 8pt; line-height: 11.5pt; }
+.position-table th, .position-table td { padding: 2mm 1.5mm; }
+.position-table thead th { background: var(--ink); color: white; }
+.position-table th:first-child { width: 25%; }
+.position-table .ga-on { background: var(--accent-soft); color: var(--ink); font-weight: 600; }
+.page--customers .customer-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; margin-bottom: 8mm; }
+.customer-band p { border-top: 1pt solid var(--ink); padding-top: 3mm; }
+.customer-band strong { display: block; color: var(--ink); font-size: 24pt; line-height: 30pt; }
+.page--strategy .strategy-line { display: grid; grid-template-columns: 1.1fr 2fr; gap: 10mm; margin-bottom: 8mm; border-top: 1pt solid var(--ink); padding-top: 4mm; }
+.strategy-line strong { color: var(--accent); font-size: 28pt; line-height: 34pt; }
+.strategy-roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
+.strategy-roadmap section { border-top: .5pt solid var(--line); padding-top: 3mm; }
+.risk-register { display: grid; grid-template-columns: 38mm 1fr 35mm; }
+.risk-register > * { padding: 3mm 2mm; border-bottom: .4pt solid var(--line); }
+.risk-register .head { color: white; background: var(--ink); font-weight: 600; border-top: 0; border-bottom: 0; }
+.risk-level { font-weight: 600; color: var(--accent); }
+.stack { display: block; }
+.page-name { margin-bottom: 3mm; font-size: 17pt; line-height: 22pt; font-weight: 600; }
+.diagram { display: grid; align-items: stretch; gap: 3mm; margin: 6mm 0; }
+.diagram--industry { grid-template-columns: repeat(4, 1fr); }
+.diagram--business { grid-template-columns: 1fr 1fr 1.35fr 1fr; }
+.diagram-node { position: relative; min-height: 31mm; padding: 4mm 3mm; border-top: 1pt solid var(--ink); background: var(--ground); }
+.diagram-node:not(:last-child)::after { content: "→"; position: absolute; right: -3.1mm; top: 12mm; z-index: 2; color: var(--accent); font-size: 12pt; font-weight: 600; }
+.diagram-node b { display: block; margin-bottom: 2mm; color: var(--ink); }
+.diagram-node span { color: var(--muted); font-size: 8pt; line-height: 11pt; }
+.diagram-node--accent { border-top-color: var(--accent); background: var(--accent-soft); }
+.donut-layout { display: grid; grid-template-columns: 52mm 1fr; gap: 7mm; align-items: center; }
+.donut-layout svg { width: 52mm; height: 52mm; transform: rotate(-90deg); }
+.donut-layout circle { fill: none; stroke-width: 18; }
+.donut-base { stroke: #e5e9ef; }
+.donut-subscription { stroke: var(--accent); stroke-dasharray: 50 50; }
+.donut-project { stroke: var(--ink); stroke-dasharray: 35 65; stroke-dashoffset: -50; }
+.donut-support { stroke: #9ba5b2; stroke-dasharray: 15 85; stroke-dashoffset: -85; }
+.legend { display: grid; gap: 3mm; }
+.legend p { display: grid; grid-template-columns: 4mm 1fr auto; gap: 2mm; margin: 0; align-items: baseline; }
+.swatch { width: 3mm; height: 3mm; background: var(--accent); }
+.swatch--dark { background: var(--ink); }.swatch--muted { background: #9ba5b2; }
+.page--statements .heading { margin-bottom: 5mm; }
+.statement-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7mm; }
+.statement-grid .statement--wide { grid-column: 1 / -1; }
+.statement-grid table { font-size: 8pt; line-height: 10.5pt; }
+.statement-grid th, .statement-grid td { padding: 1.2mm 1.5mm; }
+.statement-grid caption { font-size: 10pt; line-height: 13pt; }
+.chart-gridline { stroke: #e1e5ea; stroke-width: .7; }
+.chart-value { fill: var(--ink); font: 600 8px Pretendard, sans-serif; }
+.page--visual .visual-grid { display: grid; grid-template-columns: 1.55fr 1fr; grid-template-rows: 72mm 72mm; gap: 5mm; }
+.visual-grid figure { position: relative; background: var(--ground); }
+.visual-grid figure:first-child { grid-row: 1 / span 2; }
+.visual-grid img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.visual-grid figcaption { position: absolute; inset: auto 0 0; padding: 4mm; color: white; background: rgba(8, 19, 38, .78); font-size: 8pt; line-height: 11pt; }
+.visual-grid figcaption strong { display: block; margin-bottom: 1mm; font-size: 10pt; line-height: 13pt; }
+.visual-note { display: grid; grid-template-columns: 2fr 1fr; gap: 8mm; margin-top: 7mm; }
+.visual-note p { margin: 0; }
+@media print { body { background: white; } .page { margin: 0; } .current { print-color-adjust: exact; -webkit-print-color-adjust: exact; } }
+</style>
+</head>
+<body>
+<article class="page page--cover" id="cover" data-page="1" data-grid-id="cover" aria-labelledby="cover-title">
+  <div class="cover-top">
+    <p class="cover-pill">기업현황</p>
+    <nav class="section-nav" aria-label="보고서 구성"><b>기업현황</b><span>사업구조</span><span>재무·현금</span><span>전략·리스크</span></nav>
+  </div>
+  <div class="cover-main">
+    <h1 id="cover-title"><span class="title-line">가온 데이터 서비스</span><span class="title-line">기업현황 보고서 2025</span></h1>
+    <p class="cover-deck">회사의 정체성, 산업 환경, 사업 구조, 고객 기반, 재무 상태, 중기 비전과 핵심 위험을 한 흐름으로 정리한 2025년 기업현황 보고서입니다.</p>
+    <div class="cover-facts">
+      <p>보고기간<strong>2025.01–12</strong></p>
+      <p>주요 독자<strong>이사회·경영진</strong></p>
+      <p>문서 상태<strong>가상 데이터 기반 제작 시험</strong></p>
+    </div>
+  </div>
+  <footer><span>가온 데이터 서비스</span><span>기업현황 보고서 2025</span><span>01 / 12</span></footer>
+</article>
+
+<article class="page page--narrative" id="company-overview" data-page="2" data-grid-id="kpi-narrative" aria-labelledby="company-overview-title">
+  <div class="cover-top">
+    <p class="cover-pill">회사 개요</p>
+    <nav class="section-nav" aria-label="보고서 구성"><b>기업현황</b><span>산업·사업</span><span>재무</span><span>전략·리스크</span></nav>
+  </div>
+  <div class="narrative-stage">
+    <aside class="narrative-kpi">
+      <strong>142개</strong>
+      <p><span class="stack">제조·유통 기업이</span><span class="stack">가온의 데이터 플랫폼을 사용합니다.</span></p>
+    </aside>
+    <section class="narrative-copy">
+      <p>가온 데이터 서비스는 제조·유통 기업의 판매, 재고, 설비, 고객 데이터를 한곳에 연결해 운영 현황을 분석하는 B2B 소프트웨어 기업입니다. 2018년 설립됐으며 서울에 본사를 두고 있습니다. 2025년 말 임직원은 86명입니다.</p>
+      <p>주요 고객은 여러 사업장과 판매 채널을 운영하지만 자체 데이터 조직이 크지 않은 중견기업입니다. 가온은 데이터 수집과 정제, 경영 대시보드, 수요 예측 기능을 구독형 플랫폼으로 제공하고, 초기 구축과 운영 지원을 별도 매출로 인식합니다.</p>
+      <p>2025년 매출은 120억원으로 전년 대비 20% 증가했습니다. 구독 매출은 60억원으로 전체의 절반이며, 구축 42억원과 유지보수 18억원이 나머지를 구성합니다. 아직 구축 매출 의존도가 높아 순수 SaaS 기업과 같은 반복 매출 구조로 보기는 어렵습니다.</p>
+      <h2 id="company-overview-title">데이터 연결에서 의사결정 자동화로</h2>
+      <p>회사는 2028년까지 핵심 고객의 주문·재고·설비 데이터를 실시간으로 연결하고, 산업별 예측 모델을 적용하는 운영 인텔리전스 플랫폼으로 확장한다는 비전을 두고 있습니다. 성장을 위해 제품 개발과 고객 성공 조직 확대가 필요하지만, 현금 창출력과 고객 집중도도 함께 관리해야 합니다.</p>
+      <p>2025년 상위 5개 고객 매출은 48억원으로 전체의 40%입니다. 고객별 계약기간과 갱신율은 이번 가상 원장에 포함되지 않았습니다. 따라서 고객 수 증가만으로 매출의 지속성을 단정하지 않습니다.</p>
+    </section>
+  </div>
+  <footer><span>가온 데이터 서비스</span><span>기업현황 보고서 2025</span><span>02 / 12</span></footer>
+</article>
+
+<article class="page page--visual" id="product-and-operations" data-page="3" data-grid-id="editorial-image-spread" aria-labelledby="visual-title">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 제품과 운영 현장</span></header>
+  <div class="heading">
+    <p class="eyebrow">01 / 제품과 현장</p>
+    <h1 class="page-name" id="visual-title">제품과 운영 현장</h1>
+    <p class="lead">가온의 제품은 공장과 물류 현장에서 생성되는 데이터를 연결해 운영 현황을 화면으로 보여주고, 재고·수요·설비 관련 의사결정을 지원합니다.</p>
+  </div>
+  <div class="visual-grid">
+    <figure>
+      <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="생산 설비가 배치된 제조 공장 내부" referrerpolicy="no-referrer">
+      <figcaption><strong>제조 운영</strong>설비·생산·품질 데이터를 연결해 공정별 상태와 이상 징후를 확인합니다.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="랙과 화물이 배치된 물류 창고" referrerpolicy="no-referrer">
+      <figcaption><strong>유통과 물류</strong>판매·재고·입출고 데이터를 통합해 채널과 거점별 운영을 비교합니다.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="노트북 화면에 표시된 데이터 분석 대시보드" referrerpolicy="no-referrer">
+      <figcaption><strong>운영 대시보드 사용 장면</strong>현황 조회에서 예측·알림·조치 추적까지 이어지는 제품 사용 맥락을 보여줍니다.</figcaption>
+    </figure>
+  </div>
+  <div class="visual-note">
+    <p>사진은 가상 기업의 실제 사옥·고객·제품 화면이 아니라 사업 환경과 사용 장면을 설명하기 위한 연출 이미지입니다. 실제 기업 보고서에서는 자체 촬영 이미지와 실제 제품 화면으로 교체해야 합니다.</p>
+    <p class="note"><span class="stack">이미지 출처: Unsplash</span><span class="stack">제작 시험용 외부 이미지</span></p>
+  </div>
+  <footer><span>가온 데이터 서비스</span><span>기업현황 보고서 2025</span><span>03 / 12</span></footer>
+</article>
+
+<article class="page page--summary" id="page-1" data-page="1" data-grid-id="kpi-narrative" aria-labelledby="title-1">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 성과 요약</span></header>
+  <div class="heading">
+    <p class="eyebrow">02 / 핵심 성과</p>
+    <h1 class="page-name" id="title-1">2025 핵심 성과</h1>
+    <p class="lead">2025년 매출은 120억원, 영업이익은 15억원입니다. 영업현금흐름은 전년보다 1억원 감소했습니다. 손익 성장과 현금 창출력이 서로 다른 방향으로 움직였다는 점을 함께 봐야 합니다.</p>
+    <p class="report-meta"><span><b>보고기간</b> 2025.01–12</span><span><b>용도</b> 이사회 검토</span><span><b>상태</b> 가상 데이터 기반 제작 시험</span></p>
+  </div>
+  <div class="body">
+    <section class="full stats" aria-label="2025년 전년 대비 증감">
+      <p>매출 증감<strong class="stat">+20.0%</strong><span>100 → 120억원</span></p>
+      <p>영업이익 증감<strong class="stat">+25.0%</strong><span>12 → 15억원</span></p>
+      <p>영업현금흐름 증감<strong class="stat">−10.0%</strong><span>10 → 9억원</span></p>
+    </section>
+    <section class="full">
+      <table data-chart-id="table-values" id="annual-table">
+        <caption>3개년 실적과 영업이익률 / 각 연도 1~12월</caption>
+        <colgroup><col style="width:40%"><col><col><col class="current"></colgroup>
+        <thead><tr><th scope="col">항목 / 단위</th><th class="num" scope="col">2023</th><th class="num" scope="col">2024</th><th class="num" scope="col">2025</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">매출 / 억원</th><td class="num">80</td><td class="num">100</td><td class="num">120</td></tr>
+          <tr><th scope="row">영업이익 / 억원</th><td class="num">8</td><td class="num">12</td><td class="num">15</td></tr>
+          <tr><th scope="row">영업현금흐름 / 억원</th><td class="num">6</td><td class="num">10</td><td class="num">9</td></tr>
+          <tr><th scope="row">영업이익률 / %</th><td class="num">10.0</td><td class="num">12.0</td><td class="num">12.5</td></tr>
+        </tbody>
+      </table>
+      <p class="note">자료: 테스트 공통 원장. 영업이익률 = 영업이익 ÷ 매출 × 100. 증감률 = (당기 ÷ 전기 − 1) × 100. 표시 비율은 소수 첫째 자리까지 계산했습니다.</p>
+    </section>
+    <section class="half rule">
+      <h2>확인된 개선</h2>
+      <p>매출은 80 → 100 → 120억원으로 증가했고 영업이익률도 10.0%에서 12.5%로 높아졌습니다. 2025년 이익률은 전년보다 0.5%p 상승했습니다.</p>
+      <p>다만 매출 증가액이 두 해 모두 20억원이라는 사실만으로 다음 해에도 같은 증가가 이어진다고 볼 수는 없습니다.</p>
+    </section>
+    <section class="half rule">
+      <h2>추가 확인이 필요한 차이</h2>
+      <p>2025년 영업이익은 증가했지만 영업현금흐름은 감소했습니다. 두 지표가 다른 방향으로 움직였다는 사실은 확인됩니다.</p>
+      <p>매출채권·재고·세금 등 세부 자료가 없어 차이의 원인은 특정할 수 없습니다. 회수 지연이나 비용 증가를 원인으로 단정하지 않습니다.</p>
+    </section>
+    <section class="full limitation">
+      <h2>핵심 해석</h2>
+      <p>매출 성장과 이익률 개선은 긍정적이지만, 영업현금 감소와 상위 고객 집중은 성장의 질을 판단할 때 함께 확인해야 합니다. 이후 지면에서 사업 구조, 고객 기반, 재무제표와 현금흐름을 순서대로 연결해 봅니다.</p>
+    </section>
+  </div>
+  <footer><span>가온 데이터 서비스</span><span>기업현황 보고서 2025</span><span>04 / 12</span></footer>
+</article>
+
+<article class="page page--industry" id="industry" data-page="4" data-grid-id="industry-analysis" aria-labelledby="industry-title">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 산업 현황</span></header>
+  <div class="heading">
+    <p class="eyebrow">03 / 산업 환경</p>
+    <h1 class="page-name" id="industry-title">산업 환경</h1>
+    <p class="lead">가온은 기존 운영 시스템과 고객의 업무 의사결정 사이에서 데이터를 연결·정제하고 분석하는 영역에 있습니다. 이 페이지는 시장 범위, 산업 구조와 경쟁 방식을 함께 설명합니다.</p>
+  </div>
+  <div class="industry-lead">
+    <section class="industry-context">
+      <h2>시장 정의</h2>
+      <p>이 보고서의 대상 시장은 국내 중견 제조·유통 기업이 구매하는 데이터 통합, 운영 분석, 수요 예측 소프트웨어와 구축 서비스입니다. 고객은 기존 ERP·MES를 교체하기보다 여러 사업장의 데이터를 연결해 재고, 생산, 판매 현황을 더 자주 확인하려 합니다.</p>
+      <p>경쟁의 핵심은 단순 시각화가 아니라 기존 시스템과의 연결 범위, 산업별 데이터 모델, 구축 이후 운영 안정성입니다.</p>
+    </section>
+    <aside class="market-scope">
+      <h2>분석 범위</h2>
+      <dl>
+        <dt>고객</dt><dd>국내 중견 제조·유통 기업</dd>
+        <dt>수요</dt><dd>데이터 통합·운영 분석·예측</dd>
+        <dt>제외</dt><dd>범용 BI, 자체 개발, 단순 인프라</dd>
+      </dl>
+      <p class="data-note">시장 규모와 성장률은 비교 가능한 공식 통계가 확보되지 않아 본 분석에서 제외했습니다.</p>
+    </aside>
+  </div>
+  <h2>산업 구조와 가온의 역할</h2>
+  <div class="industry-map" role="img" aria-label="외부 운영 시스템의 데이터를 가온이 연결하고 분석해 고객 업무 의사결정으로 전달하는 산업 구조">
+    <div class="industry-map__group">
+      <span>기존 운영 시스템</span>
+      <strong>데이터가 생성되는 영역</strong>
+      <p>ERP · MES · POS<br>설비 · 물류 · 고객 데이터</p>
+    </div>
+    <div class="industry-map__core">
+      <span>가온의 핵심 제공 영역</span>
+      <div class="core-layer">
+        <div><b>연결·정제</b><small>커넥터<br>산업 데이터 모델</small></div>
+        <div><b>분석·예측</b><small>운영 대시보드<br>수요·재고·이상 탐지</small></div>
+      </div>
+    </div>
+    <div class="industry-map__group">
+      <span>고객 업무</span>
+      <strong>판단과 실행이 일어나는 영역</strong>
+      <p>발주 · 생산 · 배치<br>알림 · 승인 · 추적</p>
+    </div>
+  </div>
+  <div class="industry-bottom">
+    <section>
+      <h2>시장 변화</h2>
+      <div class="signal-list">
+        <div><b>수요</b><p>월말 취합에서 벗어나 사업장별 재고와 판매를 일 단위로 확인하려는 요구가 커지고 있습니다.</p></div>
+        <div><b>경쟁</b><p>ERP·클라우드 사업자는 기존 계약에 분석 기능을 묶어 도입 장벽을 낮출 수 있습니다.</p></div>
+      </div>
+    </section>
+    <section>
+      <h2>경쟁 방식과 가온의 포지션</h2>
+      <table class="position-table">
+        <thead><tr><th>유형</th><th>강점</th><th>도입 부담</th></tr></thead>
+        <tbody>
+          <tr><th>ERP·클라우드</th><td>기존 계약과 제품 생태계</td><td>업무별 커스터마이징</td></tr>
+          <tr><th>자체 개발</th><td>내부 업무에 최적화</td><td>개발·운영 인력 상시 필요</td></tr>
+          <tr class="ga-on"><th>가온</th><td>기존 시스템 연결·산업 모델</td><td>초기 데이터 정합성 검증</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <footer><span>가온 데이터 서비스</span><span>기업현황 보고서 2025</span><span>05 / 12</span></footer>
+</article>
+
+<article class="page page--business" id="page-2" data-page="2" data-grid-id="table-chart-asymmetry" aria-labelledby="title-2">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 사업 구조</span></header>
+  <div class="heading">
+    <p class="eyebrow">04 / 사업 구조</p>
+    <h1 class="page-name" id="title-2">사업 구조</h1>
+    <p class="lead">2025년 구독 매출은 60억원으로 전체의 50%입니다. 상위 5개 고객 매출은 48억원입니다. 계약기간과 갱신율이 없어 다음 해 매출을 확정할 근거는 부족합니다.</p>
+  </div>
+  <h2>제품과 수익이 만들어지는 흐름</h2>
+  <div class="diagram diagram--business" role="img" aria-label="고객 데이터에서 가온 플랫폼과 서비스, 수익으로 이어지는 사업 구조">
+    <div class="diagram-node"><b>고객 운영 데이터</b><span class="stack">판매 · 재고 · 설비</span><span class="stack">ERP · MES · POS</span></div>
+    <div class="diagram-node diagram-node--accent"><b>가온 데이터 허브</b><span class="stack">연결 · 정제 · 권한</span><span class="stack">산업별 공통 모델</span></div>
+    <div class="diagram-node diagram-node--accent"><b>제품과 서비스</b><span class="stack">운영 대시보드 · 예측 모듈</span><span class="stack">초기 구축 · 고객 성공</span></div>
+    <div class="diagram-node"><b>고객 가치</b><span class="stack">재고 감소 · 납기 개선</span><span class="stack">의사결정 시간 단축</span></div>
+  </div>
+  <div class="body">
+    <figure class="wide rule" data-chart-id="donut">
+      <h2>2025년 매출 구성</h2>
+      <div class="donut-layout">
+        <svg viewBox="0 0 120 120" role="img" aria-label="구독 50퍼센트, 구축 35퍼센트, 유지보수 15퍼센트 도넛 차트">
+          <circle class="donut-base" cx="60" cy="60" r="42" pathLength="100"/>
+          <circle class="donut-subscription" cx="60" cy="60" r="42" pathLength="100"/>
+          <circle class="donut-project" cx="60" cy="60" r="42" pathLength="100"/>
+          <circle class="donut-support" cx="60" cy="60" r="42" pathLength="100"/>
+        </svg>
+        <div class="legend">
+          <p><i class="swatch"></i><span>구독</span><strong>60억원 · 50%</strong></p>
+          <p><i class="swatch swatch--dark"></i><span>구축</span><strong>42억원 · 35%</strong></p>
+          <p><i class="swatch swatch--muted"></i><span>유지보수</span><strong>18억원 · 15%</strong></p>
+        </div>
+      </div>
+      <figcaption class="note">총매출 120억원. 면적 비교보다 정확한 값 조회가 쉽도록 직접 라벨을 병기했습니다.</figcaption>
+    </figure>
+    <aside class="narrow rule">
+      <h2>반복 매출의 질은 미확인</h2>
+      <p>구독이 절반을 차지하지만 계약기간과 갱신율이 없어 ARR이나 확정 계약잔액으로 해석하지 않습니다.</p>
+    </aside>
+    <section class="half rule"><h2>구독</h2><p>플랫폼 사용권과 표준 기능 업데이트. 고객 수와 사용 범위가 늘수록 확장 가능한 수익원입니다.</p></section>
+    <section class="half rule"><h2>구축·유지보수</h2><p>데이터 연동과 초기 설정, 운영 지원. 도입을 촉진하지만 고객별 개발이 늘면 마진과 확장성이 낮아질 수 있습니다.</p></section>
+  </div>
+  <footer><span>가온 데이터 서비스</span><span>기업현황 보고서 2025</span><span>06 / 12</span></footer>
+</article>
+
+<article class="page page--customers" id="customers" data-page="6" data-grid-id="customer-profile" aria-labelledby="customers-title">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 고객과 시장 접근</span></header>
+  <div class="heading">
+    <p class="eyebrow">05 / 고객 기반</p>
+    <h1 class="page-name" id="customers-title">고객 기반과 시장 접근</h1>
+    <p class="lead">2025년 말 고객은 142개입니다. 상위 5개 고객이 매출의 40%를 차지해 신규 고객 확보와 기존 대형 고객 유지가 동시에 중요합니다.</p>
+  </div>
+  <div class="customer-band">
+    <p>활성 고객<strong>142개</strong><span>제조 92 · 유통 50</span></p>
+    <p>상위 5개 고객 매출<strong>48억원</strong><span>총매출의 40%</span></p>
+    <p>임직원<strong>86명</strong><span>2025년 말</span></p>
+  </div>
+  <div class="body">
+    <section class="wide rule">
+      <h2>핵심 고객</h2>
+      <p>가온의 주 고객은 매출 500억–5,000억원 규모의 제조·유통 기업입니다. 여러 공장, 물류센터 또는 판매 채널을 운영해 데이터가 분산돼 있지만 대규모 자체 개발 조직은 보유하지 않은 기업이 주요 대상입니다.</p>
+      <p>첫 계약은 특정 사업부의 재고 또는 판매 분석으로 시작하고, 데이터 품질과 활용 성과가 확인되면 다른 사업장과 예측 기능으로 범위를 넓히는 방식입니다.</p>
+    </section>
+    <aside class="narrow rule">
+      <h2>구매 결정자</h2>
+      <p>COO·CFO·데이터 책임자가 경제적 구매자이며, 현업 운영팀과 IT팀이 실제 도입 범위와 연동 난이도를 검토합니다.</p>
+    </aside>
+    <section class="half rule">
+      <h2>판매 방식</h2>
+      <p>직접 영업이 초기 진단과 제안을 담당합니다. 구축 파트너는 ERP·MES 연동을 지원합니다. 표준 진단 → 12주 구축 → 연간 구독 전환이 기본 과정입니다.</p>
+    </section>
+    <section class="half rule">
+      <h2>확장 지표</h2>
+      <p>고객 수보다 구독 전환율, 기능별 사용률, 갱신율, 고객당 연간 매출이 중요합니다. 이번 원장에는 갱신율과 고객별 계약기간이 없어 반복 매출의 질은 미확인입니다.</p>
+    </section>
+    <section class="full limitation">
+      <h2>핵심 과제: 대형 고객 유지와 표준 제품 비중 확대</h2>
+      <p>대형 고객의 복잡한 요구를 모두 맞추면 단기 구축 매출은 늘지만 제품 표준화가 늦어질 수 있습니다. 고객별 커스터마이징 범위를 통제하면서 산업 공통 기능으로 전환하는 제품 운영 원칙이 필요합니다.</p>
+    </section>
+  </div>
+  <footer><span>가온 데이터 서비스</span><span>기업현황 보고서 2025</span><span>07 / 12</span></footer>
+</article>
+
+<article class="page page--charts" id="page-charts" data-page="4" data-grid-id="four-chart-analysis" aria-labelledby="title-charts">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 성과 분석</span></header>
+  <div class="heading">
+    <p class="eyebrow">06 / 재무 성과</p>
+    <h1 class="page-name" id="title-charts">재무 성과</h1>
+    <p class="lead">매출과 영업이익은 3년 연속 증가했지만 2025년 영업현금흐름은 감소했습니다. 분기 매출은 연말로 갈수록 커졌으나 반복 가능한 계절성인지는 확인되지 않았습니다.</p>
+  </div>
+  <div class="chart-grid">
+    <figure class="chart-panel">
+      <h2>차트 1 · 3개년 매출</h2>
+      <p class="chart-sub">2023–2025년, 단위: 억원</p>
+      <svg viewBox="0 0 260 150" role="img" aria-label="매출 80, 100, 120억원 추이">
+        <line class="chart-axis" x1="28" y1="125" x2="248" y2="125"/><line class="chart-axis" x1="28" y1="20" x2="28" y2="125"/>
+        <line class="chart-gridline" x1="28" y1="75" x2="248" y2="75"/><line class="chart-gridline" x1="28" y1="25" x2="248" y2="25"/>
+        <text class="chart-label" x="8" y="128">0</text><text class="chart-label" x="5" y="78">60</text><text class="chart-label" x="1" y="28">120</text>
+        <rect class="chart-fill-main" x="52" y="59" width="28" height="66"/><rect class="chart-fill-main" x="117" y="42" width="28" height="83"/><rect class="chart-fill-main" x="182" y="25" width="28" height="100"/>
+        <text class="chart-label" x="53" y="140">2023</text><text class="chart-label" x="118" y="140">2024</text><text class="chart-label" x="183" y="140">2025</text>
+        <text class="chart-label" x="54" y="54">80</text><text class="chart-label" x="117" y="37">100</text><text class="chart-label" x="181" y="20">120</text>
+      </svg>
+      <figcaption class="chart-note">0기준 금액축. 매출은 매년 20억원씩 증가했지만 같은 증가폭이 다음 해에도 이어진다고 가정하지 않습니다.</figcaption>
+    </figure>
+    <figure class="chart-panel">
+      <h2>차트 2 · 영업이익률 추이</h2>
+      <p class="chart-sub">영업이익 ÷ 매출, 단위: %</p>
+      <svg viewBox="0 0 260 150" role="img" aria-label="영업이익률 10.0, 12.0, 12.5퍼센트 추이">
+        <line class="chart-axis" x1="28" y1="125" x2="248" y2="125"/><line class="chart-axis" x1="28" y1="20" x2="28" y2="125"/>
+        <line class="chart-gridline" x1="28" y1="92" x2="248" y2="92"/><line class="chart-gridline" x1="28" y1="58" x2="248" y2="58"/><line class="chart-gridline" x1="28" y1="25" x2="248" y2="25"/>
+        <text class="chart-label" x="8" y="128">0</text><text class="chart-label" x="5" y="95">5</text><text class="chart-label" x="1" y="61">10</text><text class="chart-label" x="1" y="28">15</text>
+        <polyline class="chart-main" points="55,58 135,45 215,42"/><circle class="chart-fill-main" cx="55" cy="58" r="4"/><circle class="chart-fill-main" cx="135" cy="45" r="4"/><circle class="chart-fill-main" cx="215" cy="42" r="4"/>
+        <text class="chart-label" x="43" y="50">10.0</text><text class="chart-label" x="123" y="36">12.0</text><text class="chart-label" x="203" y="33">12.5</text>
+        <text class="chart-label" x="43" y="140">2023</text><text class="chart-label" x="123" y="140">2024</text><text class="chart-label" x="203" y="140">2025</text>
+      </svg>
+      <figcaption class="chart-note">2025년 이익률은 전년 대비 0.5%p 상승했습니다. 3개 관측값만으로 장기 추세를 단정하지 않습니다.</figcaption>
+    </figure>
+    <figure class="chart-panel">
+      <h2>차트 3 · 2025년 분기 매출</h2>
+      <p class="chart-sub">1–4분기, 단위: 억원</p>
+      <svg viewBox="0 0 260 150" role="img" aria-label="분기 매출 25, 28, 31, 36억원">
+        <line class="chart-axis" x1="28" y1="125" x2="248" y2="125"/><line class="chart-axis" x1="28" y1="20" x2="28" y2="125"/>
+        <line class="chart-gridline" x1="28" y1="75" x2="248" y2="75"/><line class="chart-gridline" x1="28" y1="25" x2="248" y2="25"/>
+        <text class="chart-label" x="8" y="128">0</text><text class="chart-label" x="5" y="78">20</text><text class="chart-label" x="5" y="28">40</text>
+        <polyline class="chart-dark" points="48,92 105,83 162,74 219,59"/><circle class="chart-fill-dark" cx="48" cy="92" r="4"/><circle class="chart-fill-dark" cx="105" cy="83" r="4"/><circle class="chart-fill-dark" cx="162" cy="74" r="4"/><circle class="chart-fill-dark" cx="219" cy="59" r="4"/>
+        <text class="chart-label" x="41" y="108">25</text><text class="chart-label" x="98" y="99">28</text><text class="chart-label" x="155" y="90">31</text><text class="chart-label" x="212" y="50">36</text>
+        <text class="chart-label" x="40" y="140">1Q</text><text class="chart-label" x="97" y="140">2Q</text><text class="chart-label" x="154" y="140">3Q</text><text class="chart-label" x="211" y="140">4Q</text>
+      </svg>
+      <figcaption class="chart-note">4분기 매출은 연간의 30.0%입니다. 청구·입금 시점이 없어 분기 현금 유입으로 해석하지 않습니다.</figcaption>
+    </figure>
+    <figure class="chart-panel">
+      <h2>차트 4 · 이익과 영업현금의 방향</h2>
+      <p class="chart-sub">2024–2025년, 단위: 억원</p>
+      <svg viewBox="0 0 260 150" role="img" aria-label="영업이익은 12에서 15억원으로 증가하고 영업현금흐름은 10에서 9억원으로 감소">
+        <line class="chart-axis" x1="28" y1="125" x2="248" y2="125"/><line class="chart-axis" x1="28" y1="20" x2="28" y2="125"/>
+        <line class="chart-gridline" x1="28" y1="75" x2="248" y2="75"/><line class="chart-gridline" x1="28" y1="25" x2="248" y2="25"/>
+        <text class="chart-label" x="8" y="128">0</text><text class="chart-label" x="5" y="78">10</text><text class="chart-label" x="5" y="28">20</text>
+        <polyline class="chart-main" points="75,65 195,45"/><polyline class="chart-muted" points="75,78 195,85"/><circle class="chart-fill-main" cx="75" cy="65" r="4"/><circle class="chart-fill-main" cx="195" cy="45" r="4"/><circle class="chart-fill-muted" cx="75" cy="78" r="4"/><circle class="chart-fill-muted" cx="195" cy="85" r="4"/>
+        <text class="chart-label" x="63" y="55">이익 12</text><text class="chart-label" x="183" y="35">이익 15</text><text class="chart-label" x="58" y="96">현금 10</text><text class="chart-label" x="181" y="103">현금 9</text>
+        <text class="chart-label" x="61" y="140">2024</text><text class="chart-label" x="181" y="140">2025</text>
+      </svg>
+      <figcaption class="chart-note">두 지표의 방향이 달라졌다는 사실만 표시합니다. 매출채권·재고 자료 없이 원인을 특정하지 않습니다.</figcaption>
+    </figure>
+  </div>
+  <footer><span>가온 데이터 서비스</span><span>기업현황 보고서 2025</span><span>08 / 12</span></footer>
+</article>
+
+<article class="page page--statements" id="financial-statements" data-page="8" data-grid-id="financial-statements" aria-labelledby="statements-title">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 재무제표 요약</span></header>
+  <div class="heading">
+    <p class="eyebrow">07 / 재무제표</p>
+    <h1 class="page-name" id="statements-title">재무제표 요약</h1>
+    <p class="lead">손익계산서, 재무상태표, 현금흐름표의 기본 형식으로 2024–2025년 가상 재무 상태를 함께 봅니다. 세 표의 현금과 이익이 서로 연결되도록 작성했습니다.</p>
+  </div>
+  <div class="statement-grid">
+    <section>
+      <table>
+        <caption>요약 손익계산서 / 단위: 억원</caption>
+        <thead><tr><th>항목</th><th class="num">2024</th><th class="num">2025</th></tr></thead>
+        <tbody>
+          <tr><th>매출</th><td class="num">100.0</td><td class="num current">120.0</td></tr>
+          <tr><th>매출원가</th><td class="num">45.0</td><td class="num current">52.0</td></tr>
+          <tr class="total"><th>매출총이익</th><td class="num">55.0</td><td class="num current">68.0</td></tr>
+          <tr><th>판매관리비</th><td class="num">43.0</td><td class="num current">53.0</td></tr>
+          <tr class="total"><th>영업이익</th><td class="num">12.0</td><td class="num current">15.0</td></tr>
+          <tr><th>금융손익</th><td class="num">−1.0</td><td class="num current">−1.0</td></tr>
+          <tr><th>법인세비용</th><td class="num">2.2</td><td class="num current">2.8</td></tr>
+          <tr class="total"><th>당기순이익</th><td class="num">8.8</td><td class="num current">11.2</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <table>
+        <caption>요약 재무상태표 / 단위: 억원</caption>
+        <thead><tr><th>항목</th><th class="num">2024</th><th class="num">2025</th></tr></thead>
+        <tbody>
+          <tr><th>현금및현금성자산</th><td class="num">20</td><td class="num current">20</td></tr>
+          <tr><th>매출채권</th><td class="num">18</td><td class="num current">24</td></tr>
+          <tr><th>기타유동자산</th><td class="num">7</td><td class="num current">8</td></tr>
+          <tr><th>유형·무형자산</th><td class="num">25</td><td class="num current">30</td></tr>
+          <tr class="total"><th>자산총계</th><td class="num">70</td><td class="num current">82</td></tr>
+          <tr><th>매입·미지급금</th><td class="num">18</td><td class="num current">23</td></tr>
+          <tr><th>차입금</th><td class="num">12</td><td class="num current">12</td></tr>
+          <tr class="total"><th>부채총계</th><td class="num">30</td><td class="num current">35</td></tr>
+          <tr class="total"><th>자본총계</th><td class="num">40</td><td class="num current">47</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="statement--wide">
+      <table>
+        <caption>요약 현금흐름표 / 단위: 억원</caption>
+        <colgroup><col style="width:50%"><col><col></colgroup>
+        <thead><tr><th>항목</th><th class="num">2024</th><th class="num">2025</th></tr></thead>
+        <tbody>
+          <tr><th>영업활동현금흐름</th><td class="num">10</td><td class="num current">9</td></tr>
+          <tr><th>투자활동현금흐름</th><td class="num">−5</td><td class="num current">−6</td></tr>
+          <tr><th>재무활동현금흐름</th><td class="num">−2</td><td class="num current">−3</td></tr>
+          <tr class="total"><th>현금 순증감</th><td class="num">+3</td><td class="num current">0</td></tr>
+          <tr><th>기말현금</th><td class="num">20</td><td class="num current">20</td></tr>
+        </tbody>
+      </table>
+      <p class="note">2025년 영업현금 9억원 − 투자 6억원 − 재무 3억원 = 현금 순증감 0억원. 재무상태표의 기말현금 20억원과 연결됩니다. 외부 감사 재무제표가 아닌 제작 시험용 가상 요약표입니다.</p>
+    </section>
+  </div>
+  <footer><span>가온 데이터 서비스</span><span>기업현황 보고서 2025</span><span>09 / 12</span></footer>
+</article>
+
+<article class="page page--financial" id="page-3" data-page="3" data-grid-id="dense-financial-note" aria-labelledby="title-3">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 현금 흐름</span></header>
+  <div class="heading">
+    <p class="eyebrow">08 / 현금과 유동성</p>
+    <h1 class="page-name" id="title-3">현금흐름과 유동성</h1>
+    <p class="lead">2025년 영업현금 유입 9억원은 설비투자 6억원과 배당 3억원의 합계와 같습니다. 단순화한 모형에서 기초와 기말의 현금 잔액은 변하지 않았습니다.</p>
+  </div>
+  <div class="body">
+    <section class="full">
+      <p class="equation"><span>20 + 9 − 6 − 3 + 0 = 20억원</span><small>기초 + 영업 − 설비 − 배당 + 기타 = 기말</small></p>
+      <table data-chart-id="table-values" id="cash-table">
+        <caption>2025년 현금 연결 / 금액 단위: 억원</caption>
+        <colgroup><col style="width:35%"><col style="width:17%"><col></colgroup>
+        <thead><tr><th scope="col">항목</th><th scope="col" class="num">금액</th><th scope="col">값의 성격</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">기초현금</th><td class="num">20</td><td>기간 시작 시점의 잔액</td></tr>
+          <tr><th scope="row">영업현금흐름</th><td class="num">+9</td><td>1~12월 영업현금 순유입</td></tr>
+          <tr><th scope="row">설비투자</th><td class="num">−6</td><td>1~12월 현금 사용</td></tr>
+          <tr><th scope="row">배당</th><td class="num">−3</td><td>1~12월 현금 사용</td></tr>
+          <tr><th scope="row">기타 현금흐름</th><td class="num">0</td><td>원장이 단순화를 위해 설정한 값</td></tr>
+          <tr class="total"><th scope="row">기말현금</th><td class="num">20</td><td>기간 종료 시점의 잔액</td></tr>
+        </tbody>
+      </table>
+      <p class="note">자료: 테스트 공통 원장의 단순 현금 모형. 시작·종료 잔액과 기간 중 흐름을 구분했습니다. 실제 기업의 완전한 현금흐름표가 아닙니다.</p>
+    </section>
+    <section class="half rule">
+      <h2>매출채권 증가와 현금 전환</h2>
+      <p>매출채권은 18억원에서 24억원으로 33.3% 늘어 매출 증가율 20%를 웃돌았습니다. 영업현금흐름이 감소한 원인을 확정할 수는 없지만, 회수 조건과 프로젝트 검수 시점을 우선 확인할 필요가 있습니다.</p>
+      <p>영업현금흐름 ÷ 영업이익은 2024년 83.3%에서 2025년 60.0%로 낮아졌습니다. 단일 연도 비율이므로 장기적인 현금 전환 수준으로 일반화하지 않습니다.</p>
+    </section>
+    <section class="half rule">
+      <h2>투자와 배당으로 소진된 영업현금</h2>
+      <p>2025년 영업현금 9억원은 설비투자 6억원과 배당 3억원으로 모두 사용됐습니다. 기말현금은 유지됐지만 자체 창출 현금에서 추가 투자 여력이 남았다고 보기는 어렵습니다.</p>
+      <p>차입금은 12억원으로 전년과 같아 외부 조달 확대는 확인되지 않습니다. 다음 투자 계획을 평가하려면 월별 현금계획과 최소 운영자금 기준이 필요합니다.</p>
+    </section>
+    <section class="full limitation">
+      <h2>기말현금 20억원만으로 유동성을 판단할 수 없습니다</h2>
+      <p>월별 입금과 지출, 사용 제한 현금, 세금·차입금 상환 일정, 최소 운영자금 기준이 제공되지 않았습니다. 연초와 연말 잔액이 같더라도 연중 최저 잔액과 실제 사용 가능액은 다를 수 있습니다.</p>
+    </section>
+  </div>
+  <footer><span>가온 데이터 서비스</span><span>기업현황 보고서 2025</span><span>10 / 12</span></footer>
+</article>
+
+<article class="page page--strategy" id="strategy" data-page="9" data-grid-id="strategy-roadmap" aria-labelledby="strategy-title">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 비전과 전략</span></header>
+  <div class="heading">
+    <p class="eyebrow">09 / 중기 방향</p>
+    <h1 class="page-name" id="strategy-title">Vision 2028</h1>
+    <p class="lead">가온의 2028 비전은 제조·유통 기업의 일상적인 운영 결정을 데이터와 예측 모델로 지원하는 것입니다. 성장은 기능 수보다 연결 속도, 반복 사용, 검증된 의사결정 성과로 평가합니다.</p>
+  </div>
+  <div class="strategy-line">
+    <strong>Vision 2028</strong>
+    <div><h2>중견기업 운영 인텔리전스의 기본 플랫폼</h2><p>흩어진 운영 데이터를 연결하고, 현황 진단에서 수요·재고·설비 의사결정까지 이어지는 공통 업무 체계를 제공합니다.</p></div>
+  </div>
+  <div class="strategy-roadmap">
+    <section><span class="eyebrow">2026 / 기반</span><h2>표준 연결 확대</h2><p>ERP·MES·커머스 표준 커넥터를 늘리고 구축 기간을 12주에서 8주로 단축하는 것이 목표입니다.</p><p class="note">검증 지표: 표준 연동 비중, 구축 리드타임</p></section>
+    <section><span class="eyebrow">2027 / 확장</span><h2>산업별 예측 제품</h2><p>제조 수요·설비 이상, 유통 재고·프로모션 효과처럼 산업별 반복 질문에 대응하는 예측 모듈을 제공합니다.</p><p class="note">검증 지표: 모듈 사용률, 예측 활용 업무 수</p></section>
+    <section><span class="eyebrow">2028 / 운영</span><h2>의사결정 워크플로</h2><p>분석 결과를 알림, 승인, 실행 추적과 연결해 일회성 대시보드가 아니라 운영 프로세스로 정착시킵니다.</p><p class="note">검증 지표: 주간 활성 사용자, 고객 확장 매출</p></section>
+  </div>
+  <div class="body" style="margin-top:10mm">
+    <section class="half rule"><h2>투자 우선순위</h2><p>제품·데이터 엔지니어링과 고객 성공에 우선 투자합니다. 인력과 예산은 역할별 업무량, 고객 확장 근거, 현금 계획을 함께 확인하며 단계적으로 배분합니다.</p></section>
+    <section class="half rule"><h2>하지 않을 것</h2><p>모든 산업과 대기업 요구를 동시에 수용하지 않습니다. 고객별 일회성 개발을 표준 제품처럼 포장하거나 검증되지 않은 AI 기능을 핵심 가치로 제시하지 않습니다.</p></section>
+  </div>
+  <footer><span>가온 데이터 서비스</span><span>기업현황 보고서 2025</span><span>11 / 12</span></footer>
+</article>
+
+<article class="page page--decision" id="risks" data-page="10" data-grid-id="risk-register" aria-labelledby="risks-title">
+  <header class="running"><strong>가온 데이터 서비스</strong><span>기업현황 보고서 · 리스크와 전망</span></header>
+  <div class="heading">
+    <p class="eyebrow">10 / 핵심 리스크</p>
+    <h1 class="page-name" id="risks-title">리스크와 전망</h1>
+    <p class="lead">가온은 성장 시장과 반복 매출 기반을 확보했습니다. 다만 상위 고객 의존, 구축 중심의 복잡성, 대형 플랫폼과의 경쟁, 영업현금 감소가 중기 전략의 실행 속도를 제약할 수 있습니다.</p>
+  </div>
+  <div class="risk-register" role="table" aria-label="핵심 리스크와 대응 방향">
+    <div class="head" role="columnheader">리스크</div><div class="head" role="columnheader">현재 노출과 영향</div><div class="head" role="columnheader">대응·관찰 지표</div>
+    <div role="rowheader"><span class="risk-level stack">높음</span><span>고객 집중</span></div><div>상위 5개 고객이 매출의 40%를 차지합니다. 대형 고객 한 곳의 축소가 매출과 구축 인력 가동률에 동시에 영향을 줄 수 있습니다.</div><div><span class="stack">상위 5개 비중</span><span class="stack">갱신율</span><span class="stack">고객당 매출</span></div>
+    <div role="rowheader"><span class="risk-level stack">높음</span><span>현금 전환</span></div><div>영업이익은 15억원으로 증가했지만 영업현금은 9억원으로 감소했습니다. 매출채권과 프로젝트 검수 조건을 확인해야 합니다.</div><div><span class="stack">현금전환율</span><span class="stack">매출채권 회전</span><span class="stack">월별 현금</span></div>
+    <div role="rowheader"><span class="risk-level stack">중간</span><span>제품 표준화</span></div><div>구축 매출이 35%입니다. 고객별 요구가 늘면 개발 역량이 분산되고 구독 제품의 출시 속도와 마진이 낮아질 수 있습니다.</div><div><span class="stack">표준 기능 비중</span><span class="stack">구축 기간</span><span class="stack">프로젝트 마진</span></div>
+    <div role="rowheader"><span class="risk-level stack">중간</span><span>플랫폼 경쟁</span></div><div>ERP·클라우드 사업자가 분석 기능을 번들로 제공할 수 있습니다. 가격보다 산업별 데이터 모델과 도입 성과로 차별화해야 합니다.</div><div><span class="stack">수주율</span><span class="stack">도입 기간</span><span class="stack">기능 사용률</span></div>
+    <div role="rowheader"><span class="risk-level stack">중간</span><span>실행 역량</span></div><div>제품·고객 성공 조직 확대가 필요하지만 역할별 업무량, 우선순위와 현금 집행 계획은 아직 구체화되지 않았습니다.</div><div><span class="stack">역할별 생산성</span><span class="stack">제품 로드맵</span><span class="stack">현금 계획</span></div>
+  </div>
+  <div class="body" style="margin-top:9mm">
+    <section class="wide rule"><h2>2026년 관찰 포인트</h2><p>구독 매출 성장과 갱신 데이터가 확인되고, 표준 구축 비중이 높아지며, 영업현금이 이익 증가와 같은 방향으로 회복되는지가 핵심입니다. 세 조건이 함께 개선돼야 성장의 질이 높아졌다고 평가할 수 있습니다.</p></section>
+    <aside class="narrow rule"><h2>종합 판단</h2><p><strong>성장 지속 가능성은 조건부 긍정입니다.</strong></p><p>시장과 제품 방향은 유효하지만 고객·현금·표준화 지표의 추가 확인이 필요합니다.</p></aside>
+  </div>
+  <footer><span>가온 데이터 서비스</span><span>기업현황 보고서 2025</span><span>12 / 12</span></footer>
+</article>
+</body>
+</html>

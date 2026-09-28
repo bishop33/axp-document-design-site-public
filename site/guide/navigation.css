@@ -1,0 +1,15 @@
+/* Shared primary navigation across the guide and learning records. */
+.guide-header{height:auto;padding:0;border-bottom:1px solid #d8d8d8;background:#fff}
+.guide-header .header-inner{max-width:1380px;margin:auto;padding:23px 42px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.guide-header .brand{font-size:19px;font-weight:600;text-decoration:none;letter-spacing:-.04em;white-space:nowrap}
+.guide-header .brand span{display:inline;font-size:15px;font-weight:400;color:#656565;border-left:1px solid #ccc;margin-left:18px;padding-left:18px;letter-spacing:0}
+.guide-header nav{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.guide-header nav a{font-size:15px;font-weight:400;line-height:1.7;color:#656565;text-decoration:none;white-space:nowrap;padding:5px 0;border-bottom:2px solid transparent}
+.guide-header nav a[aria-current=page]{color:#1b1b1b;font-weight:400;border-bottom-color:#1b1b1b}
+.guide-header nav a:hover{color:#1b1b1b}
+.content:focus{outline:none}
+@media(max-width:1000px){.guide-header .header-inner{flex-wrap:wrap;gap:12px}}
+@media(max-width:720px){.guide-header .header-inner{display:block;padding:14px 20px 8px}.guide-header .brand{font-size:18px}.guide-header .brand span{font-size:13px;margin-left:12px;padding-left:12px}.guide-header nav{gap:0 20px;margin-top:8px}.guide-header nav a{display:flex;align-items:center;min-height:44px;font-size:14px}}
+@media(max-width:360px){.guide-header .header-inner{padding-left:14px;padding-right:14px}.guide-header nav{gap:0 16px}.guide-header .brand span{font-size:12px}}
+@media(max-width:760px){.sidebar .nav-label{display:block;width:100%;font-size:13px;margin:8px 0 2px}.sidebar a{min-height:44px;align-items:center}}
+@media print{.guide-header{display:none}}

@@ -1,0 +1,277 @@
+{
+  "updated": "2026-09-22",
+  "notes": [
+    {
+      "id": "persona-test",
+      "name": "보고서 제작자 3인 시뮬레이션",
+      "status": "편집 디자이너안 선택 · 기업현황 v2 검토",
+      "title": "현재 가이드로 보고서를 어디까지 만들 수 있을까요?",
+      "lead": "경영기획 담당자, 편집 디자이너, 문서 생성 LLM의 조건을 모사해 같은 가상 원장으로 4쪽 보고서를 각각 제작했습니다.",
+      "principle": "원칙을 이해하는 것과 재현 가능한 제작 사양을 갖추는 것은 다릅니다. 원고·수치·독자 질문은 고정하고, 가이드에서 얻은 규칙과 제작자가 보충한 값을 분리해야 합니다.",
+      "observation": "세 독립 에이전트가 기본 가이드·그리드·차트·예시·레퍼런스·학습 기록의 관련 항목을 읽고 HTML 초안과 결정 기록을 남겼습니다. 디자이너는 전폭 표와 4+2열 배치를 조합했고, 다른 두 조건은 전폭 표·본문 중심으로 구성했습니다. NBIM의 수치 정렬과 당기 열 강조를 참고했습니다.",
+      "condition": "동일 모델의 역할 시뮬레이션입니다. 실제 사람·모델간 비교·웹 메뉴 사용성 시험이 아닙니다. 공개 데이터 소스를 직접 읽는 유리한 조건이며 모든 예시와 문서를 전수 검토한 것도 아닙니다.",
+      "result": "실제 내용이 있는 12개 HTML 지면을 만들었고 페이지 구조·가상 표시·외부 의존 없는 파일 구조를 확인했습니다. 다만 글자 크기·간격·폰트 fallback·그리드 변경·페이지 분할을 별도로 결정해야 했습니다. 초안 제작 가능성과 일관된 고품질 출력 입증은 구분합니다.",
+      "unknown": "실제 렌더·최종 PDF·실물 인쇄·독자 이해도는 미검증입니다. 충분히 정리된 공통 원장을 제공했으므로 내용 품질을 가이드만의 성과로 볼 수 없습니다. 신규 외부 레퍼런스는 확보하지 못했고 기존 NBIM의 내지 2쪽만 보강했습니다.",
+      "next": "Bishop은 밀도와 강조가 좋은 편집 디자이너안을 기준안으로 선택했습니다. 기업현황 v2에서 강제 제목 줄바꿈을 제거하고 공식 반복 체계와 proposed A4 profile을 적용했습니다. 원안과 v2를 비교한 뒤 긴 제목·표·본문의 변형으로 재테스트하고, 이후 투자검토 IM·기술제안서·산업분석 순서로 별도 profile을 만듭니다.",
+      "sourceIds": ["rhythm-nbim"],
+      "figures": [{"src":"references/assets/persona-nbim-13.png", "caption":"추가 레퍼런스 · NBIM PDF 13쪽의 서한. 시뮬레이션 결과물의 렌더가 아닙니다.", "alt":"NBIM 서한의 인용문과 긴 본문 배치"}],
+      "applicationHref": "learning/persona-test/index.html",
+      "applicationLabel": "3개 초안과 테스트 결과 비교"
+    },
+    {
+      "id": "editorial-rhythm",
+      "name": "간격·그룹핑·읽는 흐름",
+      "status": "IM 3쪽 시험 · 사용자 검토 대기",
+      "title": "그리드는 자리를 정하고, 간격은 정보의 관계를 드러냅니다.",
+      "lead": "선에 맞았다는 것과 읽기 좋다는 것은 다릅니다. 제목과 본문, 표와 해석, 서로 다른 섹션이 어떤 묶음으로 읽히는지 따로 확인합니다.",
+      "principle": "본문의 줄길이와 단 사이 간격을 함께 봅니다. 제목은 뒤따르는 본문과 연결되고, 독립 섹션은 내부 문장보다 분명하게 구분돼야 합니다. 다만 모든 간격에 같은 배수를 적용하지 않습니다. 이어 읽는 단과 독립 정보 묶음을 구별하고, 내용량이 다른 단의 바닥을 억지로 맞추지 않습니다.",
+      "observation": "리서처는 NAVER 31–33쪽, Accenture 8–11쪽, NBIM 8·9·15·16쪽을 실제로 읽고 렌더·좌표를 대조했습니다. 편집 디자이너는 영문 간격을 한국어 목표값으로 가져오는 데 반론하고 한글 원문과 측정 근거를 추가 요청했습니다. Edison의 두 지면(PDF 4–5쪽, 인쇄 3–4쪽)도 밀도 반례로 봤지만 공식 발행 URL 연결이 미확인이라 권위 근거에서 제외했습니다.",
+      "condition": "투자검토 IM처럼 긴 수치표와 판단 근거가 함께 있는 정독용 가로 문서에 시험합니다. 표는 비교에 필요한 폭을 확보하고 해설의 읽기 폭은 별도로 설계합니다. 발표용 원거리 가독성과 동일 기준으로 취급하지 않습니다.",
+      "result": "같은 가상 원고와 본문8.5pt/행간12pt를 유지했습니다. 바탕 거터12pt는 그대로 두고 두 본문 영역 안쪽에8pt씩 여백을 추가했습니다. 차트 내부 라벨을 제외한 좌우 본문 audit에서, 수직으로 겹치는 글자의 최소 Pango ink 간격은 페이지별 약21–23pt에서31–38pt로 바뀌었습니다. 전체 지면의 최소 간격이나 원본 PDF의 text bbox와는 다른 측정입니다. 문단 후 추가량은5→9pt, 표 셀 좌우 inset은5→8pt로 조정했습니다. 기간은 왼쪽, 금액은 오른쪽으로 통일하고 사용처 합계와 지분가치를 분리했습니다. 제목 아래의 과예약을 줄여 하단 설명 공간을 확보했습니다.",
+      "unknown": "신규 외부 자료 접속은 도구 장애로 실패했습니다. 이번 분석은 보유 원문의 새 지면 관찰입니다. Adobe InDesign 공식 조판 지침·새 전문 제작사 원문 수집, 실제 브라우저 렌더·실물 인쇄·독자시험은 미완료입니다.",
+      "next": "3쪽 시험에서는 간격과 그룹 구분을 우선 조정했습니다. 긴 본문 줄과 반복적인 상단 표·하단 두 영역 구성은 여전히 남아 있습니다. 다음에는 같은 원고를 유지하면서 각 쪽의 거래 판단·고객 검증·투자 조건에 맞춰 읽기 폭과 자료-해설 순서를 비교해야 합니다. 다른13개 적용안까지 개선됐다는 뜻은 아니며 숫자 검사만으로 편집 품질을 판정하지 않습니다.",
+      "sourceIds": [
+        "rhythm-naver",
+        "rhythm-accenture",
+        "rhythm-nbim"
+      ],
+      "diagram": "spacing",
+      "figures": [
+        {
+          "src": "learning/assets/im-rhythm-before.png",
+          "caption": "수정 전 · IM 코호트 내지. 상단의 빈 띠와 하단의 긴 본문·좁은 중앙 분리가 함께 나타납니다.",
+          "alt": "수정 전 가로 IM 코호트 페이지: 상단 표 아래 두 설명 영역과 차트가 가까이 배치된 지면"
+        },
+        {
+          "src": "learning/assets/im-rhythm-after.png",
+          "caption": "수정 후 · 같은 원고와 글자 크기. 상단 예약을 줄이고 중앙 분리·문단 간격·표 정렬을 조정한 시험안입니다.",
+          "alt": "수정 후 가로 IM 코호트 페이지: 상단 표가 앞당겨지고 하단 본문 묶음 사이 간격과 중앙 여백이 확보된 지면"
+        }
+      ],
+      "applicationHref": "index.html#example/columns--landscape-comparison",
+      "applicationLabel": "IM 가로 적용안 검토"
+    },
+    {
+      "id": "measure",
+      "name": "행간·읽기 폭·여백",
+      "status": "원리 정리 · 비교 실험 예정",
+      "title": "행간과 폭을 바꾸면 남는 여백도 달라집니다.",
+      "lead": "본문의 줄 길이와 줄 사이 간격을 정한 뒤, 글이 차지하는 높이와 주변 요소의 거리를 함께 봅니다.",
+      "principle": "폭을 줄이면 같은 문장이 더 많은 줄을 차지할 수 있습니다. 본문 높이가 달라지면 표가 놓일 위치와 페이지 하단의 빈 공간도 달라집니다. 모듈을 먼저 채우기보다 실제 원고가 차지하는 영역을 확인합니다.",
+      "observation": "Kelman의 여백 관련 글을 대조한 기록에서는 행간·목적·제본 조건을 함께 고려했습니다. 현금흐름 실험의 하단 여백은 모듈 높이를 먼저 정한 결과였으며, 충분한 설계 근거가 없다는 검토가 남았습니다.",
+      "condition": "판형과 원고가 정해진 인쇄 문서에서 폭·행간을 함께 시험합니다. 영문 예시의 수치나 발표자료의 여백을 한국어 A4 정독 문서에 그대로 옮기지 않습니다.",
+      "unknown": "한글 원고의 읽기 폭과 행간을 하나씩 바꾼 비교, 실제 크기 인쇄, 독자 시험은 아직 하지 않았습니다.",
+      "next": "같은 한국어 원고·글자 크기·판형으로 폭만 비교한 뒤, 폭을 고정하고 행간만 비교합니다. 줄 수와 본문 높이, 뒤따르는 표의 위치를 기록합니다.",
+      "result": "기존 실험의 9.5pt/14pt는 자체 제안값입니다. 가장 잘 읽히는 값으로 검증한 결과가 아닙니다.",
+      "sourceIds": [
+        "margins",
+        "single"
+      ],
+      "diagram": "measure"
+    },
+    {
+      "id": "systems",
+      "name": "모듈과 본문 기준선",
+      "status": "관찰 정리 · 조판 검증 중",
+      "title": "요소의 자리와 글줄의 기준은 다릅니다.",
+      "lead": "열은 가로 배치, 모듈은 내용 묶음의 영역, baseline은 글줄의 기준을 정합니다.",
+      "principle": "열 사이의 거터와 행 사이의 거터를 구분합니다. 본문이 차지할 여러 모듈을 먼저 묶고, 그 안에서 글줄이 이어지게 합니다. 글 상자의 윗변이 맞아도 실제 문자의 baseline이 같은 것은 아닙니다.",
+      "observation": "Swiss A4 제품 설명에는 36 fields와 baseline이 함께 제시됩니다. 제품 이미지의 큰 배치와 본문 글줄은 서로 다른 수준의 규칙입니다. 원본 제작 파일의 정확한 좌표는 확인하지 않았습니다.",
+      "condition": "본문·표·차트가 섞인 지면에서 각 기준의 역할을 나눕니다. 표의 행 높이는 padding과 border까지 포함해 따로 확인해야 합니다.",
+      "unknown": "자체 실험의 표·소제목·본문 전체 baseline 정합과 실제 PDF 좌표는 추가 검증이 필요합니다.",
+      "next": "실제 글줄의 baseline 위치를 측정하고 표의 행 높이와 비교합니다. 모듈 정렬과 baseline 정렬의 검증 결과를 분리합니다.",
+      "result": "기존 실험은 본문 한 지점의 marker로 기준선 위상을 잡습니다. 모든 글줄과 표의 정합을 보증하지 않습니다.",
+      "sourceIds": [
+        "swiss",
+        "two"
+      ],
+      "diagram": "systems"
+    },
+    {
+      "id": "merge",
+      "name": "같은 그리드, 다른 배치",
+      "status": "A·B 적용 실험 · 검토 중",
+      "title": "칸을 바꾸지 않고 내용의 점유 폭을 바꿉니다.",
+      "lead": "6열이 있다고 여섯 개의 좁은 본문을 만드는 것은 아닙니다. 필요한 열을 합쳐 차트·표·설명을 배치합니다.",
+      "principle": "공통 정렬선은 유지하면서 차트가 네 열을 쓰거나 여섯 열을 쓰게 할 수 있습니다. 어떤 요소에 폭을 더 줄지는 비교할 데이터와 글의 분량으로 결정합니다.",
+      "observation": "Swiss A4 공개 이미지 04에서 글과 이미지의 시작 높이·점유 폭이 다릅니다. 이를 참고한 자체 실험 A는 차트 4열과 표 2열, B는 차트 6열을 사용합니다.",
+      "condition": "같은 원고를 여러 방식으로 배치할 때 유용합니다. 내용의 의미를 무시하고 모든 모듈을 같은 상자로 채우지 않습니다.",
+      "unknown": "B의 넓은 차트가 A보다 이해를 돕는지는 독자 시험으로 확인하지 않았습니다.",
+      "next": "A의 차트 폭과 B의 하단 설명 흐름을 결합하는 안을 시험하고, 그리드를 끈 상태로 위계와 정보 중복을 비교합니다.",
+      "result": "같은 원고와 6×6 그리드로 두 배치를 만들었습니다. 배치뿐 아니라 표의 글자 크기·cell padding도 일부 달라 단일 변수 실험은 아닙니다.",
+      "sourceIds": [
+        "swiss"
+      ],
+      "diagram": "merge"
+    },
+    {
+      "id": "spacing",
+      "name": "묶음과 요소 사이 간격",
+      "status": "검토 반영 · 수정 실험 예정",
+      "title": "관련된 설명은 가까이 이어 읽게 둡니다.",
+      "lead": "그리드에 맞추기 위해 같은 주제의 표와 설명을 멀리 떨어뜨릴 필요는 없습니다.",
+      "principle": "큰 내용 묶음의 시작은 모듈에 맞추되, 묶음 안의 문단은 자연스럽게 이어집니다. 관련 요소 사이와 주제가 바뀌는 곳의 간격을 다르게 검토합니다.",
+      "observation": "현금흐름 A에서는 매출채권 설명이 6행에서 시작해 관련 표와 떨어졌습니다. 독립 검토에서는 표 아래에 설명을 이어 배치하는 편이 타당하다고 지적했습니다.",
+      "condition": "표를 읽고 바로 해석해야 하는 내지에 적용합니다. 독립된 항목을 무조건 가까이 붙여 하나의 주장처럼 보이게 하지 않습니다.",
+      "unknown": "관련 표와 매출채권 해설을 붙인 수정 지면은 아직 제작하지 않았습니다.",
+      "next": "표·설명의 묶음은 유지하면서 두 요소 사이 간격만 바꿉니다. 새 모듈 시작이 정보 관계를 끊는지 확인합니다.",
+      "result": "사이트의 A 시안은 당시 실험을 보존한 것입니다. 문제를 찾았다는 사실과 수정이 완료됐다는 사실을 구분합니다.",
+      "sourceIds": [
+        "two"
+      ],
+      "diagram": "spacing"
+    },
+    {
+      "id": "running",
+      "name": "머리글·본문·바닥글",
+      "status": "원본 관찰 · 출력 미검증",
+      "title": "반복 정보는 본문과 거리를 두되 정렬을 공유합니다.",
+      "lead": "머리글과 쪽번호의 위치를 반복하면 문서 안에서 현재 위치를 찾기 쉽도록 설계할 수 있습니다.",
+      "principle": "머리글과 바닥글은 별도 반복 영역으로 두고 본문과 좌우 정렬 기준을 공유합니다. 제목과 본문 사이 간격은 실제 글자의 높이와 함께 판단합니다.",
+      "observation": "A5 Book 공개 이미지 07에서는 머리글이 본문 위에 떨어져 있고 쪽번호는 하단 별도 공간에 있습니다. 실제 원본 치수는 확인하지 않았습니다.",
+      "condition": "연속 내지에서 문서명·장·쪽수가 필요할 때 사용합니다. 참고 사례에 없다는 이유만으로 필요한 머리글을 없애지 않습니다. 제본·재단 조건은 제작 전에 따로 정합니다.",
+      "unknown": "홀짝 펼침면, 제본 후 안쪽 여백, 실제 종이 인쇄는 검증하지 않았습니다.",
+      "next": "글 중심과 표 중심의 두 내지에서 같은 반복 영역을 유지하고 머리글·제목·본문 사이 간격을 비교합니다.",
+      "result": "현재 A4 실험의 머리글 상자 시작은 11mm, 바닥글 상자 시작은 280mm입니다. baseline 좌표로 바꿔 부르지 않습니다.",
+      "sourceIds": [
+        "book"
+      ],
+      "diagram": "running"
+    },
+    {
+      "id": "data",
+      "name": "표·차트 안쪽의 정렬",
+      "status": "관찰 정리 · 비교 검토 중",
+      "title": "차트 외곽만 맞추면 내부 정렬을 놓칩니다.",
+      "lead": "plot, 축, 수치 라벨, 제목과 범례의 위치를 각각 확인합니다. 표와 차트가 같은 역할을 반복하는지도 봅니다.",
+      "principle": "정확한 값을 찾는 표와 변화의 크기를 보는 차트는 역할이 다릅니다. 같은 수치를 두 번 싣는다면 독자가 얻는 차이가 있는지 설명할 수 있어야 합니다.",
+      "observation": "현금흐름 A·B에는 같은 기초·기말 현금과 증감 값이 표와 Waterfall에 반복됩니다. 검토에서는 중복의 필요성과 차트 내부 여백을 다시 보도록 요청했습니다.",
+      "condition": "값 조회와 증감 경로 확인이 모두 필요할 때 병행을 검토합니다. 작은 원형 조각이 많은 원본 표현을 그대로 좋은 사례로 채택하지 않습니다.",
+      "unknown": "현재 표와 차트를 모두 유지할 필요성, 실제 출력에서의 작은 수치·축 라벨 가독성은 검토 중입니다.",
+      "next": "같은 현금흐름 수치의 표와 Waterfall을 비교하고, 정확한 값 조회·변동 경로 확인에 각각 필요한 정보를 기록합니다.",
+      "result": "원본의 재무표 스타일 제공은 확인했지만, 이 사실만으로 자체 표의 조판 품질이 검증되지는 않습니다.",
+      "sourceIds": [
+        "annual",
+        "naver"
+      ],
+      "diagram": "data"
+    }
+  ],
+  "sources": [
+    {
+      "id": "margins",
+      "title": "Margins are not an afterthought",
+      "author": "Stephen Kelman",
+      "url": "https://stephenkelman.co.uk/journal/margins-are-not-an-afterthought",
+      "location": "Journal 본문 · 페이지 번호 없음",
+      "status": "본문 대조 기록",
+      "observed": "행간과 여백의 관계, 목적과 제본 조건에 따른 여백 선택.",
+      "limit": "2026.09.18 기록을 정리했습니다. 이번 사이트 제작에서 새 독자 실험은 하지 않았습니다."
+    },
+    {
+      "id": "swiss",
+      "title": "Swiss A4 grid system",
+      "author": "Stephen Kelman",
+      "url": "https://stephenkelman.co.uk/a4-swiss-grid-system-for-indesign",
+      "image": "https://stephenkelman.co.uk/assets/site/img/a4-swiss-grid-system-for-indesign/a4-swiss-grid-system-for-indesign-04-3840.jpg",
+      "location": "공개 이미지 04 · PDF 쪽수 아님",
+      "status": "제품 설명 읽기 · 이미지 관찰",
+      "observed": "제품 설명은 36 fields를 제시합니다. 이미지에서는 점유 폭과 글이 시작하는 높이가 달라집니다.",
+      "limit": "유료 InDesign 파일과 정확한 여백·글자 크기는 미확인. 자체 6×6 치수는 이 원본의 복제가 아닙니다."
+    },
+    {
+      "id": "two",
+      "title": "A4 two-column report",
+      "author": "Stephen Kelman",
+      "url": "https://stephenkelman.co.uk/a4-two-column-report-grid-system-for-indesign",
+      "image": "https://stephenkelman.co.uk/assets/site/img/a4-two-column-report-grid-system-for-indesign/a4-two-column-report-grid-system-for-indesign-04-2606.jpg",
+      "location": "공개 이미지 04 · PDF 쪽수 아님",
+      "status": "제품 설명 읽기 · 이미지 관찰",
+      "observed": "상단 이미지와 인용문의 바닥은 달라도 양쪽 본문이 같은 높이에서 시작하는 모습을 관찰했습니다.",
+      "limit": "12 fields와 11pt baseline은 제품 설명의 사양입니다. 우리 한글 문서의 추천 수치가 아닙니다."
+    },
+    {
+      "id": "single",
+      "title": "A4 single-column report",
+      "author": "Stephen Kelman",
+      "url": "https://stephenkelman.co.uk/a4-single-column-report-grid-system-for-indesign",
+      "image": "https://stephenkelman.co.uk/assets/site/img/a4-single-column-report-grid-system-for-indesign/a4-single-column-report-grid-system-for-indesign-04-3731.jpg",
+      "location": "공개 이미지 04 · PDF 쪽수 아님",
+      "status": "제품 설명 읽기 · 이미지 관찰",
+      "observed": "넓은 본문과 좁은 주석 영역이 함께 있습니다. 작은 표와 큰 이미지도 본문 정렬선을 공유합니다.",
+      "limit": "한 단이라는 이름이 페이지 전체 폭의 본문을 뜻하지 않습니다. 원본 제작 파일은 미확인입니다."
+    },
+    {
+      "id": "book",
+      "title": "A5 book grid system",
+      "author": "Stephen Kelman",
+      "url": "https://stephenkelman.co.uk/a5-book-grid-system-for-indesign",
+      "image": "https://stephenkelman.co.uk/assets/site/img/a5-book-grid-system-for-indesign/a5-book-grid-system-for-indesign-07-3388.jpg",
+      "location": "공개 이미지 07 · PDF 쪽수 아님",
+      "status": "제품 설명 읽기 · 이미지 관찰",
+      "observed": "머리글·본문·각주·쪽번호의 정렬 관계를 관찰했습니다. 긴 본문은 큰 모듈 경계를 넘어 이어집니다.",
+      "limit": "치수는 이미지로 확정하지 않았습니다. 제본 조건과 실제 인쇄는 미검증입니다."
+    },
+    {
+      "id": "annual",
+      "title": "A4 annual report grid system",
+      "author": "Stephen Kelman",
+      "url": "https://stephenkelman.co.uk/a4-annual-report-grid-system-for-indesign",
+      "image": "https://stephenkelman.co.uk/assets/site/img/a4-annual-report-grid-system-for-indesign/a4-annual-report-grid-system-for-indesign-04-3840.jpg",
+      "location": "공개 이미지 04 · PDF 쪽수 아님",
+      "status": "제품 설명 읽기 · 이미지 관찰",
+      "observed": "좁은 제목 영역과 여러 연도 재무표의 관계를 관찰했습니다. 제품 설명은 재무표 스타일을 제공합니다.",
+      "limit": "제작 파일은 미확인입니다. 원형차트의 회색 조각이 많다는 점까지 좋은 표현으로 채택하지 않습니다."
+    },
+    {
+      "id": "naver",
+      "title": "NAVER 통합보고서 2024",
+      "author": "NAVER",
+      "url": "https://www.navercorp.com/api/article/read/a6008e6b-2d43-4a86-b81c-b506259ab512/NAVER_Integrated_Report_2024_KOR.pdf",
+      "location": "PDF 5·24·25·195쪽 / 인쇄 쪽수 동일",
+      "status": "원본 PDF 확보 · 지면 분석 초안",
+      "observed": "서한, 성과, 서비스 소개, 상세 재무표가 서로 다른 내부 구성을 사용합니다. 195쪽의 두 표는 독립적으로 읽도록 배치되어 있습니다.",
+      "limit": "바탕 그리드의 열 수·거터는 미확인. 가로 판형은 약 369.7×209.9mm로 A4에 축소할 때 가독성 재검토가 필요합니다."
+    },
+    {
+      "id": "gao",
+      "title": "Main Street Lending Program",
+      "author": "US GAO",
+      "url": "https://files.gao.gov/assets/gao-25-107246.pdf",
+      "location": "PDF 16–17쪽 / 인쇄 11–12쪽",
+      "status": "원본 PDF 확보 · 지면 분석 초안",
+      "observed": "차트는 넓게 사용하고, 아래 본문은 기존의 좁은 영역으로 돌아옵니다.",
+      "limit": "정부 감독 보고서의 정보 구조 비교용입니다. 기업보고서의 서체·밀도·미적 기준으로 추천한 것은 아닙니다."
+    },
+    {
+      "id": "rhythm-naver",
+      "title": "NAVER 통합보고서 2024 · 본문과 활동 기록",
+      "author": "NAVER",
+      "status": "보유 원문 새 지면 분석 · 2026-09-22",
+      "location": "PDF 31–33쪽 / 인쇄 31–33쪽",
+      "url": "https://www.navercorp.com/api/article/read/a6008e6b-2d43-4a86-b81c-b506259ab512/NAVER_Integrated_Report_2024_KOR.pdf#page=31",
+      "observed": "31쪽은 수치 요약, 32쪽은 플랫폼 설명·이미지·연간 활동, 33쪽은 서비스 설명입니다. 내용 역할에 따라 서로 다른 폭과 높이의 묶음을 배치하면서 제목·상단 내비게이션·쪽수의 역할은 유지합니다. 32쪽의 관찰 본문은 8.5pt, 반복 baseline 14pt이며 긴 줄의 텍스트 점유폭은 약175.35pt였습니다.",
+      "limit": "텍스트 점유폭은 숨은 text frame 폭이나 거터가 아닙니다. Pretendard IM의 적정 폭으로 그대로 복사하지 않습니다. 기존 보유 PDF를 분석했으며 새 외부 원문 수집·제작사 크레딧 확인·실물 인쇄·독자시험은 하지 못했습니다."
+    },
+    {
+      "id": "rhythm-accenture",
+      "title": "Accenture Life Trends 2025 · 이어지는 단과 독립 묶음",
+      "author": "Accenture / Accenture Song",
+      "status": "보유 원문 새 지면 분석 · 2026-09-22",
+      "location": "PDF 8–11쪽 / 인쇄 8–11쪽",
+      "url": "https://www.accenture.com/content/dam/accenture/final/accenture-com/document-3/Accenture-LifeTrends2025-Report.pdf#page=8",
+      "observed": "9쪽은 중앙 본문과 인용, 오른쪽의 더 긴 본문이 서로 다른 높이로 끝납니다. 10쪽은 문장이 다음 단으로 이어집니다. 독립 정보 묶음과 연속 읽기 단을 같은 방식으로 분리하면 안 된다는 비교 근거입니다. 제목 앞뒤 간격이 거의 같은 구간도 있어 간격 배수 하나를 정답으로 삼지 않았습니다.",
+      "limit": "영문 가로 리포트이며 발표 슬라이드로 분류하지 않았습니다. 색·이미지·서체가 위계에 기여하므로 흑백 한국어 IM에 간격만 복사할 수 없습니다. 관찰한 글자 경계와 원본 제작 파일의 frame 사양은 다릅니다. 신규 다운로드가 아닙니다."
+    },
+    {
+      "id": "rhythm-nbim",
+      "title": "NBIM Annual Report 2025 · 표 내부와 표 사이의 간격",
+      "author": "Norges Bank Investment Management",
+      "status": "보유 원문 새 지면 분석 · 2026-09-22",
+      "location": "PDF 8·9·15·16쪽 / 인쇄 동일",
+      "url": "https://www.nbim.no/en/news-and-insights/reports/2025/annual-report-2025/",
+      "observed": "15쪽은 조밀한 수치 행 안에서 총계와 하위 묶음을 구분합니다. 16쪽은 표 캡션을 해당 표에 가깝게 두고 두 표 사이 공간을 크게 둡니다. 왼쪽 표들과 오른쪽 차트의 하단은 같지 않습니다. 전폭 표에서 표+차트로 바뀌어도 캡션·단위의 역할이 유지됩니다.",
+      "limit": "상단의 큰 빈 공간까지 현재 IM에 가져오지는 않았습니다. 원본 7.5pt 셀 본문은 측정 사실이지 권장값이 아닙니다. 공식 InDesign 설정이나 편집 규범을 확인한 것은 아니며, 기존 보유 PDF의 일부 내지를 대조했습니다."
+    }
+  ]
+}

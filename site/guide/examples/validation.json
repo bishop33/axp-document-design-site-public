@@ -1,0 +1,205 @@
+{
+  "renderer": "rsvg-convert / installed Pretendard",
+  "browserTested": false,
+  "browserLimitation": "Chromium blocked in coordinator environment; no bypass attempted.",
+  "measurement": "Pango actual glyph extents; chart central-baseline bounds within 1pt tolerance",
+  "pages": 38,
+  "uniqueIds": 46,
+  "errors": [],
+  "renders": [
+    {
+      "id": "single",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/single.png",
+      "chartLabelsMeasured": 15
+    },
+    {
+      "id": "single-finance",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/single-finance.png",
+      "chartLabelsMeasured": 20
+    },
+    {
+      "id": "single-business",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/single-business.png",
+      "chartLabelsMeasured": 18
+    },
+    {
+      "id": "single--text-with-notes",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/single--text-with-notes.png",
+      "chartLabelsMeasured": 15
+    },
+    {
+      "id": "single-finance--text-with-notes",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/single-finance--text-with-notes.png",
+      "chartLabelsMeasured": 20
+    },
+    {
+      "id": "single-business--text-with-notes",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/single-business--text-with-notes.png",
+      "chartLabelsMeasured": 18
+    },
+    {
+      "id": "single--asymmetric-analysis",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/single--asymmetric-analysis.png",
+      "chartLabelsMeasured": 15
+    },
+    {
+      "id": "single-finance--asymmetric-analysis",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/single-finance--asymmetric-analysis.png",
+      "chartLabelsMeasured": 20
+    },
+    {
+      "id": "single-business--asymmetric-analysis",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/single-business--asymmetric-analysis.png",
+      "chartLabelsMeasured": 18
+    },
+    {
+      "id": "columns",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/columns.png",
+      "chartLabelsMeasured": 22
+    },
+    {
+      "id": "columns-market",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/columns-market.png",
+      "chartLabelsMeasured": 17
+    },
+    {
+      "id": "columns-risk",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/columns-risk.png",
+      "chartLabelsMeasured": 13
+    },
+    {
+      "id": "columns--financial-table",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/columns--financial-table.png",
+      "chartLabelsMeasured": 22
+    },
+    {
+      "id": "columns-market--financial-table",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/columns-market--financial-table.png",
+      "chartLabelsMeasured": 17
+    },
+    {
+      "id": "columns-risk--financial-table",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/columns-risk--financial-table.png",
+      "chartLabelsMeasured": 13
+    },
+    {
+      "id": "columns--landscape-comparison",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/columns--landscape-comparison.png",
+      "chartLabelsMeasured": 22
+    },
+    {
+      "id": "columns-market--landscape-comparison",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/columns-market--landscape-comparison.png",
+      "chartLabelsMeasured": 17
+    },
+    {
+      "id": "columns-risk--landscape-comparison",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/columns-risk--landscape-comparison.png",
+      "chartLabelsMeasured": 13
+    },
+    {
+      "id": "side-note",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/side-note.png",
+      "chartLabelsMeasured": 23
+    },
+    {
+      "id": "side-note-customers",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/side-note-customers.png",
+      "chartLabelsMeasured": 19
+    },
+    {
+      "id": "side-note--financial-table",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/side-note--financial-table.png",
+      "chartLabelsMeasured": 21
+    },
+    {
+      "id": "side-note-customers--financial-table",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/side-note-customers--financial-table.png",
+      "chartLabelsMeasured": 19
+    },
+    {
+      "id": "modules",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/modules.png",
+      "chartLabelsMeasured": 16
+    },
+    {
+      "id": "modules-requirements",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/modules-requirements.png",
+      "chartLabelsMeasured": 19
+    },
+    {
+      "id": "modules--landscape-comparison",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/modules--landscape-comparison.png",
+      "chartLabelsMeasured": 16
+    },
+    {
+      "id": "modules-requirements--landscape-comparison",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/modules-requirements--landscape-comparison.png",
+      "chartLabelsMeasured": 17
+    },
+    {
+      "id": "slide-chart",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/slide-chart.png",
+      "chartLabelsMeasured": 11
+    },
+    {
+      "id": "slide-chart-company-impact",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/slide-chart-company-impact.png",
+      "chartLabelsMeasured": 15
+    },
+    {
+      "id": "slide-chart--landscape-comparison",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/slide-chart--landscape-comparison.png",
+      "chartLabelsMeasured": 11
+    },
+    {
+      "id": "slide-chart-company-impact--landscape-comparison",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/slide-chart-company-impact--landscape-comparison.png",
+      "chartLabelsMeasured": 15
+    },
+    {
+      "id": "slide-compare",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/slide-compare.png",
+      "chartLabelsMeasured": 14
+    },
+    {
+      "id": "slide-compare-bridge",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/slide-compare-bridge.png",
+      "chartLabelsMeasured": 22
+    },
+    {
+      "id": "slide-compare-cohort",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/slide-compare-cohort.png",
+      "chartLabelsMeasured": 12
+    },
+    {
+      "id": "slide-compare--slide-paired-evidence",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/slide-compare--slide-paired-evidence.png",
+      "chartLabelsMeasured": 14
+    },
+    {
+      "id": "slide-compare-bridge--slide-paired-evidence",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/slide-compare-bridge--slide-paired-evidence.png",
+      "chartLabelsMeasured": 22
+    },
+    {
+      "id": "slide-compare-cohort--slide-paired-evidence",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/slide-compare-cohort--slide-paired-evidence.png",
+      "chartLabelsMeasured": 14
+    },
+    {
+      "id": "baseline",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/baseline.png",
+      "chartLabelsMeasured": 0
+    },
+    {
+      "id": "type-scale",
+      "png": "/var/folders/y2/_pt4dqj904l0mhc_hdbr74p00000gp/T/guide-report-qa-1g12iexm/type-scale.png",
+      "chartLabelsMeasured": 0
+    }
+  ],
+  "limitations": [
+    "실물 인쇄·원거리 투사·독자시험 미실시",
+    "브라우저 inline CSS 상호작용 미검증"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "scope": "HTML structure, offline dependencies and required artifacts only",
+  "rendered": false,
+  "humanTested": false,
+  "financialContentReview": "See independent-qc.md",
+  "reports": [
+    {
+      "persona": "analyst",
+      "pageContainers": 4,
+      "offlineDependencies": true,
+      "fictionLabelPresent": true,
+      "sha256": "eb965b3fd00baca456ee0ebcffb0068e2a38e1a6eb5999d07cbce946d5dd15bd",
+      "visibleTextCharacters": 4202,
+      "hasDecisionLog": true,
+      "hasFindings": true
+    },
+    {
+      "persona": "designer",
+      "pageContainers": 4,
+      "offlineDependencies": true,
+      "fictionLabelPresent": true,
+      "sha256": "6204db6f1914e04105d45f7aa3f4d5df4b06058dd98383f81efa4ebade0b0954",
+      "visibleTextCharacters": 5197,
+      "hasDecisionLog": true,
+      "hasFindings": true
+    },
+    {
+      "persona": "llm",
+      "pageContainers": 4,
+      "offlineDependencies": true,
+      "fictionLabelPresent": true,
+      "sha256": "1faef0fbe56d8950309e24fd6068f4a0c69c039d7c0d049ed743b825cb9492e0",
+      "visibleTextCharacters": 4002,
+      "hasDecisionLog": true,
+      "hasFindings": true
+    }
+  ]
+}
