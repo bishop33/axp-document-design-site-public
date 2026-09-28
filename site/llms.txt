@@ -23,6 +23,11 @@
 
 - [차트 원칙과 갤러리](https://bishop33.github.io/axp-document-design-site-public/docs/charts.md): 정확한 값을 찾는 표부터 차이·변화·관계를 보여주는 차트까지. 예시를 선택하면 사용 목적과 배치 기준을 자세히 볼 수 있습니다.
 
+## 견본과 예시
+
+- [정보 표현 견본집](https://bishop33.github.io/axp-document-design-site-public/docs/samples/specimens.md): 표, 문장, 차트, 구조 — 같은 내용도 표현에 따라 읽히는 방식이 달라집니다. 분류별 견본을 비교합니다.
+- [다이어그램 설명 실험](https://bishop33.github.io/axp-document-design-site-public/docs/samples/diagram-lab.md): 사업 구조, 산업 지도 등 설명 목적별 도식을 A4 본문 삽입 크기로 비교한 가상 사례입니다.
+
 ## 레퍼런스
 
 - [실제 문서 레퍼런스](https://bishop33.github.io/axp-document-design-site-public/docs/references.md): 실제 PDF·문서에서 추출한 내지 미리보기와 편집 방식 관찰. 링크·템플릿·목업 후보는 탐색 후보로 분리했습니다.
