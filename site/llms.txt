@@ -1,0 +1,36 @@
+# 문서 디자인 가이드
+
+> DeepSearch의 기업 보고서·발표 자료 디자인 가이드. 각 문서는 Markdown으로도 제공한다.
+
+## 시작하기
+
+- [개요](https://bishop33.github.io/axp-document-design-site-public/docs/index.md): 기업 보고서와 발표 자료를 만들 때 쓰는 기본 원칙, 그리드, 차트, 실제 문서 레퍼런스와 제작 시험을 한곳에 모았습니다.
+- [인쇄용과 발표용](https://bishop33.github.io/axp-document-design-site-public/docs/start/print-and-presentation.md): 가까이서 자세히 읽는 인쇄용과, 설명을 들으며 멀리서 보는 발표용. 같은 내용이어도 글자 크기와 정보의 양, 배치 기준이 달라집니다.
+- [정보의 순서와 위계](https://bishop33.github.io/axp-document-design-site-public/docs/basics/hierarchy.md): 
+- [서체와 조판](https://bishop33.github.io/axp-document-design-site-public/docs/basics/type.md): 
+- [그리드와 정렬](https://bishop33.github.io/axp-document-design-site-public/docs/basics/grid.md): 
+- [간격과 그룹핑](https://bishop33.github.io/axp-document-design-site-public/docs/basics/space.md): 
+- [표·차트·도식](https://bishop33.github.io/axp-document-design-site-public/docs/basics/data.md): 
+- [연속 페이지와 출력](https://bishop33.github.io/axp-document-design-site-public/docs/basics/pages.md): 
+
+## 레이아웃
+
+- [그리드 시스템](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids.md): 본문의 흐름, 표와 차트의 비중, 주석의 위치에 따른 지면 구조.
+- [그리드 적용 예시](https://bishop33.github.io/axp-document-design-site-public/docs/layout/examples.md): 문서의 목적에 맞춘 원고, 그리드, 서체와 데이터 표현. 같은 원고를 여러 그리드에 배치해 비교합니다.
+- [원본 관찰과 자체 설정](https://bishop33.github.io/axp-document-design-site-public/docs/layout/source-observations.md): Stephen Kelman의 공개 사양과 원본 지면을 대조한 기록입니다. 확인한 사양과 자체 실험을 구분합니다.
+
+## 차트
+
+- [차트 원칙과 갤러리](https://bishop33.github.io/axp-document-design-site-public/docs/charts.md): 정확한 값을 찾는 표부터 차이·변화·관계를 보여주는 차트까지. 예시를 선택하면 사용 목적과 배치 기준을 자세히 볼 수 있습니다.
+
+## 레퍼런스
+
+- [실제 문서 레퍼런스](https://bishop33.github.io/axp-document-design-site-public/docs/references.md): 실제 PDF·문서에서 추출한 내지 미리보기와 편집 방식 관찰. 링크·템플릿·목업 후보는 탐색 후보로 분리했습니다.
+
+## 팀과 기록
+
+- [서체·라이선스](https://bishop33.github.io/axp-document-design-site-public/docs/licenses.md): 이 사이트가 사용하는 서체와 오픈소스 구성요소의 라이선스.
+
+## 데이터
+
+- [디자인 토큰](https://bishop33.github.io/axp-document-design-site-public/design-tokens.json): 색, 선, 서체 규칙

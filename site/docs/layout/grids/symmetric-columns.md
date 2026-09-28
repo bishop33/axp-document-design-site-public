@@ -1,0 +1,50 @@
+# 대칭 2단 본문
+
+같은 폭의 두 본문 단을 순서대로 읽고 전폭 자료를 사이에 삽입하는 시스템입니다.
+
+- 구조: 본문 흐름 · 인쇄용 · 세로
+- 용도: 현황 파악, 투자 검토, 성과 보고
+- 주소: https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/symmetric-columns/
+
+## 치수
+
+| 항목 | 값 |
+|---|---|
+| 판형 | 595.28 × 841.89pt |
+| 바탕 그리드 | 6열 × 9행 |
+| 거터 | 12pt |
+| 좌우 여백 | 46pt |
+| 본문 영역 | 위 44pt, 높이 752pt |
+
+## 대표 배치
+
+- 제목·요약: 1열부터 6열 × 1행부터 1행
+- 본문 전반: 1열부터 3열 × 2행부터 5행
+- 본문 후반: 4열부터 3열 × 2행부터 5행
+- 전폭 도표: 1열부터 6열 × 7행부터 2행
+- 주석: 1열부터 6열 × 9행부터 1행
+
+## 구성 원리
+
+- 바탕 열 0~2와 3~5를 병합해 같은 폭의 본문 단을 만듭니다.
+- 읽는 순서는 왼쪽 단 아래까지 읽은 뒤 오른쪽 단으로 이어지며 좌우 행별 비교가 아닙니다.
+- 전폭 도표가 있으면 두 단을 함께 끊고 도표 뒤에 본문 흐름을 다시 연결합니다.
+
+## 적합한 내용
+
+동등한 위계의 긴 본문을 짧은 행 길이로 연속해서 읽을 때 사용합니다.
+
+## 다른 구조가 필요한 때
+
+좌우를 서로 다른 대안으로 읽어야 하거나 넓은 표가 대부분일 때는 비교형 또는 표 중심 시스템을 선택합니다.
+
+## 적용 예시
+
+- 투자검토 IM (투자 검토, 3쪽): https://bishop33.github.io/axp-document-design-site-public/docs/layout/examples/columns/
+- 산업분석 (대안 비교, 2쪽): https://bishop33.github.io/axp-document-design-site-public/docs/layout/examples/slide-chart/
+
+## 관찰 근거와 자체 설정
+
+원문확인: Kelman HTML. 자체구성: 6열×9행 바탕과 3+3 병합, 모든 치수·regions는 AXP 대표배치 제안입니다.
+
+- [Kelman Two Column 공개 설명](https://stephenkelman.co.uk/a4-two-column-report-grid-system-for-indesign): 12-field, optional margin/caption, 11pt baseline 명시. 11pt를 본문 크기로 해석하지 않습니다.

@@ -1,0 +1,48 @@
+{
+  "$description": "문서 디자인 가이드 사이트의 디자인 토큰. prepare.mjs가 app/tokens.css로 변환하고 design-tokens.json으로 공개한다. 색 외 규칙도 에이전트가 읽을 수 있게 여기 둔다.",
+  "font": {
+    "family": "Pretendard",
+    "weights": [
+      400,
+      600
+    ]
+  },
+  "radius": "0px",
+  "rule": {
+    "width": "1px",
+    "principle": "선은 모두 1px. 위계는 두께가 아니라 색으로 준다: rule(구획 시작) > line(행 구분) > line-soft(목록 내부)."
+  },
+  "color": {
+    "light": {
+      "background": "#ffffff",
+      "surface": "#f4f4f2",
+      "desk": "#e7e7e4",
+      "ink": "#1b1b1b",
+      "ink-2": "#3d3d3d",
+      "muted": "#6b6b6b",
+      "rule": "#a3a3a0",
+      "line": "#e3e3e0",
+      "line-soft": "#efefed",
+      "accent": "#c82d30",
+      "accent-ink": "#a62326",
+      "warn": "#8a5a00",
+      "paper": "#ffffff"
+    },
+    "dark": {
+      "background": "#121212",
+      "surface": "#1a1a1a",
+      "desk": "#0a0a0a",
+      "ink": "#ecebe8",
+      "ink-2": "#c9c8c4",
+      "muted": "#8f8e8a",
+      "rule": "#5e5e5a",
+      "line": "#2c2c2a",
+      "line-soft": "#222221",
+      "accent": "#e5585b",
+      "accent-ink": "#f07b7d",
+      "warn": "#d4a64a",
+      "paper": "#ffffff"
+    }
+  },
+  "documentPaper": "문서 지면(A4 보고서·견본)은 화면 테마와 무관하게 paper 색을 유지한다."
+}

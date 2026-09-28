@@ -1,1 +1,49 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>학습 기록 · 문서 디자인 가이드</title><meta name="description" content="편집 디자인 학습과 실제 그리드, 적용 실험과 검토 기록을 함께 관리합니다."><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231b1b1b'/%3E%3Cpath d='M7 7h18v18H7zM13 7v18M7 13h18' fill='none' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"><link rel="stylesheet" href="learning/style.css"><link rel="stylesheet" href="guide/navigation.css"></head><body><a class="skip" href="#main">본문으로 이동</a><header class="guide-header"><div class="header-inner"><a class="brand" href="index.html#basics">DeepSearch <span>문서 디자인 가이드</span></a><nav aria-label="주 메뉴"><a href="index.html#basics">기본 가이드</a><a href="index.html#grids">그리드</a><a href="index.html#examples">예시</a><a href="index.html#charts">차트</a><a href="index.html#references">레퍼런스</a><a href="index.html#team">팀과 역할</a><a href="#notes" aria-current="page">학습 기록</a></nav></div></header><div class="shell"><aside class="sidebar"><nav aria-label="학습 기록 세부 메뉴"><p class="nav-label">학습 기록</p><a href="#notes" aria-current="page"><span>01</span>학습 노트</a><a href="#grids"><span>02</span>그리드 실험</a><a href="#experiments"><span>03</span>적용 실험</a><a href="#sources"><span>04</span>출처와 관찰</a><a href="#reviews"><span>05</span>검토 기록</a><div class="nav-divider"></div><a class="archive" href="legacy-library.html">기존 표현 샘플 ↗</a><a class="archive" href="licenses.html">서체·라이선스</a></nav></aside><main id="main" class="content" tabindex="-1"><div class="page-heading"><div><p class="eyebrow">01 / 학습 노트</p><h1>지면을 만드는 판단</h1><p>배운 원리와 실제로 확인한 것, 다음 실험에서 확인할 것을 함께 기록합니다.</p></div><span class="date">2026.09.21 정리</span></div><div class="notebook"><ol class="chapter-list"><li><button aria-pressed="true"><span class="chapter-number">01</span><span><span class="chapter-name">행간·읽기 폭·여백</span><span class="chapter-status">원리 정리 · 비교 실험 예정</span></span></button></li><li><button aria-pressed="false"><span class="chapter-number">02</span><span><span class="chapter-name">모듈과 본문 기준선</span><span class="chapter-status">적용 실험 · 검토 중</span></span></button></li></ol><article class="article"><span class="status">첫 학습 주제</span><h2>행간과 폭을 바꾸면<br>남는 여백도 달라집니다.</h2><p class="lead">본문의 줄 길이와 줄 사이 간격을 정한 뒤, 글이 차지하는 높이와 주변 요소의 거리를 함께 봅니다.</p><div class="diagram"><svg viewBox="0 0 500 230" role="img" aria-label="같은 원고가 좁은 폭에서는 많은 줄, 넓은 폭에서는 적은 줄을 차지하는 관계 도식"><g fill="white" stroke="#bbb"><rect x="25" y="10" width="200" height="190"/><rect x="275" y="10" width="200" height="190"/></g><g fill="none" stroke="#333" stroke-width="2"><path d="M60 45h100m-100 14h100m-100 14h100m-100 14h100m-100 14h100m-100 14h100m-100 14h100m-100 14h70"/><path d="M300 45h150m-150 14h150m-150 14h150m-150 14h150m-150 14h140"/></g><g font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" fill="#555"><text x="125" y="223">좁은 폭 · 많은 글줄</text><text x="375" y="223">넓은 폭 · 적은 글줄</text></g></svg><p class="caption">관계를 설명하는 도식입니다. 서체와 실제 원고를 조판해 측정한 결과는 아닙니다.</p></div><h3>무엇을 함께 볼 것인가</h3><p>폭을 줄이면 같은 문장이 더 많은 줄을 차지할 수 있습니다. 본문 높이가 달라지면 표가 놓일 위치와 페이지 하단의 빈 공간도 달라집니다. 모듈을 먼저 채우기보다 실제 원고가 차지하는 영역을 확인합니다.</p><p class="note">14pt 행간과 6×6 모듈은 기존 실험의 제안값입니다. 한국어 문서의 보편적인 권장값으로 확정하지 않았습니다.</p></article></div></main></div><script src="learning/app.js" defer></script></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>문서 디자인 가이드로 이동</title><noscript><meta http-equiv="refresh" content="0;url=/axp-document-design-site-public/docs/records/notes/measure/"></noscript><script>function mapLegacyRoute(page, hash) {
+  const [path, search = ''] = (hash || '').replace(/^#/, '').split('?')
+  const [key, rawId] = path.split('/')
+  const id = rawId ? decodeURIComponent(rawId) : ''
+  const q = search ? '?' + search : ''
+  if (page === 'study') {
+    if (!key || key === 'notes') return `/docs/records/notes/${id || 'measure'}/`
+    if (key === 'grids') return '/docs/records/grid-experiment/'
+    if (key === 'sources') return `/docs/records/sources/${id ? '#source-' + id : ''}`
+    if (['experiments', 'reviews'].includes(key)) return `/docs/records/${key}/`
+    return '/docs/records/notes/measure/'
+  }
+  switch (key) {
+    case '':
+    case undefined:
+      return '/docs/'
+    case 'basics':
+    case 'notes':
+      return !id || id === 'context' ? '/docs/start/print-and-presentation/' : `/docs/basics/${id}/`
+    case 'grids':
+      return `/docs/layout/grids/${q}`
+    case 'system':
+      return `/docs/layout/grids/${id}/`
+    case 'examples':
+      return `/docs/layout/examples/${q}`
+    case 'example':
+    case 'grid':
+      return `/docs/layout/examples/${id}/${q}`
+    case 'reference':
+      return '/docs/layout/source-observations/'
+    case 'references': {
+      const params = new URLSearchParams(search)
+      params.delete('from')
+      return `/docs/references/${id ? id + '/' : ''}${params.size && !id ? '?' + params : ''}`
+    }
+    case 'charts':
+      return '/docs/charts/'
+    case 'chart':
+      return `/docs/charts/${id}/`
+    case 'team':
+      return '/docs/team/'
+    case 'sources':
+    case 'reviews':
+    case 'experiments':
+      return mapLegacyRoute('study', hash)
+    default:
+      return '/docs/'
+  }
+};location.replace("/axp-document-design-site-public"+mapLegacyRoute("study",location.hash))</script></head><body><p><a href="/axp-document-design-site-public/docs/records/notes/measure/">문서 디자인 가이드로 이동</a></p></body></html>

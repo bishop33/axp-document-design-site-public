@@ -1,0 +1,56 @@
+# 가로 항목 대조
+
+공유 항목을 기준으로 복수 대상의 정보를 같은 행에서 대조하는 가로 인쇄 시스템입니다.
+
+- 구조: 대응 비교 · 인쇄용 · 가로
+- 용도: 대안 비교, 투자 검토, 구축 검수
+- 주소: https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/landscape-comparison/
+
+## 치수
+
+| 항목 | 값 |
+|---|---|
+| 판형 | 841.89 × 595.28pt |
+| 바탕 그리드 | 8열 × 6행 |
+| 거터 | 12pt |
+| 좌우 여백 | 42pt |
+| 본문 영역 | 위 36pt, 높이 520pt |
+
+## 대표 배치
+
+- 비교 질문·전제: 1열부터 8열 × 1행부터 1행
+- 평가 항목 1: 1열부터 2열 × 2행부터 2행
+- 대상 A·항목 1: 3열부터 3열 × 2행부터 2행
+- 대상 B·항목 1: 6열부터 3열 × 2행부터 2행
+- 평가 항목 2: 1열부터 2열 × 4행부터 2행
+- 대상 A·항목 2: 3열부터 3열 × 4행부터 2행
+- 대상 B·항목 2: 6열부터 3열 × 4행부터 2행
+- 차이·조건·출처: 1열부터 8열 × 6행부터 1행
+
+## 구성 원리
+
+- 대표배치는 열 0~1의 공유 항목과 2~4·5~7의 두 대상입니다. 세 대상이면 항목2열과 대상별2열로 재병합할 수 있습니다.
+- 대상별 설명을 끝까지 읽는 대신 같은 항목의 좌우를 먼저 대조하도록 행 경계를 공유합니다.
+- 같은 행의 기간·단위·정의를 맞춥니다. 금액·기간·조건은 서로 다른 속성이므로 대등한 비교 대상으로 이름만 바꾸지 않습니다.
+- 행 높이는 비교 대상 중 가장 긴 내용에 맞추고 결측은 미확인 등 의미를 표시합니다. 대상 수를 늘리려고 글자를 축소하지 않습니다.
+- 이 가로 인쇄 판형을 회의실 발표용으로 자동 분류하지 않습니다.
+
+## 적합한 내용
+
+대안·기업·시나리오를 같은 평가 항목과 단위로 비교할 때 사용합니다.
+
+## 다른 구조가 필요한 때
+
+좌우 대상의 정의가 다르거나 각각을 긴 독립 본문으로 읽어야 하는 경우에는 쓰지 않습니다.
+
+## 적용 예시
+
+- 투자검토 IM (투자 검토, 3쪽): https://bishop33.github.io/axp-document-design-site-public/docs/layout/examples/columns--landscape-comparison/
+- 기술 제안서 (구축 검수, 2쪽): https://bishop33.github.io/axp-document-design-site-public/docs/layout/examples/modules--landscape-comparison/
+- 산업분석 (대안 비교, 2쪽): https://bishop33.github.io/axp-document-design-site-public/docs/layout/examples/slide-chart--landscape-comparison/
+
+## 관찰 근거와 자체 설정
+
+원문확인: Kelman 가로 판형 설명. 자체구성: 공유 항목과 두 대상의 행 대응, 모든 치수·regions는 대표배치 제안입니다.
+
+- [Kelman A4 Landscape Presentation 공개 설명](https://stephenkelman.co.uk/a4-presentation-grid-system-for-indesign): A4 가로, 24-field와 caption grid 확인. 항목별 비교 구조는 원문 사양이 아닌 자체 적용 제안입니다.
