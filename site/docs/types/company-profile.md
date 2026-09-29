@@ -26,14 +26,14 @@
 | 쪽 | 답할 질문 | 표현 |
 |---|---|---|
 | 요약 | 한 문장으로 이 회사는? 판단은? | [KPI + 작은 추세](/docs/charts/sparkline/), 판단 세 줄 |
-| 회사 개요 | 무엇을 누구에게 팔고 돈은 어떻게 버나? | [사업 구조도](/docs/data/diagrams/#business-model), [연혁](/docs/data/diagrams/#history) |
-| 산업 환경 | 어떤 시장에 있고 시장은 커지나? | [시장 범위](/docs/data/diagrams/#market-sizing), [산업 지도](/docs/data/diagrams/#value-chain), [실적과 전망](/docs/charts/forecast/) |
-| 경쟁 포지션 | 경쟁사와 무엇이 다른가? | [포지셔닝 맵](/docs/data/diagrams/#positioning), [강조 선](/docs/charts/multi-line/) |
-| 제품과 수익 | 매출은 어디서 나오나? | [매출 구성 트리](/docs/data/diagrams/#revenue-tree), [도넛](/docs/charts/donut/) |
+| 회사 개요 | 무엇을 누구에게 팔고 돈은 어떻게 버나? | [사업 구조도](/docs/diagrams/business-model/), [연혁](/docs/diagrams/history/) |
+| 산업 환경 | 어떤 시장에 있고 시장은 커지나? | [시장 범위](/docs/diagrams/market-sizing/), [산업 지도](/docs/diagrams/value-chain/), [실적과 전망](/docs/charts/forecast/) |
+| 경쟁 포지션 | 경쟁사와 무엇이 다른가? | [포지셔닝 맵](/docs/diagrams/positioning/), [강조 선](/docs/charts/multi-line/) |
+| 제품과 수익 | 매출은 어디서 나오나? | [매출 구성 트리](/docs/diagrams/revenue-tree/), [도넛](/docs/charts/donut/) |
 | 고객과 판매 | 누가 사고 얼마나 오래 쓰나? | [누적 막대](/docs/charts/stacked-bar/), [퍼널](/docs/charts/funnel/) |
 | 재무 요약 | 성장·수익성·안정성은? | [재무 요약표](/docs/charts/table-financial/) |
 | 재무 추이 | 무엇이 이익을 바꿨나? | [막대 + 선](/docs/charts/combo/), [워터폴](/docs/charts/waterfall/) |
-| 지배구조·조직 | 누가 소유하고 누가 운영하나? | [지배구조·지분도](/docs/data/diagrams/#ownership), [조직도](/docs/data/diagrams/#org-chart) |
+| 지배구조·조직 | 누가 소유하고 누가 운영하나? | [지배구조·지분도](/docs/diagrams/ownership/), [조직도](/docs/diagrams/org-chart/) |
 | 위험과 과제 | 무엇이 틀어질 수 있나? | 위험 표(위험 · 영향 · 신호 · 대응) |
 | 판단 | 그래서 어떻게 볼까? | 확인된 것 / 확인할 것 두 열 |
 

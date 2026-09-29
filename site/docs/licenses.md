@@ -17,7 +17,7 @@ Copyright (c) 2021, Kil Hyung-jin. Reserved Font Name: Pretendard. SIL Open Font
 
 ## Apache ECharts 5.6.0
 
-표·차트의 공통 차트 라이브러리입니다. 기존 페이지, 새 사이트, 정보 표현 견본집이 모두 5.6.0을 씁니다. Apache License 2.0이며 배포본의 하위 구성요소 고지를 보존합니다.
+표·차트의 공통 차트 라이브러리입니다. 기존 페이지, 새 사이트, 표현 비교 견본이 모두 5.6.0을 씁니다. Apache License 2.0이며 배포본의 하위 구성요소 고지를 보존합니다.
 
 - [LICENSE](/guide/vendor/ECHARTS-LICENSE.txt) · [NOTICE](/guide/vendor/ECHARTS-NOTICE.txt)
 - [공식 프로젝트](https://github.com/apache/echarts)

@@ -26,14 +26,14 @@
 |---|---|---|
 | 투자 요약 | 얼마를, 어떤 조건으로, 왜? | 거래 조건 표, 투자 포인트 세 개 |
 | 투자 포인트 | 이 회사가 이길 이유는? | 포인트마다 수치 하나 + 근거 두 줄 |
-| 시장 기회 | 시장은 얼마나 크고 빨리 크나? | [시장 범위](/docs/data/diagrams/#market-sizing), [실적과 전망](/docs/charts/forecast/) |
-| 사업 모델 | 돈은 어떻게 벌리나? | [사업 구조도](/docs/data/diagrams/#business-model), [플랫폼 생태계](/docs/data/diagrams/#ecosystem) |
+| 시장 기회 | 시장은 얼마나 크고 빨리 크나? | [시장 범위](/docs/diagrams/market-sizing/), [실적과 전망](/docs/charts/forecast/) |
+| 사업 모델 | 돈은 어떻게 벌리나? | [사업 구조도](/docs/diagrams/business-model/), [플랫폼 생태계](/docs/diagrams/ecosystem/) |
 | 경쟁 비교 | 경쟁사보다 무엇이 낫나? | [항목 비교표](/docs/charts/table-matrix/), [기울기](/docs/charts/slope/) |
 | 재무 실적 | 지금까지의 성장과 수익성은? | [재무 요약표](/docs/charts/table-financial/), [세로 막대](/docs/charts/column/) |
 | 재무 전망 | 전망의 근거와 가정은? | [막대 + 선](/docs/charts/combo/), 가정 표 |
 | 가치 평가 | 가격은 합리적인가? | 유사 기업 배수 표, [양방향 막대](/docs/charts/diverging/)(민감도) |
-| 투자 구조 | 돈은 어디로 가고 지분은 어떻게 되나? | [투자 구조도](/docs/data/diagrams/#deal-structure), 거래 전후 지분표 |
-| 위험과 완화 | 무엇이 틀어지고 어떻게 막나? | 위험 표, [이슈 트리](/docs/data/diagrams/#issue-tree) |
+| 투자 구조 | 돈은 어디로 가고 지분은 어떻게 되나? | [투자 구조도](/docs/diagrams/deal-structure/), 거래 전후 지분표 |
+| 위험과 완화 | 무엇이 틀어지고 어떻게 막나? | 위험 표, [이슈 트리](/docs/diagrams/issue-tree/) |
 
 ## 지킬 것
 

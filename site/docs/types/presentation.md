@@ -31,8 +31,8 @@
 | 대등 비교 | 두 대상을 나란히 볼 때 | [덤벨](/docs/charts/dumbbell/), [기울기](/docs/charts/slope/) |
 | 표 비교 | 조건을 항목별로 대조할 때 | [항목 비교표](/docs/charts/table-matrix/) |
 | 대안 비교 | 하나를 고르게 할 때 | 대안 세 열 + 권고 |
-| 일정 | 단계와 시점을 약속할 때 | [추진 일정](/docs/data/diagrams/#roadmap), [연혁](/docs/data/diagrams/#history) |
-| 설명과 도판 | 구조나 화면을 설명할 때 | [사업 구조도](/docs/data/diagrams/#business-model), [시스템 구성도](/docs/data/diagrams/#system-architecture) |
+| 일정 | 단계와 시점을 약속할 때 | [추진 일정](/docs/diagrams/roadmap/), [연혁](/docs/diagrams/history/) |
+| 설명과 도판 | 구조나 화면을 설명할 때 | [사업 구조도](/docs/diagrams/business-model/), [시스템 구성도](/docs/diagrams/system-architecture/) |
 
 ## 지킬 것
 

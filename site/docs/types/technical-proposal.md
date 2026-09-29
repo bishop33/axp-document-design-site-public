@@ -23,13 +23,13 @@
 
 | 쪽 | 답할 질문 | 표현 |
 |---|---|---|
-| 제안 요약 | 무엇을 바꾸고 어떤 효과가 있나? | 핵심 효과 수치 세 개, [현행·개선 비교](/docs/data/diagrams/#as-is-to-be) |
-| 현황과 과제 | 지금 무엇이 문제인가? | [이슈 트리](/docs/data/diagrams/#issue-tree), 과제 표 |
+| 제안 요약 | 무엇을 바꾸고 어떤 효과가 있나? | 핵심 효과 수치 세 개, [현행·개선 비교](/docs/diagrams/as-is-to-be/) |
+| 현황과 과제 | 지금 무엇이 문제인가? | [이슈 트리](/docs/diagrams/issue-tree/), 과제 표 |
 | 제안 범위 | 무엇을 하고 무엇은 안 하나? | 범위 표(포함 · 제외 · 전제) |
-| 시스템 구성 | 어떤 층과 연계로 이루어지나? | [시스템 구성도](/docs/data/diagrams/#system-architecture) |
-| 수행 방법 | 어떤 단계로 진행하고 무엇을 검증하나? | [공정·업무 단계](/docs/data/diagrams/#process), [의사결정 흐름](/docs/data/diagrams/#decision-flow) |
-| 추진 일정 | 언제 무엇이 끝나나? | [추진 일정(간트)](/docs/data/diagrams/#roadmap) |
-| 수행 조직 | 누가 책임지나? | [조직도](/docs/data/diagrams/#org-chart), 투입 인력 표 |
+| 시스템 구성 | 어떤 층과 연계로 이루어지나? | [시스템 구성도](/docs/diagrams/system-architecture/) |
+| 수행 방법 | 어떤 단계로 진행하고 무엇을 검증하나? | [공정·업무 단계](/docs/diagrams/process/), [의사결정 흐름](/docs/diagrams/decision-flow/) |
+| 추진 일정 | 언제 무엇이 끝나나? | [추진 일정(간트)](/docs/diagrams/roadmap/) |
+| 수행 조직 | 누가 책임지나? | [조직도](/docs/diagrams/org-chart/), 투입 인력 표 |
 | 기대 효과 | 효과는 얼마이고 어떻게 재나? | [덤벨](/docs/charts/dumbbell/), [불릿](/docs/charts/bullet/) |
 | 사업비 | 비용은 어떻게 구성되나? | 비용 표, [워터폴](/docs/charts/waterfall/) |
 
