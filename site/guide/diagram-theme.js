@@ -37,10 +37,26 @@
       titleColor: '#555555',
       edgeLabelBackground: '#ffffff',
       nodeBorder: '#999999',
+      // 2×2(quadrantChart): 사분면은 옅은 회색 두 단계, 점은 짙은 회색. 대상 기업은 원고에서 :::focus 대신 radius·color로 구분한다.
+      quadrant1Fill: '#f2f2f2', quadrant2Fill: '#fafafa', quadrant3Fill: '#f2f2f2', quadrant4Fill: '#fafafa',
+      quadrant1TextFill: '#777777', quadrant2TextFill: '#777777', quadrant3TextFill: '#777777', quadrant4TextFill: '#777777',
+      quadrantPointFill: '#8a8a8a', quadrantPointTextFill: '#222222', quadrantXAxisTextFill: '#555555', quadrantYAxisTextFill: '#555555',
+      quadrantInternalBorderStrokeFill: '#cccccc', quadrantExternalBorderStrokeFill: '#cccccc', quadrantTitleFill: '#222222',
+      // 연혁(timeline): 구간 색을 모두 흰 면 + 회색으로. 첫 구간만 짙게 두지 않는다(시간 순서 외의 위계를 만들지 않는다).
+      ...Object.fromEntries(Array.from({ length: 12 }, (_, i) => [[`cScale${i}`, '#f2f2f2'], [`cScaleLabel${i}`, '#222222'], [`cScaleInv${i}`, '#999999']]).flat()),
+      // 일정(gantt): 작업 막대는 회색, 핵심 작업(crit)만 짙게, 오늘 선은 쓰지 않는다.
+      sectionBkgColor: '#fafafa', altSectionBkgColor: '#ffffff', sectionBkgColor2: '#fafafa',
+      taskBkgColor: '#c8c8c8', taskBorderColor: '#c8c8c8', taskTextColor: '#222222', taskTextLightColor: '#222222', taskTextOutsideColor: '#222222', taskTextDarkColor: '#ffffff',
+      activeTaskBkgColor: '#8a8a8a', activeTaskBorderColor: '#8a8a8a', doneTaskBkgColor: '#e4e4e4', doneTaskBorderColor: '#e4e4e4',
+      critBkgColor: '#303030', critBorderColor: '#303030', gridColor: '#e5e5e5', todayLineColor: 'transparent',
     },
     // Mermaid 12는 상자 최소 폭이 120px(minNodeWidth)이라 짧은 이름도 넓은 상자가 된다. 0으로 두고 글자에 맞춘다.
     // Mermaid 11부터 htmlLabels는 최상위 설정이다(flowchart 안의 값은 무시된다).
     htmlLabels: false,
+    suppressErrorRendering: true,
+    quadrantChart: { chartWidth: 480, chartHeight: 360, pointRadius: 5, pointTextPadding: 6, titleFontSize: 13, quadrantLabelFontSize: 12, pointLabelFontSize: 12, xAxisLabelFontSize: 12, yAxisLabelFontSize: 12, quadrantPadding: 6, xAxisPosition: 'bottom', useMaxWidth: false },
+    timeline: { disableMulticolor: true, useMaxWidth: false },
+    gantt: { fontSize: 12, sectionFontSize: 12, barHeight: 20, barGap: 6, topPadding: 62, leftPadding: 110, gridLineStartPadding: 40, useMaxWidth: false },
     flowchart: { htmlLabels: false, minNodeWidth: 0, curve: 'basis', nodeSpacing: 14, rankSpacing: 22, padding: 7, diagramPadding: 4, subGraphTitleMargin: { top: 4, bottom: 4 }, useMaxWidth: false, wrappingWidth: 200 },
   };
   // 도식에서 쓰는 상자 종류. 새 종류가 필요하면 여기에 더한다.
@@ -49,6 +65,9 @@
     '.edgeLabel text, .edgeLabel tspan { font-size: 10.5px; fill: #555; }',
     '.cluster-label text, .cluster-label tspan { font-size: 10.5px; fill: #555; }',
     '.node text, .node tspan { font-size: 12px; }',
+    // 일정(gantt): 눈금선은 옅게, 막대 안 글자는 본문색.
+    '.grid .tick text { font-size: 11px; fill: #555; } .grid .tick line { stroke: #e5e5e5; } .grid path { stroke-width: 0; }',
+    '.taskText, .taskTextOutsideRight, .taskTextOutsideLeft, .sectionTitle { font-size: 12px !important; fill: #222 !important; }',
   ].join('\n');
   const classes = [
     'classDef default fill:#ffffff,stroke:#999999,stroke-width:1px,color:#222222',
@@ -74,7 +93,9 @@
       return `${m[1]}${m[2]} <-${m[3] === '.-' ? '.->' : '->'}${m[4] || ''} ${m[5]}`;
     }).join('\n');
     const id = 'diagram-' + ++count;
-    const { svg } = await window.mermaid.render(id, text + '\n' + classes);
+    // 상자 종류(classDef)는 flowchart에만 붙는다. 다른 도식(quadrantChart·timeline·gantt)은 themeVariables로만 색을 정한다.
+    const flow = /^\s*(flowchart|graph)\b/.test(text);
+    const { svg } = await window.mermaid.render(id, flow ? text + '\n' + classes : text);
     const doc = new DOMParser().parseFromString(svg, 'image/svg+xml');
     doc.querySelectorAll('path[id]').forEach((path) => {
       if (reversed.some((key) => path.id.includes('-' + key))) path.removeAttribute('marker-end');
