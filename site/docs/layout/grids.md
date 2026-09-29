@@ -26,7 +26,7 @@
 
 ## 함께 보는 조판 기준
 
-- [그리드를 짜는 기준](/docs/layout/grid-principles/) — 유형, 한 줄 길이, 행간과 행 모듈, 판면과 여백
+- [그리드 설계 원리](/docs/layout/grid-principles/) — 유형, 한 줄 길이, 행간과 행 모듈, 판면과 여백
 - [본문 기준선](/docs/layout/examples/baseline/)
 - [인쇄 본문 크기 비교](/docs/layout/examples/type-scale/)
 - [원본 관찰과 자체 설정](/docs/layout/source-observations/)
