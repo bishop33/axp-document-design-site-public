@@ -16,6 +16,13 @@
 - [절차와 검증 대응](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/process-and-evidence.md): 절차의 선후 관계와 단계별 산출물·검증 조건을 같은 위치에서 연결하는 시스템입니다. (인쇄용 · 가로 · 6열 × 6행)
 - [발표 핵심 차트](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-chart-focus.md): 하나의 결론과 이를 뒷받침하는 큰 차트를 중심으로 설명하는 발표용 시스템입니다. (발표용 · 가로 · 6열 × 6행)
 - [발표 대등 비교](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-paired-evidence.md): 같은 질문에 대한 두 근거를 동일한 크기와 기준으로 대조하는 발표용 시스템입니다. (발표용 · 가로 · 6열 × 6행)
+- [결론과 근거 셋](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-claim-three-proofs.md): 결론 한 문장을 크게 두고 그 아래 같은 무게의 근거 세 개를 나란히 놓는 발표 화면입니다. (발표용 · 가로 · 12열 × 6행)
+- [지표 넷과 추이](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-kpi-dashboard.md): 핵심 지표 네 개를 한 줄에 두고 그 아래 추이 차트와 해석을 붙이는 발표 화면입니다. (발표용 · 가로 · 12열 × 6행)
+- [단계와 일정](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-timeline.md): 네 단계를 왼쪽에서 오른쪽으로 놓고 아래에 일정·담당을 표로 받치는 발표 화면입니다. (발표용 · 가로 · 12열 × 6행)
+- [표 중심 비교](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-table-focus.md): 화면 대부분을 비교표 하나에 주고 제목과 해석만 위아래에 두는 발표 화면입니다. (발표용 · 가로 · 12열 × 6행)
+- [설명과 도판](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-text-visual.md): 왼쪽 다섯 열에 설명을, 오른쪽 일곱 열에 도식이나 제품 화면을 두는 발표 화면입니다. (발표용 · 가로 · 12열 × 6행)
+- [대안 셋 비교](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-three-options.md): 대안 세 개를 같은 폭의 열로 나누고 같은 항목 순서로 설명한 뒤 권고를 전폭으로 두는 발표 화면입니다. (발표용 · 가로 · 12열 × 6행)
+- [섹션 표지](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-section-divider.md): 섹션 번호와 제목을 크게 두고 이 섹션에서 답할 질문만 짧게 보여 주는 전환 화면입니다. (발표용 · 가로 · 12열 × 6행)
 
 ## 함께 보는 조판 기준
 
