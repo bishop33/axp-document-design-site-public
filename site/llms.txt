@@ -15,6 +15,7 @@
 
 ## 레이아웃
 
+- [그리드를 짜는 기준](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grid-principles.md): 판면과 여백, 열과 거터, 행 모듈과 행간, 한 줄 길이. 그리드 10종의 치수로 직접 계산해 무엇이 맞고 무엇이 어긋나는지 확인합니다.
 - [그리드 시스템](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids.md): 본문의 흐름, 표와 차트의 비중, 주석의 위치에 따른 지면 구조.
 - [그리드 적용 예시](https://bishop33.github.io/axp-document-design-site-public/docs/layout/examples.md): 문서의 목적에 맞춘 원고, 그리드, 서체와 데이터 표현. 같은 원고를 여러 그리드에 배치해 비교합니다.
 - [원본 관찰과 자체 설정](https://bishop33.github.io/axp-document-design-site-public/docs/layout/source-observations.md): Stephen Kelman의 공개 사양과 원본 지면을 대조한 기록입니다. 확인한 사양과 자체 실험을 구분합니다.

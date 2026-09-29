@@ -1,6 +1,6 @@
 [
   {
-    "id": "continuous-text", "name": "연속 본문", "family": "본문 흐름",
+    "id": "continuous-text", "gridType": "원고형", "name": "연속 본문", "family": "본문 흐름",
     "description": "한 줄기의 논증을 이어 읽으며 표와 그림은 본문 흐름에 삽입하는 시스템입니다.",
     "medium": "print", "orientation": "portrait", "size": [595.28, 841.89],
     "columns": 6, "rows": 9, "gap": 10, "margin": 62, "y": 44, "height": 752,
@@ -8,12 +8,12 @@
     "use": "긴 해설을 순서대로 읽어야 하고 독립된 보조 정보가 적을 때 사용합니다.",
     "avoid": "폭이 넓은 다기간 표나 여러 대안을 동시에 대조하는 페이지에는 적합하지 않습니다.",
     "composition": ["제목과 본문은 여섯 바탕 열을 병합해 공통 왼쪽 정렬선을 사용합니다.", "문단은 행 모듈마다 끊지 않고 본문 영역 안에서 연속으로 흐릅니다.", "본문에 삽입한 표·그림의 주석은 해당 자료와 함께 이동하며 긴 원고는 다음 쪽으로 이어집니다."],
-    "regions": [{"column": 0, "row": 0, "colSpan": 6, "rowSpan": 1, "label": "제목·요약"}, {"column": 0, "row": 1, "colSpan": 6, "rowSpan": 7, "label": "연속 본문·삽입 자료"}, {"column": 0, "row": 8, "colSpan": 6, "rowSpan": 1, "label": "주석"}],
+    "regions": [{"column": 0, "row": 0, "colSpan": 6, "rowSpan": 1, "label": "제목·요약"}, {"column": 0, "row": 1, "colSpan": 6, "rowSpan": 7, "label": "연속 본문·삽입 자료", "body": true}, {"column": 0, "row": 8, "colSpan": 6, "rowSpan": 1, "label": "주석"}],
     "references": [{"title": "Kelman Single Column 공개 설명", "url": "https://stephenkelman.co.uk/a4-single-column-report-grid-system-for-indesign", "note": "6-field와 선택형 margin/caption grid를 원문에서 확인했습니다. 여기의 열·행·치수는 원본 복제가 아닙니다."}],
     "evidence": "원문확인: 저장된 Kelman HTML의 공개 설명. 자체구성: 모든 치수·병합·regions는 AXP 대표배치 제안이며 유료 제작 파일과 출력 가독성은 미검증입니다."
   },
   {
-    "id": "symmetric-columns", "name": "대칭 2단 본문", "family": "본문 흐름",
+    "id": "symmetric-columns", "gridType": "칼럼형", "name": "대칭 2단 본문", "family": "본문 흐름",
     "description": "같은 폭의 두 본문 단을 순서대로 읽고 전폭 자료를 사이에 삽입하는 시스템입니다.",
     "medium": "print", "orientation": "portrait", "size": [595.28, 841.89],
     "columns": 6, "rows": 9, "gap": 12, "margin": 46, "y": 44, "height": 752,
@@ -21,12 +21,12 @@
     "use": "동등한 위계의 긴 본문을 짧은 행 길이로 연속해서 읽을 때 사용합니다.",
     "avoid": "좌우를 서로 다른 대안으로 읽어야 하거나 넓은 표가 대부분일 때는 비교형 또는 표 중심 시스템을 선택합니다.",
     "composition": ["바탕 열 0~2와 3~5를 병합해 같은 폭의 본문 단을 만듭니다.", "읽는 순서는 왼쪽 단 아래까지 읽은 뒤 오른쪽 단으로 이어지며 좌우 행별 비교가 아닙니다.", "전폭 도표가 있으면 두 단을 함께 끊고 도표 뒤에 본문 흐름을 다시 연결합니다."],
-    "regions": [{"column": 0, "row": 0, "colSpan": 6, "rowSpan": 1, "label": "제목·요약"}, {"column": 0, "row": 1, "colSpan": 3, "rowSpan": 5, "label": "본문 전반"}, {"column": 3, "row": 1, "colSpan": 3, "rowSpan": 5, "label": "본문 후반"}, {"column": 0, "row": 6, "colSpan": 6, "rowSpan": 2, "label": "전폭 도표"}, {"column": 0, "row": 8, "colSpan": 6, "rowSpan": 1, "label": "주석"}],
+    "regions": [{"column": 0, "row": 0, "colSpan": 6, "rowSpan": 1, "label": "제목·요약"}, {"column": 0, "row": 1, "colSpan": 3, "rowSpan": 5, "label": "본문 전반", "body": true}, {"column": 3, "row": 1, "colSpan": 3, "rowSpan": 5, "label": "본문 후반", "body": true}, {"column": 0, "row": 6, "colSpan": 6, "rowSpan": 2, "label": "전폭 도표"}, {"column": 0, "row": 8, "colSpan": 6, "rowSpan": 1, "label": "주석"}],
     "references": [{"title": "Kelman Two Column 공개 설명", "url": "https://stephenkelman.co.uk/a4-two-column-report-grid-system-for-indesign", "note": "12-field, optional margin/caption, 11pt baseline 명시. 11pt를 본문 크기로 해석하지 않습니다."}],
     "evidence": "원문확인: Kelman HTML. 자체구성: 6열×9행 바탕과 3+3 병합, 모든 치수·regions는 AXP 대표배치 제안입니다."
   },
   {
-    "id": "text-with-notes", "name": "본문과 옆주석", "family": "본문과 보조 정보",
+    "id": "text-with-notes", "gridType": "칼럼형", "name": "본문과 옆주석", "family": "본문과 보조 정보",
     "description": "주된 본문과 해당 문단의 용어·근거·예외를 구분하면서 가까이 연결하는 시스템입니다.",
     "medium": "print", "orientation": "portrait", "size": [595.28, 841.89],
     "columns": 6, "rows": 9, "gap": 12, "margin": 46, "y": 44, "height": 752,
@@ -34,12 +34,12 @@
     "use": "본문을 중단하지 않고 정의·근거 번호·예외 조건을 참조할 필요가 있을 때 사용합니다.",
     "avoid": "보조 정보가 본문만큼 길거나 독립적인 결론이면 옆주석에 축소하지 않습니다.",
     "composition": ["바탕 열 0~1은 주석, 2~5는 본문으로 병합하고 페이지 사이에도 역할을 유지합니다.", "옆주석의 시작 높이는 관련 문단과 대응시키며 빈 주석 영역을 억지로 채우지 않습니다.", "전폭 표가 필요한 부분만 여섯 열을 병합하고 표 주석은 표 바로 아래에서 읽게 합니다."],
-    "regions": [{"column": 0, "row": 0, "colSpan": 6, "rowSpan": 1, "label": "제목·요약"}, {"column": 0, "row": 1, "colSpan": 2, "rowSpan": 2, "label": "용어·근거"}, {"column": 0, "row": 4, "colSpan": 2, "rowSpan": 2, "label": "예외·주석"}, {"column": 2, "row": 1, "colSpan": 4, "rowSpan": 5, "label": "연속 본문"}, {"column": 0, "row": 6, "colSpan": 6, "rowSpan": 2, "label": "근거 표"}, {"column": 0, "row": 8, "colSpan": 6, "rowSpan": 1, "label": "표 주석"}],
+    "regions": [{"column": 0, "row": 0, "colSpan": 6, "rowSpan": 1, "label": "제목·요약"}, {"column": 0, "row": 1, "colSpan": 2, "rowSpan": 2, "label": "용어·근거"}, {"column": 0, "row": 4, "colSpan": 2, "rowSpan": 2, "label": "예외·주석"}, {"column": 2, "row": 1, "colSpan": 4, "rowSpan": 5, "label": "연속 본문", "body": true}, {"column": 0, "row": 6, "colSpan": 6, "rowSpan": 2, "label": "근거 표"}, {"column": 0, "row": 8, "colSpan": 6, "rowSpan": 1, "label": "표 주석"}],
     "references": [{"title": "Kelman Single Column 공개 설명", "url": "https://stephenkelman.co.uk/a4-single-column-report-grid-system-for-indesign", "note": "optional margins/captions 명시. 기존 group01-12-and22의 상품22 슬롯4·6·8에 본문과 옆주석 관찰 기록이 있습니다."}],
     "evidence": "원문확인: 공개 HTML의 보조 그리드 설명. 기존 그룹의 이미지 관찰 기록은 재독했으며 이번 신규 이미지 관찰과 구분합니다. 치수·regions는 자체 대표배치 제안입니다."
   },
   {
-    "id": "asymmetric-analysis", "name": "근거와 해설 비대칭", "family": "근거와 해설",
+    "id": "asymmetric-analysis", "gridType": "칼럼형", "name": "근거와 해설 비대칭", "family": "근거와 해설",
     "description": "넓은 근거 영역과 짧은 해석 영역을 대응시켜 수치와 판단을 함께 읽는 시스템입니다.",
     "medium": "print", "orientation": "portrait", "size": [595.28, 841.89],
     "columns": 6, "rows": 9, "gap": 12, "margin": 46, "y": 44, "height": 752,
@@ -52,7 +52,7 @@
     "evidence": "원문확인: NAVER PDF의 내용 관계 및 Kelman HTML. 자체구성: A4에서 4+2 역할 분담, 치수·regions는 대표배치 제안입니다."
   },
   {
-    "id": "modular-evidence", "name": "병합 모듈", "family": "모듈 조합",
+    "id": "modular-evidence", "gridType": "모듈형", "name": "병합 모듈", "family": "모듈 조합",
     "description": "서로 다른 크기의 본문·도표·보충자료를 행과 열의 병합으로 결합하는 시스템입니다.",
     "medium": "print", "orientation": "portrait", "size": [595.28, 841.89],
     "columns": 6, "rows": 9, "gap": 12, "margin": 46, "y": 44, "height": 752,
@@ -65,7 +65,7 @@
     "evidence": "원문확인: 두 Kelman 공개 HTML. 자체구성: 6열×9행은 원본 36-field의 재현이 아니며 모든 치수·regions는 대표배치 제안입니다."
   },
   {
-    "id": "financial-table", "name": "재무표 중심", "family": "조회와 검증",
+    "id": "financial-table", "gridType": "원고형", "name": "재무표 중심", "family": "조회와 검증",
     "description": "행 항목과 다기간 수치를 전폭 표로 조회하고 정의·예외를 이어 읽는 시스템입니다.",
     "medium": "print", "orientation": "portrait", "size": [595.28, 841.89],
     "columns": 6, "rows": 9, "gap": 10, "margin": 38, "y": 44, "height": 752,
@@ -78,7 +78,7 @@
     "evidence": "원문확인: Kelman HTML 및 NAVER PDF 선택 재무표. 자체구성: 표 중심 세로 지면, 모든 치수·regions는 대표배치 제안입니다."
   },
   {
-    "id": "landscape-comparison", "name": "가로 항목 대조", "family": "대응 비교",
+    "id": "landscape-comparison", "gridType": "모듈형", "name": "가로 항목 대조", "family": "대응 비교",
     "description": "공유 항목을 기준으로 복수 대상의 정보를 같은 행에서 대조하는 가로 인쇄 시스템입니다.",
     "medium": "print", "orientation": "landscape", "size": [841.89, 595.28],
     "columns": 8, "rows": 6, "gap": 12, "margin": 42, "y": 36, "height": 520,
@@ -91,7 +91,7 @@
     "evidence": "원문확인: Kelman 가로 판형 설명. 자체구성: 공유 항목과 두 대상의 행 대응, 모든 치수·regions는 대표배치 제안입니다."
   },
   {
-    "id": "process-and-evidence", "name": "절차와 검증 대응", "family": "순서와 의존 관계",
+    "id": "process-and-evidence", "gridType": "모듈형", "name": "절차와 검증 대응", "family": "순서와 의존 관계",
     "description": "절차의 선후 관계와 단계별 산출물·검증 조건을 같은 위치에서 연결하는 시스템입니다.",
     "medium": "print", "orientation": "landscape", "size": [841.89, 595.28],
     "columns": 6, "rows": 6, "gap": 12, "margin": 42, "y": 36, "height": 520,
@@ -104,7 +104,7 @@
     "evidence": "원문확인: Kelman의 모듈·caption 설명. 자체구성: 절차와 검증을 대응시킨 AXP 응용 시스템이며 모든 치수·regions는 대표배치 제안입니다. 직접 기술제안서 원문은 미확보입니다."
   },
   {
-    "id": "slide-chart-focus", "name": "발표 핵심 차트", "family": "발표 집중",
+    "id": "slide-chart-focus", "gridType": "모듈형", "name": "발표 핵심 차트", "family": "발표 집중",
     "description": "하나의 결론과 이를 뒷받침하는 큰 차트를 중심으로 설명하는 발표용 시스템입니다.",
     "medium": "slides", "orientation": "landscape", "size": [960, 540],
     "columns": 6, "rows": 6, "gap": 12, "margin": 42, "y": 30, "height": 480,
@@ -117,7 +117,7 @@
     "evidence": "원문확인: Kelman HTML과 NAVER PDF 선택 지면. 자체구성: 960×540pt, 병합·regions는 대표배치 제안이며 원거리 투사는 미검증입니다."
   },
   {
-    "id": "slide-paired-evidence", "name": "발표 대등 비교", "family": "발표 비교",
+    "id": "slide-paired-evidence", "gridType": "칼럼형", "name": "발표 대등 비교", "family": "발표 비교",
     "description": "같은 질문에 대한 두 근거를 동일한 크기와 기준으로 대조하는 발표용 시스템입니다.",
     "medium": "slides", "orientation": "landscape", "size": [960, 540],
     "columns": 6, "rows": 6, "gap": 16, "margin": 42, "y": 30, "height": 480,

@@ -3,7 +3,7 @@
 본문의 흐름, 표와 차트의 비중, 주석의 위치에 따른 지면 구조.
 
 - 상태: 승인
-- 갱신: 2026-09-22
+- 갱신: 2026-09-29
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/
 
 - [연속 본문](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/continuous-text.md): 한 줄기의 논증을 이어 읽으며 표와 그림은 본문 흐름에 삽입하는 시스템입니다. (인쇄용 · 세로 · 6열 × 9행)
@@ -19,6 +19,7 @@
 
 ## 함께 보는 조판 기준
 
+- [그리드를 짜는 기준](/docs/layout/grid-principles/) — 유형, 한 줄 길이, 행간과 행 모듈, 판면과 여백
 - [본문 기준선](/docs/layout/examples/baseline/)
 - [인쇄 본문 크기 비교](/docs/layout/examples/type-scale/)
 - [원본 관찰과 자체 설정](/docs/layout/source-observations/)
