@@ -3,7 +3,7 @@
 이 사이트가 사용하는 서체와 오픈소스 구성요소의 라이선스.
 
 - 상태: 승인
-- 갱신: 2026-09-28
+- 갱신: 2026-09-29
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/licenses/
 
 이 고지는 해당 제3자 구성요소에 적용됩니다. 사이트의 문서·디자인 전체에 별도의 오픈소스 라이선스를 부여하는 의미는 아닙니다.
@@ -15,13 +15,19 @@ Copyright (c) 2021, Kil Hyung-jin. Reserved Font Name: Pretendard. SIL Open Font
 - [라이선스 전문](/licenses/pretendard-LICENSE.txt)
 - [공식 프로젝트](https://github.com/orioncactus/pretendard)
 
-## Apache ECharts
+## Apache ECharts 5.6.0
 
-기존 페이지와 새 사이트의 차트에 5.6.0을, 일부 견본에 6.0.0을 씁니다. Apache License 2.0이며 배포본의 하위 구성요소 고지를 보존합니다.
+표·차트의 공통 차트 라이브러리입니다. 기존 페이지, 새 사이트, 정보 표현 견본집이 모두 5.6.0을 씁니다. Apache License 2.0이며 배포본의 하위 구성요소 고지를 보존합니다.
 
-- [ECharts 6.0.0 LICENSE](/licenses/echarts-LICENSE.txt) · [NOTICE](/licenses/echarts-NOTICE.txt) · [d3 고지](/licenses/LICENSE-d3)
-- [ECharts 5.6.0 LICENSE](/guide/vendor/ECHARTS-LICENSE.txt) · [NOTICE](/guide/vendor/ECHARTS-NOTICE.txt)
+- [LICENSE](/guide/vendor/ECHARTS-LICENSE.txt) · [NOTICE](/guide/vendor/ECHARTS-NOTICE.txt)
 - [공식 프로젝트](https://github.com/apache/echarts)
+
+## Mermaid 12.0.0
+
+도식의 공통 라이브러리입니다(설명형 도식 4종). MIT License. 배포본에는 d3(ISC), dagre, ELK(EPL-2.0) 등 하위 구성요소가 함께 들어 있습니다.
+
+- [LICENSE](/guide/vendor/MERMAID-LICENSE.txt) · [d3 LICENSE](/licenses/d3-LICENSE.txt) · [ELK LICENSE](/licenses/elkjs-LICENSE.txt)
+- [공식 프로젝트](https://github.com/mermaid-js/mermaid)
 
 ## 새 사이트의 구성요소
 
