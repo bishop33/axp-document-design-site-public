@@ -6,19 +6,19 @@
 - 갱신: 2026-09-29
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/types/investment-memo/
 
-1. 표지 — 페이지 패턴 [kp-cover-dark-type](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-cover-dark-type)
-2. 투자 요지와 목차 — 페이지 패턴 [kp-section-statement-contents](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-section-statement-contents)
-3. 투자 요약 — 페이지 패턴 [kp-kpi-blocks](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-kpi-blocks)
+1. 표지 — 그리드 [kp-cover-dark-type](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-cover-dark-type.md)
+2. 투자 요지와 목차 — 그리드 [kp-section-statement-contents](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-section-statement-contents.md)
+3. 투자 요약 — 그리드 [kp-kpi-blocks](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-kpi-blocks.md)
 4. 투자 포인트 — 그리드 [text-with-notes](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/text-with-notes.md)
-5. 시장 기회 — 페이지 패턴 [kp-chart-commentary](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-chart-commentary)
+5. 시장 기회 — 그리드 [kp-chart-commentary](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-chart-commentary.md)
 6. 사업 모델 — 그리드 [asymmetric-analysis](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/asymmetric-analysis.md)
 7. 경쟁 비교 — 그리드 [landscape-comparison](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/landscape-comparison.md)
-8. 재무 실적 — 페이지 패턴 [kp-financial-table](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-financial-table)
+8. 재무 실적 — 그리드 [kp-financial-table](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-financial-table.md)
 9. 재무 전망 — 그리드 [modular-evidence](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/modular-evidence.md)
 10. 가치 평가 — 그리드 [financial-table](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/financial-table.md)
 11. 투자 구조 — 그리드 [text-with-notes](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/text-with-notes.md)
 12. 위험과 완화 — 그리드 [symmetric-columns](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/symmetric-columns.md)
-13. 마감 — 페이지 패턴 [kp-closing-dark](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-closing-dark)
+13. 마감 — 그리드 [kp-closing-dark](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-closing-dark.md)
 
 ## 쪽마다 답할 질문과 표현
 

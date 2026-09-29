@@ -6,18 +6,18 @@
 - 갱신: 2026-09-29
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/types/technical-proposal/
 
-1. 표지 — 페이지 패턴 [kp-cover-split](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-cover-split)
-2. 목차 — 페이지 패턴 [kp-contents-numbered](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-contents-numbered)
+1. 표지 — 그리드 [kp-cover-split](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-cover-split.md)
+2. 목차 — 그리드 [kp-contents-numbered](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-contents-numbered.md)
 3. 제안 요약 — 그리드 [modular-evidence](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/modular-evidence.md)
 4. 현황과 과제 — 그리드 [asymmetric-analysis](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/asymmetric-analysis.md)
 5. 제안 범위 — 그리드 [text-with-notes](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/text-with-notes.md)
 6. 시스템 구성 — 그리드 [continuous-text](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/continuous-text.md)
 7. 수행 방법 — 그리드 [process-and-evidence](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/process-and-evidence.md)
 8. 추진 일정 — 그리드 [continuous-text](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/continuous-text.md)
-9. 수행 조직 — 페이지 패턴 [kp-profile-cards](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-profile-cards)
-10. 기대 효과 — 페이지 패턴 [kp-chart-commentary](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-chart-commentary)
+9. 수행 조직 — 그리드 [kp-profile-cards](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-profile-cards.md)
+10. 기대 효과 — 그리드 [kp-chart-commentary](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-chart-commentary.md)
 11. 사업비 — 그리드 [financial-table](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/financial-table.md)
-12. 마감 — 페이지 패턴 [kp-closing-dark](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-closing-dark)
+12. 마감 — 그리드 [kp-closing-dark](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-closing-dark.md)
 
 ## 쪽마다 답할 질문과 표현
 

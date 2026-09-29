@@ -6,18 +6,18 @@
 - 갱신: 2026-09-29
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/types/industry-analysis/
 
-1. 표지 — 페이지 패턴 [kp-cover-dark-type](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-cover-dark-type)
-2. 목차 — 페이지 패턴 [kp-contents-numbered](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-contents-numbered)
-3. 요약 — 페이지 패턴 [kp-kpi-blocks](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-kpi-blocks)
+1. 표지 — 그리드 [kp-cover-dark-type](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-cover-dark-type.md)
+2. 목차 — 그리드 [kp-contents-numbered](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-contents-numbered.md)
+3. 요약 — 그리드 [kp-kpi-blocks](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-kpi-blocks.md)
 4. 시장 정의 — 그리드 [text-with-notes](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/text-with-notes.md)
-5. 시장 규모와 전망 — 페이지 패턴 [kp-chart-commentary](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-chart-commentary)
+5. 시장 규모와 전망 — 그리드 [kp-chart-commentary](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-chart-commentary.md)
 6. 산업 구조 — 그리드 [continuous-text](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/continuous-text.md)
 7. 세부 시장 — 그리드 [modular-evidence](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/modular-evidence.md)
 8. 경쟁 구도 — 그리드 [landscape-comparison](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/landscape-comparison.md)
 9. 주요 기업 비교 — 그리드 [financial-table](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/financial-table.md)
-10. 동인과 위험 — 페이지 패턴 [kp-text-two-column](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-text-two-column)
+10. 동인과 위험 — 그리드 [kp-text-two-column](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-text-two-column.md)
 11. 전망과 판단 — 그리드 [asymmetric-analysis](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/asymmetric-analysis.md)
-12. 마감 — 페이지 패턴 [kp-closing-dark](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-closing-dark)
+12. 마감 — 그리드 [kp-closing-dark](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-closing-dark.md)
 
 ## 쪽마다 답할 질문과 표현
 

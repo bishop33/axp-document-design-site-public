@@ -6,19 +6,19 @@
 - 갱신: 2026-09-29
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/types/presentation/
 
-1. 표지 — 페이지 패턴 [kp-slide-cover-split](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-slide-cover-split)
-2. 목차 — 페이지 패턴 [kp-slide-contents](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-slide-contents)
+1. 표지 — 그리드 [kp-slide-cover-split](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-slide-cover-split.md)
+2. 목차 — 그리드 [kp-slide-contents](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-slide-contents.md)
 3. 섹션 표지 — 그리드 [slide-section-divider](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-section-divider.md)
-4. 핵심 숫자 — 페이지 패턴 [kp-slide-kpi-number](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-slide-kpi-number)
+4. 핵심 숫자 — 그리드 [kp-slide-kpi-number](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-slide-kpi-number.md)
 5. 결론과 근거 셋 — 그리드 [slide-claim-three-proofs](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-claim-three-proofs.md)
 6. 핵심 지표 — 그리드 [slide-kpi-dashboard](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-kpi-dashboard.md)
 7. 핵심 차트 — 그리드 [slide-chart-focus](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-chart-focus.md)
-8. 대등 비교 — 페이지 패턴 [kp-slide-paired-tables](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-slide-paired-tables)
+8. 대등 비교 — 그리드 [kp-slide-paired-tables](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-slide-paired-tables.md)
 9. 표 비교 — 그리드 [slide-table-focus](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-table-focus.md)
 10. 대안 비교 — 그리드 [slide-three-options](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-three-options.md)
 11. 일정 — 그리드 [slide-timeline](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/slide-timeline.md)
-12. 고객 증언 — 페이지 패턴 [kp-slide-quote-image](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-slide-quote-image)
-13. 마무리 진술 — 페이지 패턴 [kp-slide-statement](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-slide-statement)
+12. 고객 증언 — 그리드 [kp-slide-quote-image](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-slide-quote-image.md)
+13. 마무리 진술 — 그리드 [kp-slide-statement](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-slide-statement.md)
 
 ## 화면마다 쓰는 곳
 

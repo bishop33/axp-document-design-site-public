@@ -6,20 +6,20 @@
 - 갱신: 2026-09-29
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/types/company-profile/
 
-1. 표지 — 페이지 패턴 [kp-cover-dark-type](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-cover-dark-type)
-2. 목차 — 페이지 패턴 [kp-contents-numbered](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-contents-numbered)
-3. 요약 — 페이지 패턴 [kp-kpi-blocks](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-kpi-blocks)
+1. 표지 — 그리드 [kp-cover-dark-type](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-cover-dark-type.md)
+2. 목차 — 그리드 [kp-contents-numbered](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-contents-numbered.md)
+3. 요약 — 그리드 [kp-kpi-blocks](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-kpi-blocks.md)
 4. 회사 개요 — 그리드 [text-with-notes](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/text-with-notes.md)
 5. 산업 환경 — 그리드 [asymmetric-analysis](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/asymmetric-analysis.md)
-6. 경쟁 포지션 — 페이지 패턴 [kp-chart-commentary](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-chart-commentary)
+6. 경쟁 포지션 — 그리드 [kp-chart-commentary](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-chart-commentary.md)
 7. 제품과 수익 — 그리드 [asymmetric-analysis](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/asymmetric-analysis.md)
 8. 고객과 판매 — 그리드 [symmetric-columns](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/symmetric-columns.md)
-9. 재무 요약 — 페이지 패턴 [kp-financial-table](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-financial-table)
+9. 재무 요약 — 그리드 [kp-financial-table](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-financial-table.md)
 10. 재무 추이 — 그리드 [modular-evidence](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/modular-evidence.md)
-11. 지배구조·경영진 — 페이지 패턴 [kp-profile-cards](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-profile-cards)
-12. 위험과 과제 — 페이지 패턴 [kp-text-single-notes](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-text-single-notes)
+11. 지배구조·경영진 — 그리드 [kp-profile-cards](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-profile-cards.md)
+12. 위험과 과제 — 그리드 [kp-text-single-notes](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-text-single-notes.md)
 13. 판단 — 그리드 [asymmetric-analysis](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/asymmetric-analysis.md)
-14. 마감 — 페이지 패턴 [kp-closing-dark](https://bishop33.github.io/axp-document-design-site-public/docs/layout/page-patterns/#kp-closing-dark)
+14. 마감 — 그리드 [kp-closing-dark](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids/kp-closing-dark.md)
 
 ## 쪽마다 답할 질문과 표현
 
