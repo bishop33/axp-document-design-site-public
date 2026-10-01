@@ -13,7 +13,7 @@
 - [서체와 조판](https://bishop33.github.io/axp-document-design-site-public/docs/basics/type.md): 
 - [간격과 그룹핑](https://bishop33.github.io/axp-document-design-site-public/docs/basics/space.md): 
 - [표현 선택](https://bishop33.github.io/axp-document-design-site-public/docs/basics/data.md): 
-- [표현 비교](https://bishop33.github.io/axp-document-design-site-public/docs/samples/specimens.md): 같은 내용을 표, 문장, 차트, 도식으로 바꿔 놓고 무엇이 먼저 읽히는지 비교합니다. 분류 일곱 개 중 하나를 고르세요.
+- [표현 비교](https://bishop33.github.io/axp-document-design-site-public/docs/samples/specimens.md): 같은 내용을 표, 문장, 차트, 도식으로 바꿔 놓고 무엇이 먼저 읽히는지 비교합니다. 탭에서 분류 일곱 개를 오갑니다. 처음 탭은 글의 위계와 구성요소입니다.
 - [연속 페이지와 출력](https://bishop33.github.io/axp-document-design-site-public/docs/basics/pages.md): 
 
 ## 레이아웃
@@ -25,8 +25,8 @@
 
 ## 차트·도식
 
-- [차트 안내](https://bishop33.github.io/axp-document-design-site-public/docs/charts.md): 먼저 독자가 무엇을 알고 싶은지 정합니다. 질문 여섯 개 중 하나를 고르면 그 질문에 답하는 표와 차트 33종 가운데 해당하는 것만 볼 수 있습니다.
-- [도식 안내](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams.md): 먼저 독자가 무엇을 알고 싶은지 정합니다. 질문 넷 중 하나를 고르면 그 질문에 답하는 도식 16종 가운데 해당하는 것만 볼 수 있습니다.
+- [차트 안내](https://bishop33.github.io/axp-document-design-site-public/docs/charts.md): 독자가 무엇을 알고 싶은지에 따라 고릅니다. 탭의 질문 여섯 개가 표와 차트 33종을 나눕니다. 처음 탭은 정확한 값을 읽는 표입니다.
+- [도식 안내](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams.md): 독자가 무엇을 알고 싶은지에 따라 고릅니다. 탭의 질문 네 개가 도식 16종을 나눕니다. 처음 탭은 누가 누구와 어떤 관계인지 보여주는 도식입니다.
 - [라이브러리 안내](https://bishop33.github.io/axp-document-design-site-public/docs/visuals/libraries.md): 차트는 ECharts, 표는 공통 표 규칙, 도식은 Mermaid로 만듭니다.
 
 ## 제작 흐름

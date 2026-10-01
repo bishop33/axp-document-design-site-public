@@ -4,7 +4,8 @@
 // - 선 의미: 실선은 제품·판매·업무 흐름, 점선은 현금·되돌림.
 // - 배치는 앞으로 가는 흐름으로만 잡는다. 거꾸로 가는 선(대금·되돌림)은 `A <-.- B`로 써서 화살표만 뒤로 향하게 한다.
 //   (B -.-> A로 쓰면 순환이 생겨 자동 배치가 뒤엉킨다.)
-// - 선: 부드러운 곡선(basis). 직선(linear)은 이름표를 지나며 지그재그가, 직각(step)은 작은 꺾임이 생긴다.
+// - 선: 도식 방향에 맞춘 S자 곡선(가로 LR·RL은 bumpX, 세로 TB·TD·BT는 bumpY). 선은 상자에서 수직·수평으로 나와 한 번만 휜다.
+//   basis는 이름표를 지나며 오르내리는 굴곡이, 직선(linear)은 지그재그가, 직각(step)은 이름표 앞에서 끊긴 꺾임이 생겨 쓰지 않는다(2026-10-01 Bishop 지적: 대충 그은 선 같음).
 // - 글자: Pretendard 12px(본문 삽입 크기), 상자 안 둘째 줄은 설명.
 // - 순수 SVG 글자(htmlLabels:false)로 그려 인쇄·PDF에서 글자가 사라지지 않게 한다.
 (function () {
@@ -57,12 +58,13 @@
     quadrantChart: { chartWidth: 480, chartHeight: 360, pointRadius: 5, pointTextPadding: 6, titleFontSize: 13, quadrantLabelFontSize: 12, pointLabelFontSize: 12, xAxisLabelFontSize: 12, yAxisLabelFontSize: 12, quadrantPadding: 6, xAxisPosition: 'bottom', useMaxWidth: false },
     timeline: { disableMulticolor: true, useMaxWidth: false },
     gantt: { fontSize: 12, sectionFontSize: 12, barHeight: 20, barGap: 6, topPadding: 62, leftPadding: 110, gridLineStartPadding: 40, useMaxWidth: false },
-    flowchart: { htmlLabels: false, minNodeWidth: 0, curve: 'basis', nodeSpacing: 14, rankSpacing: 22, padding: 7, diagramPadding: 4, subGraphTitleMargin: { top: 4, bottom: 4 }, useMaxWidth: false, wrappingWidth: 200 },
+    flowchart: { htmlLabels: false, minNodeWidth: 0, curve: 'bumpY', nodeSpacing: 14, rankSpacing: 22, padding: 7, diagramPadding: 4, subGraphTitleMargin: { top: 4, bottom: 4 }, useMaxWidth: false, wrappingWidth: 200 },
   };
   // 도식에서 쓰는 상자 종류. 새 종류가 필요하면 여기에 더한다.
   // 선 이름표·묶음 제목은 상자 글자보다 한 단계 작게, 회색으로.
   config.themeCSS = [
-    '.edgeLabel text, .edgeLabel tspan { font-size: 10.5px; fill: #555; }',
+    // 선 이름표 글자에 흰 테두리(paint-order)를 둘러 아래로 지나는 선이 글자를 긋지 않게 한다(순수 SVG 글자라 배경 상자가 없다).
+    '.edgeLabel text, .edgeLabel tspan { font-size: 10.5px; fill: #555; paint-order: stroke; stroke: #ffffff; stroke-width: 4px; stroke-linejoin: round; }',
     '.cluster-label text, .cluster-label tspan { font-size: 10.5px; fill: #555; }',
     '.node text, .node tspan { font-size: 12px; }',
     // 일정(gantt): 눈금선은 옅게, 막대 안 글자는 본문색.
@@ -94,8 +96,10 @@
     }).join('\n');
     const id = 'diagram-' + ++count;
     // 상자 종류(classDef)는 flowchart에만 붙는다. 다른 도식(quadrantChart·timeline·gantt)은 themeVariables로만 색을 정한다.
-    const flow = /^\s*(flowchart|graph)\b/.test(text);
-    const { svg } = await window.mermaid.render(id, flow ? text + '\n' + classes : text);
+    const head = text.match(/^\s*(flowchart|graph)\s+(LR|RL|TB|TD|BT)?/);
+    const curve = head && /^(LR|RL)$/.test(head[2] || '') ? 'bumpX' : 'bumpY';
+    const body = head ? `%%{init: {"flowchart": {"curve": "${curve}"}}}%%\n${text}\n${classes}` : text;
+    const { svg } = await window.mermaid.render(id, body);
     const doc = new DOMParser().parseFromString(svg, 'image/svg+xml');
     doc.querySelectorAll('path[id]').forEach((path) => {
       if (reversed.some((key) => path.id.includes('-' + key))) path.removeAttribute('marker-end');
