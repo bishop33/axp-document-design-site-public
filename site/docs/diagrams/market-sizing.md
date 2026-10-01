@@ -2,7 +2,7 @@
 
 전체 시장 가운데 대상 기업이 실제로 공략하는 시장은 얼마인가요?
 
-- 분류: 산업과 시장
+- 분류: 시장 속 위치
 - 쓰는 문서: 산업분석, 투자검토 IM, 기업현황
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/market-sizing/
 

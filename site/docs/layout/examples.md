@@ -1,9 +1,9 @@
-# 예시
+# 같은 원고를 여러 그리드에 배치해 비교합니다
 
 문서의 목적에 맞춘 원고, 그리드, 서체와 데이터 표현. 같은 원고를 여러 그리드에 배치해 비교합니다.
 
-- 상태: 승인
-- 갱신: 2026-09-22
+- 상태: 검토 중
+- 갱신: 2026-10-01
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/layout/examples/
 
 - [기업현황 · 연속 본문](https://bishop33.github.io/axp-document-design-site-public/docs/layout/examples/single.md): 현황 파악, 3쪽

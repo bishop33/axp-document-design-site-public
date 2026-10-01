@@ -13,24 +13,21 @@
 - [서체와 조판](https://bishop33.github.io/axp-document-design-site-public/docs/basics/type.md): 
 - [간격과 그룹핑](https://bishop33.github.io/axp-document-design-site-public/docs/basics/space.md): 
 - [표현 선택](https://bishop33.github.io/axp-document-design-site-public/docs/basics/data.md): 
-- [표현 비교](https://bishop33.github.io/axp-document-design-site-public/docs/samples/specimens.md): 같은 내용을 표, 문장, 차트, 도식으로 바꿔 놓고 무엇이 먼저 읽히는지 비교합니다.
+- [표현 비교](https://bishop33.github.io/axp-document-design-site-public/docs/samples/specimens.md): 같은 내용을 표, 문장, 차트, 도식으로 바꿔 놓고 무엇이 먼저 읽히는지 비교합니다. 분류 일곱 개 중 하나를 고르세요.
 - [연속 페이지와 출력](https://bishop33.github.io/axp-document-design-site-public/docs/basics/pages.md): 
 
 ## 레이아웃
 
 - [그리드란](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grid.md): 판면을 열과 행으로 나누고, 칸을 합쳐 제목·본문·표·차트의 자리를 정합니다. 같은 선을 여러 쪽에서 반복하면 쪽을 넘겨도 정렬이 이어집니다.
 - [설계 원리](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grid-principles.md): 먼저 본문의 크기와 행간을 정하고, 그 글줄이 읽히는 폭으로 열을 나눈 뒤, 남는 공간으로 판면과 여백을 정합니다. 행 모듈은 행간의 배수로 맞춥니다.
-- [그리드 시스템](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids.md): 같은 12열 판면에서 표지, 요약, 본문, 수치, 비교, 일정, 마감처럼 쪽의 역할에 맞춰 영역을 나눈 그리드 71종입니다. 그리드 유형, 지면 역할, 매체로 골라 볼 수 있습니다.
+- [그리드 시스템](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids.md): 그리드 시스템 17종과 페이지 패턴 54종을 쪽의 역할에 맞춰 다섯 묶음으로 나눴습니다. 먼저 내용에 맞는 그리드를 고르고, 탭에서 묶음별로 봅니다.
 - [적용 예시](https://bishop33.github.io/axp-document-design-site-public/docs/layout/applied.md): 그리드 시스템의 영역에 가상 기업의 원고, 표, 차트, 도식을 그대로 채운 지면입니다. 모든 쪽이 같은 데이터 원장을 쓰고, ‘지면 + 그리드’로 영역과 선을 겹쳐 볼 수 있습니다.
 
-## 차트
+## 차트·도식
 
-- [차트 카탈로그](https://bishop33.github.io/axp-document-design-site-public/docs/charts.md): 정확한 값을 찾는 표부터 크기·변화·구성·관계·증감을 보여주는 차트까지 33종입니다. 예시를 선택하면 사용 목적과 표현 규칙을 볼 수 있습니다.
-
-## 도식
-
-- [도식 카탈로그](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams.md): 사업 구조, 산업 지도, 지배구조, 절차, 일정처럼 관계와 순서를 보여주는 도식 16종입니다. 도식을 누르면 쓸 때와 규칙, Mermaid 원고를 볼 수 있습니다.
-- [적용 예시](https://bishop33.github.io/axp-document-design-site-public/docs/samples/diagram-lab.md): 사업 구조, 산업 지도, 공정, 판단 흐름을 A4 본문 삽입 크기로 배치한 가상 사례입니다.
+- [차트 안내](https://bishop33.github.io/axp-document-design-site-public/docs/charts.md): 먼저 독자가 무엇을 알고 싶은지 정합니다. 질문 여섯 개 중 하나를 고르면 그 질문에 답하는 표와 차트 33종 가운데 해당하는 것만 볼 수 있습니다.
+- [도식 안내](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams.md): 먼저 독자가 무엇을 알고 싶은지 정합니다. 질문 넷 중 하나를 고르면 그 질문에 답하는 도식 16종 가운데 해당하는 것만 볼 수 있습니다.
+- [라이브러리 안내](https://bishop33.github.io/axp-document-design-site-public/docs/visuals/libraries.md): 차트는 ECharts, 표는 공통 표 규칙, 도식은 Mermaid로 만듭니다.
 
 ## 제작 흐름
 

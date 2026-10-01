@@ -2,7 +2,7 @@
 
 경쟁사와 비교해 대상 기업은 어떤 위치에 있나요?
 
-- 분류: 산업과 시장
+- 분류: 시장 속 위치
 - 쓰는 문서: 산업분석, 기업현황, 발표
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/positioning/
 

@@ -2,7 +2,7 @@
 
 누가 이 회사를 소유하고, 이 회사는 어떤 회사를 소유하나요?
 
-- 분류: 사업과 조직
+- 분류: 관계와 구조
 - 쓰는 문서: 기업현황, 투자검토 IM
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/ownership/
 

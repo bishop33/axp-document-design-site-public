@@ -2,7 +2,7 @@
 
 플랫폼을 중심으로 누가 무엇을 주고받나요?
 
-- 분류: 산업과 시장
+- 분류: 시장 속 위치
 - 쓰는 문서: 기업현황, 산업분석, 투자검토 IM
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/ecosystem/
 

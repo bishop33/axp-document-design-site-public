@@ -2,7 +2,7 @@
 
 사업은 어떤 단계로, 언제부터 언제까지 진행하나요?
 
-- 분류: 시간과 일정
+- 분류: 시간과 논리
 - 쓰는 문서: 기술제안서, 투자검토 IM
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/roadmap/
 

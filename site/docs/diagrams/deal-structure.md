@@ -2,7 +2,7 @@
 
 투자금은 어떤 경로로 들어가고, 거래 후 지분은 어떻게 바뀌나요?
 
-- 분류: 사업과 조직
+- 분류: 관계와 구조
 - 쓰는 문서: 투자검토 IM
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/deal-structure/
 

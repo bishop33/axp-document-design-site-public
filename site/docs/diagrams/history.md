@@ -2,7 +2,7 @@
 
 회사는 언제 어떤 일을 거쳐 지금에 이르렀나요?
 
-- 분류: 시간과 일정
+- 분류: 시간과 논리
 - 쓰는 문서: 기업현황, 투자검토 IM, 발표
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/history/
 

@@ -2,7 +2,7 @@
 
 매출은 어떤 사업과 제품에서 나오나요?
 
-- 분류: 사업과 조직
+- 분류: 관계와 구조
 - 쓰는 문서: 기업현황, 투자검토 IM, 산업분석
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/revenue-tree/
 

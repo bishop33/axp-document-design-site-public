@@ -2,7 +2,7 @@
 
 이 산업은 어떤 단계로 이루어지고, 대상 기업은 어디에 있나요?
 
-- 분류: 산업과 시장
+- 분류: 시장 속 위치
 - 쓰는 문서: 기업현황, 산업분석, 투자검토 IM
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/value-chain/
 

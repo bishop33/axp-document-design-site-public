@@ -2,7 +2,7 @@
 
 결과(문제)는 어떤 원인으로 나눠 설명할 수 있나요?
 
-- 분류: 논리와 판단
+- 분류: 시간과 논리
 - 쓰는 문서: 투자검토 IM, 산업분석, 기업현황
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/issue-tree/
 
