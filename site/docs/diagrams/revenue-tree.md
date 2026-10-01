@@ -20,29 +20,6 @@
 - 같은 층의 합계가 위 상자의 값과 맞는지 확인합니다.
 - 가장 큰 가지만 짙게 하지 말고, 설명하려는 가지에만 강조를 둡니다.
 
-## Mermaid 원고
+## 그림
 
-공통 설정 [diagram-theme.js](https://bishop33.github.io/axp-document-design-site-public/guide/diagram-theme.js)로 그린다(Mermaid 12.0.0, dagre 배치, classDef focus·soft·note). 예시는 가상 기업·가상 수치다.
-
-```mermaid
-flowchart TB
-  total["`**매출 128억원**
-2025년 · 연결 기준`"]:::focus
-  sub["`**구독**
-74억원 · 58%`"]
-  lic["`**라이선스**
-35억원 · 27%`"]
-  svc["`**용역**
-19억원 · 15%`"]
-  s1["`**기업용**
-52억원`"]:::soft
-  s2["`**개인용**
-22억원`"]:::soft
-  l1["`**온프레미스**
-28억원`"]:::soft
-  l2["`**OEM**
-7억원`"]:::soft
-  total --> sub & lic & svc
-  sub --> s1 & s2
-  lic --> l1 & l2
-```
+좌표로 그린 SVG: [revenue-tree.svg](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/revenue-tree.svg). 상자 위치와 선 경로를 좌표로 정하고 공통 부품(web/lib/diagram-draw.mjs)으로 그린다. 선은 직각, 이름표는 선 옆 빈 곳. 예시는 가상 기업·가상 수치다.

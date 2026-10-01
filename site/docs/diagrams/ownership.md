@@ -20,30 +20,6 @@
 - 지분율 기준일을 도식 아래 주석에 적습니다.
 - 합계가 100%인지 확인합니다.
 
-## Mermaid 원고
+## 그림
 
-공통 설정 [diagram-theme.js](https://bishop33.github.io/axp-document-design-site-public/guide/diagram-theme.js)로 그린다(Mermaid 12.0.0, dagre 배치, classDef focus·soft·note). 예시는 가상 기업·가상 수치다.
-
-```mermaid
-flowchart TB
-  f["`**창업자**
-개인`"]
-  v1["`**A 벤처캐피탈**
-재무적 투자자`"]
-  v2["`**B 전략투자사**
-사업 제휴`"]
-  etc["`**기타 주주**
-임직원 포함`"]:::soft
-  co["`**가상 소프트웨어**
-대상 기업`"]:::focus
-  s1["`**해외 법인**
-싱가포르`"]
-  s2["`**데이터 자회사**
-국내`"]
-  f -->|42%| co
-  v1 -->|24%| co
-  v2 -->|15%| co
-  etc -->|19%| co
-  co -->|100%| s1
-  co -->|67%| s2
-```
+좌표로 그린 SVG: [ownership.svg](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/ownership.svg). 상자 위치와 선 경로를 좌표로 정하고 공통 부품(web/lib/diagram-draw.mjs)으로 그린다. 선은 직각, 이름표는 선 옆 빈 곳. 예시는 가상 기업·가상 수치다.

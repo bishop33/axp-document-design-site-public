@@ -20,22 +20,6 @@
 - 현재 또는 설명하려는 시점만 짙게 둡니다.
 - 투자·매출 같은 수치 사건은 금액을 함께 적습니다.
 
-## Mermaid 원고
+## 그림
 
-공통 설정 [diagram-theme.js](https://bishop33.github.io/axp-document-design-site-public/guide/diagram-theme.js)로 그린다(Mermaid 12.0.0, dagre 배치, classDef focus·soft·note). 예시는 가상 기업·가상 수치다.
-
-```mermaid
-flowchart LR
-  y1["`**2016**
-법인 설립`"]
-  y2["`**2018**
-시리즈 A 60억원
-첫 기업 고객`"]
-  y3["`**2021**
-해외 법인 설립`"]
-  y4["`**2024**
-매출 100억원 돌파`"]
-  y5["`**2025**
-상장 예비심사 청구`"]:::focus
-  y1 --> y2 --> y3 --> y4 --> y5
-```
+좌표로 그린 SVG: [history.svg](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/history.svg). 상자 위치와 선 경로를 좌표로 정하고 공통 부품(web/lib/diagram-draw.mjs)으로 그린다. 선은 직각, 이름표는 선 옆 빈 곳. 예시는 가상 기업·가상 수치다.

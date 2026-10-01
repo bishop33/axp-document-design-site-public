@@ -20,19 +20,6 @@
 - 핵심 작업 또는 검수 시점만 짙게 둡니다.
 - 기간 단위(월·주)를 축에 적습니다.
 
-## Mermaid 원고
+## 그림
 
-공통 설정 [diagram-theme.js](https://bishop33.github.io/axp-document-design-site-public/guide/diagram-theme.js)로 그린다(Mermaid 12.0.0, dagre 배치, classDef focus·soft·note). 예시는 가상 기업·가상 수치다.
-
-```mermaid
-gantt
-  dateFormat YYYY-MM
-  axisFormat %y.%m
-  section 1단계 진단
-  현황 분석 :a1, 2026-01, 2M
-  section 2단계 구축
-  데이터 연계 :a2, after a1, 3M
-  화면 개발 :a3, after a1, 4M
-  section 3단계 안정화
-  시범 운영 :active, a4, after a3, 2M
-```
+좌표로 그린 SVG: [roadmap.svg](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/roadmap.svg). 상자 위치와 선 경로를 좌표로 정하고 공통 부품(web/lib/diagram-draw.mjs)으로 그린다. 선은 직각, 이름표는 선 옆 빈 곳. 예시는 가상 기업·가상 수치다.

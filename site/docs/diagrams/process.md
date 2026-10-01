@@ -20,27 +20,6 @@
 - 상자 안 줄 수와 순서(설비 → 설명)를 모든 단계에서 같게 둡니다.
 - 화살표에는 이름표를 붙이지 않습니다.
 
-## Mermaid 원고
+## 그림
 
-공통 설정 [diagram-theme.js](https://bishop33.github.io/axp-document-design-site-public/guide/diagram-theme.js)로 그린다(Mermaid 12.0.0, dagre 배치, classDef focus·soft·note). 예시는 가상 기업·가상 수치다.
-
-```mermaid
-flowchart LR
-  p1["`**01 원료 배합**
-배합 탱크
-원료를 혼합해
-내용물을 만듭니다.`"]
-  p2["`**02 내용물 확인**
-시료·시험
-내용물의 품질을
-확인합니다.`"]
-  p3["`**03 충전·포장**
-충전 설비
-용기에 담고
-포장합니다.`"]
-  p4["`**04 출하 검사**
-검사 기록
-검사를 마친 제품의
-출하를 승인합니다.`"]
-  p1 --> p2 --> p3 --> p4
-```
+좌표로 그린 SVG: [process.svg](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/process.svg). 상자 위치와 선 경로를 좌표로 정하고 공통 부품(web/lib/diagram-draw.mjs)으로 그린다. 선은 직각, 이름표는 선 옆 빈 곳. 예시는 가상 기업·가상 수치다.

@@ -6,30 +6,7 @@
 - 갱신: 2026-09-29
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/workflow/process/
 
-문서 제작 흐름 (Mermaid 원고)
-
-```mermaid
-flowchart LR
-  s1["`**01 목적**
-기획`"]
-  s2["`**02 수집**
-리서치`"]
-  s3["`**03 검증**
-검증`"]
-  s4["`**04 구조화**
-편집`"]
-  s5["`**05 표현**
-디자인`"]
-  s6["`**06 검수**
-검수`"]:::focus
-  s7["`**07 전달**
-기획`"]
-  s8["`**08 개선**
-전원`"]:::soft
-  s1 --> s2 --> s3 --> s4 --> s5 --> s6 --> s7 --> s8
-  s2 <-.-|근거 부족| s3
-  s5 <-.-|수정 요청| s6
-```
+![문서 제작 흐름](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/workflow.svg)
 
 ## 단계와 통과 기준
 

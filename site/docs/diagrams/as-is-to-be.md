@@ -20,31 +20,6 @@
 - 같은 단계는 같은 높이에 둡니다.
 - 개선되는 단계만 짙게 두고 효과(시간, 비용)를 둘째 줄에 적습니다.
 
-## Mermaid 원고
+## 그림
 
-공통 설정 [diagram-theme.js](https://bishop33.github.io/axp-document-design-site-public/guide/diagram-theme.js)로 그린다(Mermaid 12.0.0, dagre 배치, classDef focus·soft·note). 예시는 가상 기업·가상 수치다.
-
-```mermaid
-flowchart LR
-  subgraph asis["현행"]
-    direction TB
-    a1["`**엑셀로 자료 취합**
-부서별 이메일`"]
-    a2["`**수작업 검증**
-평균 3일`"]
-    a3["`**보고서 작성**
-담당자 2명`"]
-    a1 --> a2 --> a3
-  end
-  subgraph tobe["개선"]
-    direction TB
-    t1["`**자동 수집**
-시스템 연계`"]:::soft
-    t2["`**규칙 기반 검증**
-당일 처리`"]:::focus
-    t3["`**보고서 자동 생성**
-검토 1명`"]:::focus
-    t1 --> t2 --> t3
-  end
-  asis ~~~ tobe
-```
+좌표로 그린 SVG: [as-is-to-be.svg](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/as-is-to-be.svg). 상자 위치와 선 경로를 좌표로 정하고 공통 부품(web/lib/diagram-draw.mjs)으로 그린다. 선은 직각, 이름표는 선 옆 빈 곳. 예시는 가상 기업·가상 수치다.

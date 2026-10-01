@@ -20,39 +20,6 @@
 - 이번 제안의 신규 구축 범위만 짙게 둡니다.
 - 기존 시스템은 옅은 면으로 구분합니다.
 
-## Mermaid 원고
+## 그림
 
-공통 설정 [diagram-theme.js](https://bishop33.github.io/axp-document-design-site-public/guide/diagram-theme.js)로 그린다(Mermaid 12.0.0, dagre 배치, classDef focus·soft·note). 예시는 가상 기업·가상 수치다.
-
-```mermaid
-flowchart LR
-  subgraph u["사용자"]
-    direction TB
-    web["`**업무 화면**
-웹 · 사내망`"]
-    mob["`**모바일**
-현장 점검`"]
-  end
-  subgraph s["서비스 · 신규 구축"]
-    direction TB
-    api["`**통합 API**
-인증 · 권한`"]:::focus
-    ana["`**분석 엔진**
-배치 · 실시간`"]:::focus
-  end
-  subgraph d["데이터"]
-    direction TB
-    dw["`**데이터 저장소**
-정형 · 비정형`"]
-  end
-  subgraph e["기존 시스템 · 외부"]
-    direction TB
-    erp["`**ERP**
-기존`"]:::soft
-    ext["`**공공 데이터**
-외부 API`"]:::soft
-  end
-  web & mob --> api --> ana --> dw
-  dw <-.-|수집| erp
-  dw <-.-|수집| ext
-```
+좌표로 그린 SVG: [system-architecture.svg](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/system-architecture.svg). 상자 위치와 선 경로를 좌표로 정하고 공통 부품(web/lib/diagram-draw.mjs)으로 그린다. 선은 직각, 이름표는 선 옆 빈 곳. 예시는 가상 기업·가상 수치다.

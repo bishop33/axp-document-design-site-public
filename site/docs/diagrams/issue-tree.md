@@ -20,27 +20,6 @@
 - 같은 층의 가지는 서로 겹치지 않게 나눕니다.
 - 데이터로 확인된 원인만 짙게 두고 수치를 적습니다.
 
-## Mermaid 원고
+## 그림
 
-공통 설정 [diagram-theme.js](https://bishop33.github.io/axp-document-design-site-public/guide/diagram-theme.js)로 그린다(Mermaid 12.0.0, dagre 배치, classDef focus·soft·note). 예시는 가상 기업·가상 수치다.
-
-```mermaid
-flowchart LR
-  root["`**영업이익 14억원 감소**
-2025년 · 전년 대비`"]
-  r1["`**매출 감소**
-−6억원`"]
-  r2["`**비용 증가**
-−8억원`"]
-  q["`**판매량**
-−4%`"]:::soft
-  p["`**단가**
-변동 없음`"]:::soft
-  c1["`**원재료비**
-+7억원 · 환율`"]:::focus
-  c2["`**판관비**
-+1억원`"]:::soft
-  root --> r1 & r2
-  r1 --> q & p
-  r2 --> c1 & c2
-```
+좌표로 그린 SVG: [issue-tree.svg](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/issue-tree.svg). 상자 위치와 선 경로를 좌표로 정하고 공통 부품(web/lib/diagram-draw.mjs)으로 그린다. 선은 직각, 이름표는 선 옆 빈 곳. 예시는 가상 기업·가상 수치다.

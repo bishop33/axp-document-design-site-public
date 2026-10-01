@@ -21,30 +21,6 @@
 - 되돌아가는 선은 점선으로 둡니다.
 - 범례: 실선 업무 흐름, 점선 되돌림
 
-## Mermaid 원고
+## 그림
 
-공통 설정 [diagram-theme.js](https://bishop33.github.io/axp-document-design-site-public/guide/diagram-theme.js)로 그린다(Mermaid 12.0.0, dagre 배치, classDef focus·soft·note). 예시는 가상 기업·가상 수치다.
-
-```mermaid
-flowchart TB
-  order["`**주문 접수**
-영업`"]
-  stock["`**재고 확인**
-물류`"]
-  decide{"`**출고 가능**
-재고입니까?`"}
-  negotiate["`**고객과 일정 협의**
-영업`"]
-  confirm["`**입고 일정 확정**
-영업`"]
-  check["`**출하 품질 확인**
-품질 담당`"]
-  ship["`**승인 제품 출고**
-품질 담당`"]
-  deliver["`**고객 인도**
-품질 담당`"]:::focus
-  order --> stock --> decide
-  decide -->|아니요| negotiate --> confirm
-  stock <-.-|입고 후| confirm
-  decide -->|예| check -->|적합| ship --> deliver
-```
+좌표로 그린 SVG: [decision-flow.svg](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/decision-flow.svg). 상자 위치와 선 경로를 좌표로 정하고 공통 부품(web/lib/diagram-draw.mjs)으로 그린다. 선은 직각, 이름표는 선 옆 빈 곳. 예시는 가상 기업·가상 수치다.

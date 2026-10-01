@@ -22,13 +22,6 @@ Copyright (c) 2021, Kil Hyung-jin. Reserved Font Name: Pretendard. SIL Open Font
 - [LICENSE](/guide/vendor/ECHARTS-LICENSE.txt) · [NOTICE](/guide/vendor/ECHARTS-NOTICE.txt)
 - [공식 프로젝트](https://github.com/apache/echarts)
 
-## Mermaid 12.0.0
-
-도식의 공통 라이브러리입니다(설명형 도식 4종). MIT License. 배포본에는 d3(ISC), dagre, ELK(EPL-2.0) 등 하위 구성요소가 함께 들어 있습니다.
-
-- [LICENSE](/guide/vendor/MERMAID-LICENSE.txt) · [d3 LICENSE](/licenses/d3-LICENSE.txt) · [ELK LICENSE](/licenses/elkjs-LICENSE.txt)
-- [공식 프로젝트](https://github.com/mermaid-js/mermaid)
-
 ## 새 사이트의 구성요소
 
 | 구성요소 | 라이선스 | 쓰는 곳 |

@@ -27,7 +27,7 @@
 
 - [차트 안내](https://bishop33.github.io/axp-document-design-site-public/docs/charts.md): 독자가 무엇을 알고 싶은지에 따라 고릅니다. 탭의 질문 여섯 개가 표와 차트 33종을 나눕니다. 처음 탭은 정확한 값을 읽는 표입니다.
 - [도식 안내](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams.md): 독자가 무엇을 알고 싶은지에 따라 고릅니다. 탭의 질문 네 개가 도식 16종을 나눕니다. 처음 탭은 누가 누구와 어떤 관계인지 보여주는 도식입니다.
-- [라이브러리 안내](https://bishop33.github.io/axp-document-design-site-public/docs/visuals/libraries.md): 차트는 ECharts, 표는 공통 표 규칙, 도식은 Mermaid로 만듭니다.
+- [라이브러리 안내](https://bishop33.github.io/axp-document-design-site-public/docs/visuals/libraries.md): 차트는 ECharts, 표는 공통 표 규칙, 도식은 좌표로 정한 공통 부품으로 만듭니다.
 
 ## 제작 흐름
 

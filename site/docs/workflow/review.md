@@ -6,25 +6,7 @@
 - 갱신: 2026-09-29
 - 주소: https://bishop33.github.io/axp-document-design-site-public/docs/workflow/review/
 
-검수 단계 (Mermaid 원고)
-
-```mermaid
-flowchart LR
-  c["`**내용 검수**
-사실 · 수치 · 논리`"]
-  r["`**화면 렌더**
-A4 · Chrome`"]
-  p["`**PDF**
-글꼴 · 넘침 · 쪽`"]
-  o["`**실물 출력**
-100% 인쇄`"]
-  q["`**디자인 QC**
-위계 · 밀도 · 정렬`"]
-  ok["`**승인**
-최종 판단: Bishop`"]:::focus
-  c --> r --> p --> o --> q --> ok
-  c <-.-|수정| q
-```
+![검수 단계](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/review-gates.svg)
 
 ## 단계별로 보는 것
 

@@ -21,23 +21,6 @@
 - 거래 전·후 지분 비교는 도식 옆 표로 둡니다.
 - 범례: 실선 지분, 점선 자금
 
-## Mermaid 원고
+## 그림
 
-공통 설정 [diagram-theme.js](https://bishop33.github.io/axp-document-design-site-public/guide/diagram-theme.js)로 그린다(Mermaid 12.0.0, dagre 배치, classDef focus·soft·note). 예시는 가상 기업·가상 수치다.
-
-```mermaid
-flowchart LR
-  lp["`**출자자**
-연기금 · 금융기관`"]
-  fund["`**투자조합**
-약정 500억원`"]
-  co["`**대상 기업**
-거래 후 기업가치 1,200억원`"]:::focus
-  old["`**기존 주주**
-일부 구주 매각`"]
-  lp -.->|출자| fund
-  fund -.->|신주 100억원| co
-  fund -.->|구주 40억원| old
-  old -->|지분 3.3%| fund
-  co -->|신규 지분 8.3%| fund
-```
+좌표로 그린 SVG: [deal-structure.svg](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/deal-structure.svg). 상자 위치와 선 경로를 좌표로 정하고 공통 부품(web/lib/diagram-draw.mjs)으로 그린다. 선은 직각, 이름표는 선 옆 빈 곳. 예시는 가상 기업·가상 수치다.

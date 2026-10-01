@@ -1,0 +1,12 @@
+/* Narrow screens (the A4 drawing needs about 700px to fit without scrolling) get the vertical drawing (mobile-explanations.js); print and wide screens keep the A4 drawing. */
+.sample .diagram svg.m{display:none}
+@media screen and (max-width:700px){
+  .paper{width:calc(100% - 16px)!important;padding:24px 14px!important}
+  .sample .figure{padding:8px 6px!important}
+  .sample .diagram svg.d{display:none!important}
+  .sample .diagram svg.m{display:block;width:100%!important;min-width:0!important;max-width:360px;margin-inline:auto}
+  .sample .diagram svg.m .title{font-size:14px!important}
+  .sample .diagram svg.m .small{font-size:12.5px!important}
+  .sample .diagram{overflow:visible}
+}
+@media print{.sample .diagram svg.m{display:none!important}}

@@ -21,42 +21,6 @@
 - 단계를 돕는 지원 서비스는 도식 아래 한 줄 띠로 뺍니다.
 - 도식 아래 띠: 지원 서비스 — 시험·분석, 패키지 디자인, 물류·보관
 
-## Mermaid 원고
+## 그림
 
-공통 설정 [diagram-theme.js](https://bishop33.github.io/axp-document-design-site-public/guide/diagram-theme.js)로 그린다(Mermaid 12.0.0, dagre 배치, classDef focus·soft·note). 예시는 가상 기업·가상 수치다.
-
-```mermaid
-flowchart LR
-  subgraph s1["01 공급"]
-    raw["`**원료 공급사**
-성분 원료`"]
-    pack["`**용기·포장사**
-용기 · 단상자`"]
-  end
-  subgraph s2["02 제조"]
-    make["`**ODM 개발 + 생산**
-또는
-OEM 위탁 생산`"]:::soft
-  end
-  subgraph s3["03 브랜드 · 대상 기업"]
-    brand["`**가상 브랜드**
-기획 · 판매`"]:::focus
-  end
-  subgraph s4["04 판매 채널"]
-    own["`**자사몰**
-직접 판매`"]
-    dist["`**유통사**
-매입 후 판매`"]
-  end
-  subgraph s5["05 소비"]
-    user["`**소비자**
-구매 · 사용`"]
-  end
-  raw -->|투입| make
-  pack --> make
-  make -->|제품| brand
-  brand -->|판매| own
-  brand --> dist
-  own -->|전달| user
-  dist --> user
-```
+좌표로 그린 SVG: [value-chain.svg](https://bishop33.github.io/axp-document-design-site-public/docs/diagrams/value-chain.svg). 상자 위치와 선 경로를 좌표로 정하고 공통 부품(web/lib/diagram-draw.mjs)으로 그린다. 선은 직각, 이름표는 선 옆 빈 곳. 예시는 가상 기업·가상 수치다.
