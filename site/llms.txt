@@ -20,6 +20,7 @@
 
 - [그리드란](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grid.md): 판면을 열과 행으로 나누고, 칸을 합쳐 제목·본문·표·차트의 자리를 정합니다. 같은 선을 여러 쪽에서 반복하면 쪽을 넘겨도 정렬이 이어집니다.
 - [설계 원리](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grid-principles.md): 먼저 본문의 크기와 행간을 정하고, 그 글줄이 읽히는 폭으로 열을 나눈 뒤, 남는 공간으로 판면과 여백을 정합니다. 행 모듈은 행간의 배수로 맞춥니다.
+- [분량 맞추기](https://bishop33.github.io/axp-document-design-site-public/docs/layout/content-fit.md): 레이아웃과 그리드를 정하면 영역마다 담을 수 있는 정보의 양이 정해집니다. 넘치면 요약하고, 모자라면 내용을 늘리거나 배치로 채웁니다. 어떤 경우에도 핵심은 빠지지 않습니다.
 - [그리드 시스템](https://bishop33.github.io/axp-document-design-site-public/docs/layout/grids.md): 그리드 시스템 17종과 페이지 패턴 54종을 쪽의 역할에 맞춰 다섯 묶음으로 나눴습니다. 먼저 내용에 맞는 그리드를 고르고, 탭에서 묶음별로 봅니다.
 - [적용 예시](https://bishop33.github.io/axp-document-design-site-public/docs/layout/applied.md): 그리드 시스템의 영역에 가상 기업의 원고, 표, 차트, 도식을 그대로 채운 지면입니다. 모든 쪽이 같은 데이터 원장을 쓰고, ‘지면 + 그리드’로 영역과 선을 겹쳐 볼 수 있습니다.
 
